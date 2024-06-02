@@ -3,10 +3,12 @@
 # UPDATED: 2023-12-07  15:40:00
 # HOST-SUFFIX: 7
 # TOTAL: 7
-HOST-SUFFIX, livednow.com
-HOST-SUFFIX, dtmb-s1.cc
-HOST-SUFFIX, dtmb-s2.cc
-HOST-SUFFIX, stream-link.org
-HOST-SUFFIX, stream-link.online
-HOST-SUFFIX, hinet.net
-HOST-SUFFIX, hoy.tv
+HOST-SUFFIX,livednow.com
+HOST-SUFFIX,dtmb-s1.cc
+HOST-SUFFIX,dtmb-s2.cc
+HOST-SUFFIX,stream-link.org
+HOST-SUFFIX,stream-link.online
+HOST-SUFFIX,hinet.net
+HOST-SUFFIX,hoy.tv
+HOST-SUFFIX,4gtv.tv
+HOST-SUFFIX,ofiii.com
