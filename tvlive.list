@@ -1,12 +1,12 @@
 # NAME: livednow
 # AUTHOR: livednow.com
 # UPDATED: 2023-12-07  15:40:00
-# DOMAIN-SUFFIX: 7
+# HOST-SUFFIX: 7
 # TOTAL: 7
-DOMAIN-SUFFIX, livednow.com
-DOMAIN-SUFFIX, dtmb-s1.cc
-DOMAIN-SUFFIX, dtmb-s2.cc
-DOMAIN-SUFFIX, stream-link.org
-DOMAIN-SUFFIX, stream-link.online
-DOMAIN-SUFFIX, hinet.net
-DOMAIN-SUFFIX, hoy.tv
+HOST-SUFFIX, livednow.com
+HOST-SUFFIX, dtmb-s1.cc
+HOST-SUFFIX, dtmb-s2.cc
+HOST-SUFFIX, stream-link.org
+HOST-SUFFIX, stream-link.online
+HOST-SUFFIX, hinet.net
+HOST-SUFFIX, hoy.tv
