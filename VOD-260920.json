@@ -14,5 +14,13 @@
   {
     "api": "https://gc.wki8.com/api.php/provide/vod/",
     "name": "🟢山海官方资源站"
+  },
+  {
+    "api": "https://caiji.maotaizy.cc/api.php/provide/vod/",
+    "name": "🟢影剧资源网"
+  },
+  {
+    "api": "https://cj.rycjapi.com/api.php/provide/vod/",
+    "name": "🟢如意资源网"
   }
 ]
