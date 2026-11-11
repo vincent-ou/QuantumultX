@@ -19,7 +19,7 @@ var obj = status
     )
   : $response.body;
 
-// 绕过强制更新:force 置 0,high_version 降到 0.0.1,版本字段改成 4.6.6
+// 绕过强制更新:force 置 0,high_version 降到 0.0.1,版本字段改成 4.6.9
 if (status) spoofVersion(obj);
 
 if (/^https:\/\/api\.ankianki\.com\/user\/userInfo\/get?/.test(requestUrl)) {
@@ -119,7 +119,7 @@ function spoofVersion(node) {
       typeof val === "string" &&
       /^\d+\.\d+(\.\d+){0,2}$/.test(val)
     ) {
-      node[key] = "4.6.6";
+      node[key] = "4.6.9";
     } else if (
       MIN_VERSION_KEYS.indexOf(key) !== -1 &&
       typeof val === "string" &&
