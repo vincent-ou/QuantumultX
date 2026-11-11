@@ -19,9 +19,7 @@ var obj = status
     )
   : $response.body;
 
-// 强制更新绕过:把服务端返回的版本号改成跟本地装的版本一模一样的 4.6.6,
-// 强制更新开关全部关闭。App 是拿服务端版本跟本地版本比对是否相等,不相等就弹
-// 升级,所以 9.9.9 和 0.0.1 都会弹,只有改成跟本地一样的 4.6.6 才不弹。
+// 绕过强制更新:force 置 0,high_version 降到 0.0.1,版本字段改成 4.6.6
 if (status) spoofVersion(obj);
 
 if (/^https:\/\/api\.ankianki\.com\/user\/userInfo\/get?/.test(requestUrl)) {
@@ -88,9 +86,7 @@ if (/^https:\/\/api\.ankianki\.com\/user\/userInfo\/get?/.test(requestUrl)) {
 }
 $done({ body: status ? JSON.stringify(obj) : obj });
 
-// 版本号伪装:服务端返回的版本字段一律改成 4.6.6(跟本地装的版本一致),最低版本要求降到 0.0.1,
-// 强制更新类开关一律关闭。只改值长得像版本号的字符串和布尔/数字开关,
-// 其他字段不动;递归遍历整个响应体,所以不管版本信息藏在哪一层都能命中。
+// 递归改写响应体里的版本/强制更新字段,其他字段不动
 function spoofVersion(node) {
   var VERSION_KEYS = [
     "version", "app_version", "appVersion", "latest_version", "latestVersion",
@@ -103,11 +99,14 @@ function spoofVersion(node) {
     "minVersion", "minimumVersion"
   ];
   var FORCE_KEYS = [
-    "force_update", "is_force_update", "must_update", "forceUpdate",
+    "force", "force_update", "is_force_update", "must_update", "forceUpdate",
     "isForceUpdate", "need_update", "is_need_update", "mandatory_update",
     "is_mandatory", "force_upgrade", "need_upgrade", "has_update",
     "has_new_version", "update_available", "is_update", "needUpdate",
     "hasUpdate"
+  ];
+  var RANGE_KEYS = [
+    "high_version", "highVersion"
   ];
   var UPDATE_TYPE_KEYS = ["update_type", "updateType"];
 
@@ -123,6 +122,12 @@ function spoofVersion(node) {
       node[key] = "4.6.6";
     } else if (
       MIN_VERSION_KEYS.indexOf(key) !== -1 &&
+      typeof val === "string" &&
+      /^\d+\.\d+(\.\d+){0,2}$/.test(val)
+    ) {
+      node[key] = "0.0.1";
+    } else if (
+      RANGE_KEYS.indexOf(key) !== -1 &&
       typeof val === "string" &&
       /^\d+\.\d+(\.\d+){0,2}$/.test(val)
     ) {
