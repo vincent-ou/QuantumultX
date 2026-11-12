@@ -1,0 +1,56 @@
+# 彩云天气 / 彩云天气Pro — 规则(配合 CaiYun.js 使用)
+# 用法:把这个文件和 CaiYun.js 一起传到仓库,然后在 QX 里加一次规则资源:
+# 重写 → 规则资源 → 添加 https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.snippet
+# 规则会自动加载,脚本走下面的 js 链接,以后改规则/脚本都只需更新仓库。
+
+[filter_local]
+# 上传信息
+host, gather.colorfulclouds.net, reject
+
+[rewrite_local]
+# 开屏广告
+^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather url reject-dict
+# 通用广告请求
+^https?:\/\/ad\.cyapi\.cn\/v\d url reject-200
+# 限时福利 Svip
+^https:\/\/biz\.cyapi\.cn\/p\/v1\/trial_card\/info url reject-dict
+# 普通版修改 VIP 后提示账号迁移
+^https:\/\/biz\.cyapi\.cn\/api\/v1\/token\/device$ url reject-dict
+# 亲友卡
+^https:\/\/biz\.cyapi\.cn\/p\/v1\/entries url reject-dict
+# 左上角推荐
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config$ url reject-dict
+# 通知
+^https:\/\/starplucker\.cyapi\.cn\/v3\/notification\/message_center url reject-dict
+# 会员限时弹窗
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/home\/conditions\/local$ url reject-dict
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/home_activity\/conditions$ url reject-dict
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/40day\/conditions\/local$ url reject-dict
+
+# 赏叶赏花模块
+^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
+# 解锁旧版 VIP(7.20.0 之前)
+^https:\/\/biz\.cyapi\.cn\/v2\/user url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
+# 卫星云图 48小时预报
+^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
+# 7.20.0 版本显示 VIP
+^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
+# 7.22.0 版本 40天趋势/60天潮汐等
+^https:\/\/starplucker\.cyapi\.cn\/v3\/ url script-request-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
+# 发现-轮播
+^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/banners\?user_type= url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
+# 发现-宫格
+^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/features\?user_type= url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
+# 发现-官方活动
+^https:\/\/starplucker\.cyapi\.cn\/v3\/campaigns$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
+# 发现-瀑布流
+^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/feeds url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
+# AI 天气额度
+^https?:\/\/(biz|wrapper|starplucker)\.cyapi\.cn\/.*ai\/weather url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
+# 用户信息(注册天数)
+^https:\/\/biz\.cyapi\.cn\/p\/v\d\/user_info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
+# 特权
+^https:\/\/biz\.cyapi\.cn\/p\/v\d\/privileges url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
+
+[mitm]
+hostname = *.cyapi.cn, *.caiyunapp.com

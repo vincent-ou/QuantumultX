@@ -34,29 +34,29 @@ host, gather.colorfulclouds.net, reject
 ^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/40day\/conditions\/local$ url reject-dict
 
 # 赏叶赏花模块
-^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/caiyun-merged.js
+^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
 # 解锁旧版 VIP(7.20.0 之前)
-^https:\/\/biz\.cyapi\.cn\/v2\/user url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/caiyun-merged.js
+^https:\/\/biz\.cyapi\.cn\/v2\/user url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
 # 卫星云图 48小时预报
-^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/caiyun-merged.js
+^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
 # 7.20.0 版本显示 VIP
-^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/caiyun-merged.js
+^https?:\/\/biz\.cyapi\.cn\/api\/v1\/user_detail$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
 # 7.22.0 版本 40天趋势/60天潮汐等
-^https:\/\/starplucker\.cyapi\.cn\/v3\/ url script-request-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/caiyun-merged.js
+^https:\/\/starplucker\.cyapi\.cn\/v3\/ url script-request-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
 # 发现-轮播
-^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/banners\?user_type= url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/caiyun-merged.js
+^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/banners\?user_type= url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
 # 发现-宫格
-^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/features\?user_type= url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/caiyun-merged.js
+^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/features\?user_type= url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
 # 发现-官方活动
-^https:\/\/starplucker\.cyapi\.cn\/v3\/campaigns$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/caiyun-merged.js
+^https:\/\/starplucker\.cyapi\.cn\/v3\/campaigns$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
 # 发现-瀑布流
-^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/feeds url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/caiyun-merged.js
+^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/feeds url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
 # AI 天气额度
-^https?:\/\/(biz|wrapper|starplucker)\.cyapi\.cn\/.*ai\/weather url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/caiyun-merged.js
+^https?:\/\/(biz|wrapper|starplucker)\.cyapi\.cn\/.*ai\/weather url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
 # 用户信息(注册天数)
-^https:\/\/biz\.cyapi\.cn\/p\/v\d\/user_info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/caiyun-merged.js
+^https:\/\/biz\.cyapi\.cn\/p\/v\d\/user_info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
 # 特权
-^https:\/\/biz\.cyapi\.cn\/p\/v\d\/privileges url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/caiyun-merged.js
+^https:\/\/biz\.cyapi\.cn\/p\/v\d\/privileges url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/CaiYun.js
 
 [mitm]
 hostname = *.cyapi.cn, *.caiyunapp.com
