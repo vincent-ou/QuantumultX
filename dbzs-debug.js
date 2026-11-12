@@ -2,11 +2,13 @@
 倒班助手抓包+解锁二合一调试脚本（临时用）
 用途：既打日志（看点“使用”时走了哪个接口），又做解锁改写（让 App 显示“使用”按钮）。
 只在抓“使用”接口时用，抓完换回正式的 dbzs.js。
+注意：规则已放宽到 /shiftassistant/rs/ 下所有接口，目的是抓到头像框“使用”
+实际走的接口（之前窄规则漏掉了它）。日志会很多，只看点“使用”前后那几行。
 改写内容与 dbzs.js 相同：立盾卡 status→1，皮肤/头像框 userHave→1，
 皮肤/头像框购买返回成功，豆币显示 99999。
 
 [rewrite_local]
-^https?:\/\/open\.daobanzhushou\.cn\/shiftassistant\/rs\/(user\/lidunka|user\/doubinum|skin\/|headerbox\/|availableDoubi\/show).* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/dbzs-debug.js
+^https?:\/\/open\.daobanzhushou\.cn\/shiftassistant\/rs\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/dbzs-debug.js
 
 [mitm]
 hostname = open.daobanzhushou.cn
