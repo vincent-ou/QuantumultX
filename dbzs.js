@@ -15,9 +15,10 @@
           buy/toggle 返回成功（code 1），供点购买/使用时走通客户端流程。
   头像框：GET /shiftassistant/rs/headerbox/show（20 个：4 个 200 豆币 + 活动专属 + 撑腰奖励）
     改写：全部 userHave → 1。
-    点“使用”可能走 /headerbox/toggle（与皮肤同结构）或 POST /user/headerbox
-    （该接口首次抓包时返回空 {"code":"1","msg":""}），两者都改写为成功。
-    注意：旧规则漏了 /user/headerbox（无尾斜杠，不匹配 headerbox\/），已补上。
+    点“使用”走 POST /pocket/changeheaderbox（实测 2026-11-12 20:31），服务器校验拥有权，
+    未拥有返回 {"code":"0","msg":"头像框不存在或当前没有获得该头像框"}——改写为成功。
+    /headerbox/toggle 是按皮肤同结构推测的，未实测到，保留作备用。
+    /user/headerbox 是启动时调的当前头像框接口（返回空），也改写为成功。
   豆币：/user/doubinum（10）与 /availableDoubi/show（13）→ 99999（仅显示用）。
 注意：皮肤/头像框的“使用”是否需服务器再校验未知；若点“使用”后仍提示未拥有，
 请把那次的接口返回发我再调。
@@ -58,6 +59,10 @@ try {
     obj.msg = '';
     obj.data = '';
   } else if (url.indexOf('/headerbox/buy') !== -1) {
+    obj.code = '1';
+    obj.msg = '';
+    obj.data = '';
+  } else if (url.indexOf('/pocket/changeheaderbox') !== -1) {
     obj.code = '1';
     obj.msg = '';
     obj.data = '';

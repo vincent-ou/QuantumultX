@@ -52,6 +52,10 @@ try {
     obj.code = '1';
     obj.msg = '';
     obj.data = '';
+  } else if (url.indexOf('/pocket/changeheaderbox') !== -1) {
+    obj.code = '1';
+    obj.msg = '';
+    obj.data = '';
   } else if (url.indexOf('/headerbox/toggle') !== -1) {
     obj.code = '1';
     obj.msg = '';
