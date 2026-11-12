@@ -42,7 +42,15 @@ try {
     obj.code = '1';
     obj.msg = '';
     obj.data = '';
+  } else if (url.indexOf('/skin/toggle') !== -1) {
+    obj.code = '1';
+    obj.msg = '';
+    obj.data = '';
   } else if (url.indexOf('/headerbox/buy') !== -1) {
+    obj.code = '1';
+    obj.msg = '';
+    obj.data = '';
+  } else if (url.indexOf('/headerbox/toggle') !== -1) {
     obj.code = '1';
     obj.msg = '';
     obj.data = '';

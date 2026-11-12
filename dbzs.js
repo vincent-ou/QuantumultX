@@ -9,8 +9,10 @@
         GET /shiftassistant/rs/skin/detail（doubi 10，皮肤碎片 0，400 豆币或 36 碎片）
         /skin/buy 实测服务器会校验余额（返回“豆币不足”/“皮肤碎片不足”），
         所以不改余额去买，而是直接把列表里的 userHave 改成 1，让 App 显示为已拥有。
+        点“使用”走 POST /skin/toggle，服务器校验拥有权（返回“用户无此皮肤使用权限”），
+        改写为成功（code 1）。头像框同理：/headerbox/toggle 改写为成功。
     改写：show/detail 里 userHave → 1；detail 里 doubi → 99999，skinPiece → 999；
-          buy 返回成功（code 1），供点购买时走通客户端流程。
+          buy/toggle 返回成功（code 1），供点购买/使用时走通客户端流程。
   头像框：GET /shiftassistant/rs/headerbox/show（20 个：4 个 200 豆币 + 活动专属 + 撑腰奖励）
     改写：全部 userHave → 1。
   豆币：/user/doubinum（10）与 /availableDoubi/show（13）→ 99999（仅显示用）。
@@ -45,6 +47,18 @@ try {
       obj.data.skinPiece = 999;
     }
   } else if (url.indexOf('/skin/buy') !== -1) {
+    obj.code = '1';
+    obj.msg = '';
+    obj.data = '';
+  } else if (url.indexOf('/skin/toggle') !== -1) {
+    obj.code = '1';
+    obj.msg = '';
+    obj.data = '';
+  } else if (url.indexOf('/headerbox/buy') !== -1) {
+    obj.code = '1';
+    obj.msg = '';
+    obj.data = '';
+  } else if (url.indexOf('/headerbox/toggle') !== -1) {
     obj.code = '1';
     obj.msg = '';
     obj.data = '';
