@@ -15,6 +15,9 @@
           buy/toggle 返回成功（code 1），供点购买/使用时走通客户端流程。
   头像框：GET /shiftassistant/rs/headerbox/show（20 个：4 个 200 豆币 + 活动专属 + 撑腰奖励）
     改写：全部 userHave → 1。
+    点“使用”可能走 /headerbox/toggle（与皮肤同结构）或 POST /user/headerbox
+    （该接口首次抓包时返回空 {"code":"1","msg":""}），两者都改写为成功。
+    注意：旧规则漏了 /user/headerbox（无尾斜杠，不匹配 headerbox\/），已补上。
   豆币：/user/doubinum（10）与 /availableDoubi/show（13）→ 99999（仅显示用）。
 注意：皮肤/头像框的“使用”是否需服务器再校验未知；若点“使用”后仍提示未拥有，
 请把那次的接口返回发我再调。
@@ -59,6 +62,10 @@ try {
     obj.msg = '';
     obj.data = '';
   } else if (url.indexOf('/headerbox/toggle') !== -1) {
+    obj.code = '1';
+    obj.msg = '';
+    obj.data = '';
+  } else if (url.indexOf('/user/headerbox') !== -1) {
     obj.code = '1';
     obj.msg = '';
     obj.data = '';

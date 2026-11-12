@@ -54,6 +54,10 @@ try {
     obj.code = '1';
     obj.msg = '';
     obj.data = '';
+  } else if (url.indexOf('/user/headerbox') !== -1) {
+    obj.code = '1';
+    obj.msg = '';
+    obj.data = '';
   } else if (url.indexOf('/headerbox/show') !== -1) {
     if (obj && Array.isArray(obj.data)) {
       obj.data.forEach(function (h) { h.userHave = 1; });
