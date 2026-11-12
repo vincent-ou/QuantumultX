@@ -1,14 +1,14 @@
 /*
 倒班助手抓包调试脚本（临时用，不解锁）
-用途：记录 open.daobanzhushou.cn 的接口 URL 和返回内容，原样放行。
+用途：记录 open.daobanzhushou.cn 与 h5.daobanzhushou.cn 的接口 URL 和返回内容，原样放行。
 跑完后把圈叉日志里 [dbzs-debug] 的那几行发给我，我再写解锁脚本。
 用完可删。
 
 [rewrite_local]
-^https?:\/\/open\.daobanzhushou\.cn\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/dbzs-debug.js
+^https?:\/\/(open|h5)\.daobanzhushou\.cn\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/dbzs-debug.js
 
 [mitm]
-hostname = open.daobanzhushou.cn
+hostname = open.daobanzhushou.cn, h5.daobanzhushou.cn
 */
 
 var url = $request.url;
