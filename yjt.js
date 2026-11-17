@@ -18,16 +18,16 @@ TG频道群：https://t.me/py996
 # 2026-11-18 修复：后端域名从 1jietu.com 换成 jietu6.com，老规则一条都命中不了；
 # 规则改成同时覆盖两个域名、全路径。/apiv2/user 在新域名上仍存在（POST 带参数，
 # 直接 GET 会返回 404），vip/group_id 改写仍生效，验证：会员去水印显示 已去水印。
-# 2026-11-18 新增：去掉更新提示框 —— /apiv2/version 返回最新版 1.2.2/122，
-# 本地版本低于它就弹窗；把版本号改成 0.0.1/0，App 认为已是最新，不再弹窗。
-# 2026-11-18 新增：去掉底部「钱包」入口 —— /apiv2/app 返回的开关里有
-# show_wallet_proxy:"1"，改成 "0" 试试能不能藏掉钱包入口；若 App 是写死原生
-# 底部栏则改写无效（同倒班助手「游乐场」的情况），只能作罢。
+# 2026-11-18 回退：把 /apiv2/version 伪造成 0.0.1/0 后，App 掉进精简模式——
+# 「我的」没了、首页很多功能消失（疑似 App/服务端按版本号给精简配置）；更新弹窗
+# 改用 reject 规则直接挡掉版本请求（见 snippet，reject 须排在改写规则前面），
+# 不再伪造版本号。藏钱包的 show_wallet_proxy 改写也一并撤掉，等恢复后再单独试。
 
 *******************************
 
 [rewrite_local]
 
+https://jietu6.com/apiv2/version url reject
 ^http[s]?:\/\/.*(1jietu|jietu6)\.com\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/yjt.js
 
 [mitm]
@@ -36,12 +36,5 @@ hostname = 1jietu.com, *.1jietu.com, jietu6.com, *.jietu6.com
 
 *******************************/
 
-var url = $request.url;
-var body = $response.body || "";
-if (url.indexOf("/apiv2/version") !== -1) {
-  body = '{"status":1,"info":{"version":"0.0.1","version_code":"0"}}';
-} else {
-  body = body.replace(/vip":"\d"/g, 'vip":"1"').replace(/group_id":"\d"/g, 'group_id":"3"')
-    .replace(/"show_wallet_proxy":"1"/g, '"show_wallet_proxy":"0"');
-}
+var body = $response.body.replace(/vip":"\d"/g, 'vip":"1"').replace(/group_id":"\d"/g, 'group_id":"3"');
 $done({ body });
