@@ -1,7 +1,6 @@
 /*
 麦片屏幕翻译 — 高级订阅
 
-原版：https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/maipianpingmufanyi-orig.js
 清理整理：Muse — 仅去作者推广，逻辑与数值与原版一致。
            高级订阅（level 3），无限次，到期 2099-09-09。
 
