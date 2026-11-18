@@ -1,3 +1,5 @@
+# 易截图2 — 规则（配合 yijietu.js 使用）
+# 下面这条 reject 挡更新弹窗，必须排在改写规则前面
 [rewrite_local]
 https://jietu6.com/apiv2/version url reject
 ^http[s]?:\/\/.*(1jietu|jietu6)\.com\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/yijietu.js
