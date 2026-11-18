@@ -1,10 +1,8 @@
 /*
 Picsew 拼图 — 标准版 & 专业版解锁
 
-原版：https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/XiaoMaoPicsew.js
-逻辑原版：https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/psw.js
-（逻辑原版是 sojson.v4 混淆，已还原；还原文件见 psw-decoded.js）
 清理整理：Muse — 仅去作者推广、加 bundle_id 保护，逻辑与数值与原版一致。
+           （逻辑原版是 sojson.v4 混淆，已还原。）
            拦截苹果 buy.itunes.apple.com/verifyReceipt，替换 receipt 为
            伪造的购买记录（Picsew Pro + 免费升级，到期 2222-02-02）。
            注意：
