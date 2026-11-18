@@ -1,7 +1,5 @@
-/**************************
+/*
 快对作业 — 会员 + PDF捕获 + 图片捕获
-
-仅供学习参考，请于下载后24小时内删除
 
 使用方法：
 1、QX > 右下角风车 > 重写 > 规则资源 > 引用以下脚本 > 打开资源解析器
@@ -21,4 +19,4 @@ https:\/\/apm\.zuoyebang\.com url script-response-body https://raw.githubusercon
 https:\/\/www\.kuaiduizuoye\.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/kuaidui.js
 https:\/\/apivip\.kuaiduizuoye\.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/kuaidui.js
 
-********************************/
+*/
