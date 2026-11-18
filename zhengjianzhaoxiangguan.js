@@ -2,7 +2,6 @@
 证件照相馆-美颜证件照&一寸证件照相机 — 永久会员
 软件版本：1.4.2
 
-原版：https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/zhengjianzhaoxiangguan-orig.js
 清理整理：Muse — 原版为 jsjiami 混淆，已还原。只改 VIP 相关字段；
            原版把 mobile/nickname 写成作者电报链接 (https://t.me/GieGie777)，
            已去掉，保留用户自己的手机号/昵称/头像/注册时间等身份字段。
