@@ -3,7 +3,7 @@
 软件版本：1.4.2
 
 清理整理：Muse — 原版为 jsjiami 混淆，已还原。只改 VIP 相关字段；
-           原版把 mobile/nickname 写成作者电报链接 (https://t.me/GieGie777)，
+           原版把 mobile/nickname 写成作者的电报链接，
            已去掉，保留用户自己的手机号/昵称/头像/注册时间等身份字段。
            VIP 到 2999-09-09。
 
