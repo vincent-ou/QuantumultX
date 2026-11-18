@@ -1,7 +1,6 @@
 /*
 白描 — 黄金会员
 
-原版：https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/baimiao-orig.js
 清理整理：Muse — 仅去作者推广、保用户身份，逻辑与数值与原版一致。
            appLaunchWithUser：写入黄金会员记录（deadline 2029-04-18），
            识别次数全部 -100（不限），翻译等额度按原版。
