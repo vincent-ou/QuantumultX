@@ -19,17 +19,19 @@ if (url.indexOf('/user/getinfo') !== -1) {
   // 用户信息：VIP 至 2099-01-01
   if (modified.data) {
     if (modified.data.saveMoney) {
-      modified.data.saveMoney.sumMoney = "510004015";
+      modified.data.saveMoney.sumMoney = "99999";
       modified.data.saveMoney.user_vip_tip = "有效期至：2099-01-01";
     }
+    // 用用户自己的 uid，不再写作者的 QQ
+    var realUid = (modified.data && (modified.data.uid || modified.data.userId || modified.data.user_id)) || 99999999;
     modified.data.vip = {
       "jiaoyu_vip_info": {
-        "uid": 510004015,
+        "uid": realUid,
         "is_vip": 1,
         "start_time": 1672502400,
         "end_time": 4070880000,
-        "pro_total": 510004015,
-        "remain_day": 510004015
+        "pro_total": 99999999,
+        "remain_day": 99999999
       }
     };
   }
