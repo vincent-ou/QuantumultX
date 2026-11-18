@@ -4,7 +4,7 @@
 hostname = api.ankianki.com
 
 [rewrite_local]
-https:\/\/api\.ankianki\.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/ksb.js
+https:\/\/api\.ankianki\.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/kaoshibao.js
 https:\/\/api\.ankianki\.com\/banner\/get url reject-200
 https:\/\/api\.ankianki\.com\/popupAd\/get url reject-200
 https:\/\/api\.ankianki\.com\/popup\/get url reject
