@@ -1,7 +1,6 @@
 /*
 一木记账 — 永久会员
 
-原版：https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/yimujizhang-orig.js
 清理整理：Muse — 仅做结构清理（加 result 空值保护、去作者推广），逻辑与数值与原版一致。
            会员到期 2099-09-09，vipType 2 = 永久会员。
 
