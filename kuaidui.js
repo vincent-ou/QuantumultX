@@ -6,7 +6,7 @@
            其它逻辑与原版一致。
            注意：原版有一处全局 false->true 的替换，保留原样。
 
-规则文件：KuaiDui.js（与本文件同传仓库）
+规则文件：KuaiDui.snippet（与本文件同传仓库）
 
 [rewrite_local]
 http:\/\/kd02-1253445850\.file\.myqcloud\.com\/scanimg url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/kuaidui.js
