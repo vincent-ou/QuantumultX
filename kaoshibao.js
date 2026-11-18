@@ -4,7 +4,7 @@
 清理整理：Muse — 基于小帽脚本，逻辑与数值与原版一致。
            userInfo：VIP 到 2222-02-02，各类额度改为 1000/10000，去广告。
            版本伪装：force 置 0、high_version 降到 0.0.1、版本字段改成 4.6.9
-             （4.6.9 上改返回值拦不住更新弹窗，实际靠 KaoShiBao.js 里
+             （4.6.9 上改返回值拦不住更新弹窗，实际靠 KaoShiBao.snippet 里
              拦掉 /system/checkUpdate 请求；伪装逻辑留作备用。）
            仅支持 4.6.9（最后一个能 MITM 的版本），4.7.0+ 已禁 MITM。
 
@@ -36,7 +36,7 @@ var obj = status
     )
   : $response.body;
 
-// 版本伪装（备用）：force 置 0，high_version 降到 0.0.1，版本字段改成 4.6.9；4.6.9 上实际靠 KaoShiBao.js 拦 checkUpdate 请求
+// 版本伪装（备用）：force 置 0，high_version 降到 0.0.1，版本字段改成 4.6.9；4.6.9 上实际靠 KaoShiBao.snippet 拦 checkUpdate 请求
 if (status) spoofVersion(obj);
 
 if (/^https:\/\/api\.ankianki\.com\/user\/userInfo\/get?/.test(requestUrl)) {
