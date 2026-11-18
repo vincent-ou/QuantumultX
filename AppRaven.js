@@ -1,8 +1,6 @@
 /*
 AppRaven — 解锁会员权限
 
-原版：https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/XiaoMaoAppRaven.js
-逻辑原版：https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/ar.js
 清理整理：Muse — 仅去作者推广，逻辑与数值与原版一致。
            拦截 appraven.net 的 GraphQL 接口，字符串替换：
              "premium":false → true（会员）
@@ -10,7 +8,7 @@ AppRaven — 解锁会员权限
              "loadAdsOnStartup":true → false（启动不加载广告）
              "adTimerEnabled":true → false（关广告计时）
              权限不足的提示文案换成一句玩笑（原版行为，保留）。
-           原版注明：已知内购限免无法显示。
+           注意：内购限免无法显示。
 
 [rewrite_local]
 https:\/\/appraven\.net\/appraven\/graphql url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/AppRaven.js
