@@ -1,8 +1,7 @@
 /*
 不挂科 (百度文库 App) — 解锁 VIP + 文档免费下载
 
-原版：https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/BuGuaKe.js
-清理整理：Muse — 仅做结构清理 (body 声明、加空值保护)，逻辑与数值与原版一致。
+清理整理：Muse — 仅做结构清理（body 声明、加空值保护），逻辑与数值与原版一致。
            VIP 到 2099-01-01；文档搜索去限制/去付费；下载文案清空。
 
 [rewrite_local]
