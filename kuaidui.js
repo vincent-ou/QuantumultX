@@ -1,11 +1,12 @@
-/*************************************
-项目名称：快对作业 — 会员解锁 + 图片/PDF 捕获
-清理整理：Muse — 去掉 Env 跨平台 boilerplate (只留 QX)，
+/*
+快对作业 — 会员解锁 + 图片/PDF 捕获
+
+清理整理：Muse — 去掉 Env 跨平台 boilerplate（只留 QX），
            到期时间由原版已过期的 2024-10-15 改为 2099-09-09，
            其它逻辑与原版一致。
            注意：原版有一处全局 false->true 的替换，保留原样。
 
-规则文件：KuaiDui.js (与本文件同传仓库)
+规则文件：KuaiDui.js（与本文件同传仓库）
 
 [rewrite_local]
 http:\/\/kd02-1253445850\.file\.myqcloud\.com\/scanimg url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/kuaidui.js
@@ -15,7 +16,8 @@ https:\/\/apivip\.kuaiduizuoye\.com url script-response-body https://raw.githubu
 
 [mitm]
 hostname = kd02-1253445850.file.myqcloud.com, apivip.kuaiduizuoye.com, apm.zuoyebang.com, www.kuaiduizuoye.com
-*************************************/
+*/
+
 
 var requestUrl = $request.url;
 
