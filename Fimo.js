@@ -1,23 +1,24 @@
-/*************************************
-项目名称：Fimo-复古胶片相机
-原版作者：@ddm1023 (chxm1023/Rewrite, 2025-01-16, jsjiami.com.v5 加密)
-解密整理：Muse — 已解密验证，去除 BoxJS 开关与反调试代码
+/*
+Fimo — 复古胶片相机
+
+原版作者：@ddm1023（2025-01-16，jsjiami v5 加密，已解密）
+解密整理：Muse — 已解密验证，去除 BoxJS 开关与反调试代码。
            原版的 BoxJS 开关包在 if(typeof $rocket!=="undefined") 里，
            $rocket 是 Shadowrocket 的全局变量，QX 里不存在，
            所以在 QX 下那个开关本来就不生效，解锁是无条件执行的。
-
-解锁内容(已验证)：
-  - user 接口：全部胶片 pay -> sync；subscribe 设为 valid + forever + 到期 2099-09-09
-  - apple/certificate：伪造一张 2099-09-09 到期的收据 (fimopro_1, PURCHASED)
-  - config：去掉"新用户抽奖活动"横幅
-  - startPopConfig：清空启动弹窗配置
+           解锁内容（已验证）：
+             - user 接口：全部胶片 pay -> sync；subscribe 设为 valid + forever + 到期 2099-09-09
+             - apple/certificate：伪造一张 2099-09-09 到期的收据（fimopro_1, PURCHASED）
+             - config：去掉“新用户抽奖活动”横幅
+             - startPopConfig：清空启动弹窗配置
 
 [rewrite_local]
 ^https?:\/\/fimo\.appfimo\.com\/fimo-.*\/(user|apple\/certificate|config|startPopConfig|filmAll) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Fimo.js
 
 [mitm]
 hostname = fimo.appfimo.com
-*************************************/
+*/
+
 
 var ddm = JSON.parse($response.body);
 var url = $request.url;
