@@ -1,7 +1,7 @@
 /*
 Fimo — 复古胶片相机
 
-原版作者：@ddm1023（2025-01-16，jsjiami v5 加密，已解密）
+原版为 jsjiami v5 加密（2025-01-16），已解密还原
 解密整理：Muse — 已解密验证，去除 BoxJS 开关与反调试代码。
            原版的 BoxJS 开关包在 if(typeof $rocket!=="undefined") 里，
            $rocket 是 Shadowrocket 的全局变量，QX 里不存在，
@@ -72,7 +72,6 @@ if (/fimo-user\/apple\/certificate/.test(url)) {
   };
   ddm.receipt = ddm.receipt || {};
   ddm.receipt.in_app = [data];
-  ddm.latest_receipt = "ddm1023";
   ddm.latest_receipt_info = [Object.assign({}, data, { subscription_group_identifier: "20919732" })];
   ddm.pending_renewal_info = [{
     product_id: "fimopro_1",
