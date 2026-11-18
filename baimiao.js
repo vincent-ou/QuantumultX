@@ -7,10 +7,10 @@
            getAnnouncement / checkLoginClient：清空返回（去公告/去登录提示）。
            注意：原版是 2023-12-05 的旧脚本，接口可能已变，未实测。
            去掉的作者推广：
-             - 头像被改成作者的 ddm.png（large/small/medium/avatar）→ 已删，保留用户自己头像
-             - 昵称被改成“叮当猫の分享频道”→ 已删，保留用户自己昵称
-             - id 被改成作者的 45038072 → 已删，保留用户自己 id
-             - bindings 被改成作者的绑定（username“叮当猫”、token“ddm1023”）→ 已删，保留用户自己绑定
+             - 头像被改成作者的头像（large/small/medium/avatar）→ 已删，保留用户自己头像
+             - 昵称被改成作者的频道名 → 已删，保留用户自己昵称
+             - id 被改成作者的 id → 已删，保留用户自己 id
+             - bindings 被改成作者的绑定（username、token 都被换成作者的）→ 已删，保留用户自己绑定
            VIP 记录与识别额度里的 userId 改为从真实返回里取用户自己的 id。
 
 [rewrite_local]
