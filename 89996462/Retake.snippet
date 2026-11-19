@@ -1,0 +1,7 @@
+# Retake AI照片修复 — 规则（配合 retake.js 使用）
+[rewrite_local]
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/retake.js
+
+[mitm]
+
+hostname = buy.itunes.apple.com
