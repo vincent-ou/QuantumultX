@@ -1,4 +1,6 @@
 /* 车票票 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽车票票，权益与产品与合集一致
  * 权益 vip+watch_vip，产品 eticket_with_watch_life_a（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 %E8%BD%A6%E7%A5%A8%E7%A5%A8 的请求（车票票），不影响其他 App
