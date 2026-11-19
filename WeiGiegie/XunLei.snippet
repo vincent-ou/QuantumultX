@@ -1,0 +1,8 @@
+# 迅雷 — 规则（配合 xunlei.js 使用）
+[rewrite_local]
+# >迅雷
+^http://adapi\.izuiyou\.com url reject
+^https?://api-shoulei-ssl\.xunlei\.com/flowhub/v1/slots:batchGet url reject
+^https?://\*xunlei\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xunlei.js
+[mitm]
+hostname = *xunlei.com,api-shoulei-ssl.xunlei.com
