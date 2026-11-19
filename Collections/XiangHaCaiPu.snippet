@@ -1,0 +1,7 @@
+# 香哈菜谱 — 规则（配合 xianghacaipu.js 使用）
+
+[rewrite_local]
+^https?:\/\/api.*\.xiangha\.com\/.+\/([Uu]ser\/(getUserData|info)|pay\/home|dish|home\/getUser|school) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/xianghacaipu.js
+
+[mitm]
+hostname = *.xiangha.com
