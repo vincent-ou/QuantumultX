@@ -1,0 +1,6 @@
+# MP3转换助手 — 规则（配合 mp3zhuanhuanzhushou.js 使用）
+[rewrite_local]
+^https?:\/\/audio.xinmengma.com\/api\/user url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/mp3zhuanhuanzhushou.js
+
+[mitm]
+hostname = audio.xinmengma.com
