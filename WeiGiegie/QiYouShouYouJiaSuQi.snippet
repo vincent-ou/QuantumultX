@@ -1,0 +1,8 @@
+# 奇游手游加速器 — 规则（配合 qiyoushouyoujiasuqi.js 使用）
+[rewrite_local]
+# >奇游手游加速器
+^https?://api\.qiyou\.cn/api/common_bll/v1/client_advertisements url reject
+^https?://api\.qiyou\.cn/api/common_bll/adv url reject-dict
+^https?://api\.qiyou\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/qiyoushouyoujiasuqi.js
+[mitm]
+hostname = api.qiyou.cn,apifast.qiyou.cn
