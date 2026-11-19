@@ -1,0 +1,7 @@
+# 网速测速大师 — 规则（配合 wangsucesudashi.js 使用）
+
+[rewrite_local]
+^https?:\/\/iap\.etm\.tech\/receipts url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/wangsucesudashi.js
+
+[mitm]
+hostname = iap.etm.tech
