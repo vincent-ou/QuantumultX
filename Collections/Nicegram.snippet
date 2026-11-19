@@ -1,0 +1,6 @@
+# Nicegram — 规则（配合 Nicegram.js 使用）
+[rewrite_local]
+^https?:\/\/(nicegram\.cloud\/api\/v\d\/(user\/info|unblock-feature\/get-settings)|restore-access\.indream\.app\/restoreAccess|api\.mbrx\.app\/v\d\/purchase\/ios\/transaction) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Nicegram.js
+
+[mitm]
+hostname = nicegram.cloud, restore-access.indream.app, api.mbrx.app
