@@ -1,0 +1,6 @@
+# Tripsy — 规则（配合 Tripsy.js 使用）
+[rewrite_local]
+^https?:\/\/firstclass\.tripsy\.app\/api\/v\d\/receipt\/update url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Tripsy.js
+
+[mitm]
+hostname = firstclass.tripsy.app
