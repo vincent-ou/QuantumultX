@@ -1,0 +1,6 @@
+# LuckPik — 规则（配合 LuckPik.js 使用）
+[rewrite_local]
+^https?:\/\/front-gw.luckpik.com\/productAuthorizeService\/user\/auth\/query\/allAuthSimple url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/LuckPik.js
+
+[mitm]
+hostname = front-gw.luckpik.com
