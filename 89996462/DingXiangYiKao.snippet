@@ -1,0 +1,6 @@
+# DingXiangYiKao — 规则（配合 dingxiangyikao.js 使用）
+[rewrite_local]
+^http[s]?:\/\/exam.dxy.cn url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/dingxiangyikao.js
+
+[mitm]
+hostname = exam.dxy.cn
