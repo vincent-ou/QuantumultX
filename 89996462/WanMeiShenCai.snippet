@@ -1,0 +1,6 @@
+# 完美身材 — 规则（配合 wanmeishencai.js 使用）
+[rewrite_local]
+^http[s]?:\/\/fbapi.meetboxs.com\/api\/v1\/user\/account\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/wanmeishencai.js
+
+[mitm]
+hostname = fbapi.meetboxs.com
