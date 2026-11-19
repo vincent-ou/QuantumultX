@@ -1,6 +1,6 @@
-# OneTap — 规则（配合 onetap.js 使用）
+# OneTap — 规则（配合 OneTap.js 使用）
 [rewrite_local]
-^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Reheji/onetap.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Reheji/OneTap.js
 
 [mitm]
 hostname = api.revenuecat.com, api.rc-backup.com
