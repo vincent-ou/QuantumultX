@@ -1,0 +1,8 @@
+# 芒果TV — 规则（配合 mangguotv.js 使用）
+[rewrite_local]
+^http[s]?:\/\/mobile\.api\.mgtv\.com\/v[0-9]\/(playlist|video\/album|video\/relative|video\/list).*$ url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/mangguotv.js
+^https?:\/\/.*mgtv\.com\/(v\d+\/(video\/getSource|module\/list)|GetUserInfo|entrance\/home) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/mangguotv.js
+
+[mitm]
+
+hostname = *.mgtv.com
