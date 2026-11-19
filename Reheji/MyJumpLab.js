@@ -1,4 +1,6 @@
 /* My Jump Lab — RevenueCat 订阅解锁（单独版）
+ * 原作者：ddgksf2013
+ * 适配版本：未注明
  * 清理整理：Muse — 从 ddgksf2013 RevenueCat 映射单抽My Jump Lab，权益与产品与映射一致
  * 权益 lifetime，产品 lifetime（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 My Jump Lab 的请求（My Jump Lab），不影响其他 App
