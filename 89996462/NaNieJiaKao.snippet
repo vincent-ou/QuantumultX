@@ -1,0 +1,6 @@
+# 拿捏驾考 — 规则（配合 naniejiakao.js 使用）
+[rewrite_local]
+^http[s]?:\/\/nanie.flyingeffect.com\/api\/me\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/naniejiakao.js
+
+[mitm]
+hostname = nanie.flyingeffect.com
