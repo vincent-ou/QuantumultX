@@ -1,0 +1,6 @@
+# 视频图片编辑套装 — 规则（配合 shipintupianbianjitaozhuang.js 使用）
+[rewrite_local]
+^https?:\/\/.*\.vlognow\.me\/.*-pay\/api\/v\d\/(user\/subscriptions|public\/iap\/receipt\/status) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/shipintupianbianjitaozhuang.js
+
+[mitm]
+hostname = *.vlognow.me
