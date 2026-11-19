@@ -1,0 +1,6 @@
+# iNotes私密备忘录 — 规则（配合 inotessimibeiwanglu.js 使用）
+[rewrite_local]
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Reheji/inotessimibeiwanglu.js
+
+[mitm]
+hostname = api.revenuecat.com, api.rc-backup.com
