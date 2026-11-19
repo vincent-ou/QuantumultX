@@ -1,0 +1,6 @@
+# 人人视频 — 规则（配合 renrenshipin.js 使用）
+[rewrite_local]
+^https?:\/\/api\.(hujuvod\.com|qwapp\.top)\/(user\/personal\/information|app\/drama\/page) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/renrenshipin.js
+
+[mitm]
+hostname = api.hujuvod.com, api.qwapp.top
