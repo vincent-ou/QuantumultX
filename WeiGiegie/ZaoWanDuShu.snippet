@@ -1,0 +1,6 @@
+# 早晚读书 — 规则（配合 zaowandushu.js 使用）
+[rewrite_local]
+# > 早晚读书vip+付费课程、有声书、vip电子书,付费书
+^https?://api\.zaowandushu\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/zaowandushu.js
+[mitm]
+hostname = api.zaowandushu.com
