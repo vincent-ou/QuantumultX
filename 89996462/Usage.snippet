@@ -1,0 +1,7 @@
+# Usage System — 规则（配合 Usage.js 使用）
+[rewrite_local]
+^https:\/\/api\.revenuecat\.com\/v1\/subscribers.+ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/Usage.js
+
+[mitm]
+
+hostname = api.revenuecat.com
