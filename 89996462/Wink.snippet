@@ -1,0 +1,7 @@
+# Wink — 规则（配合 Wink.js 使用）
+[rewrite_local]
+^https:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/Wink.js
+
+[mitm]
+
+hostname = api-*.meitu.com
