@@ -1,0 +1,6 @@
+# 去刷短剧 — 规则（配合 qushuaduanju.js 使用）
+[rewrite_local]
+# > 去刷短剧 vip
+^https?://qs\.szqibu\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/qushuaduanju.js
+[mitm]
+hostname = qs.szqibu.cn
