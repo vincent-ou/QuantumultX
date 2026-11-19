@@ -1,0 +1,7 @@
+# 堆糖 — 规则（配合 duitang.js 使用）
+
+[rewrite_local]
+^https?:\/\/.*\.duitang\.com\/napi url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/duitang.js
+
+[mitm]
+hostname = *.duitang.com
