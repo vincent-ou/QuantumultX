@@ -1,0 +1,6 @@
+# Dofm — 规则（配合 dofm.js 使用）
+[rewrite_local]
+^http[s]?:\/\/api.cikelink.com\/fm\/v2\/fm\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/dofm.js
+
+[mitm]
+hostname = api.cikelink.com
