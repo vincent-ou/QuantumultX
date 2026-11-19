@@ -1,0 +1,6 @@
+# 面包FM — 规则（配合 mianbaofm.js 使用）
+[rewrite_local]
+^https?:\/\/wx.voxpie.com\/api\/(fmapp_bookinfo|fmapp_user).*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/mianbaofm.js
+
+[mitm]
+hostname = wx.voxpie.com
