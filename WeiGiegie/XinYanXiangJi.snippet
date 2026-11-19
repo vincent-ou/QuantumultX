@@ -1,0 +1,7 @@
+# 新颜相机 — 规则（配合 xinyanxiangji.js 使用）
+[rewrite_local]
+# > 新颜相机-ai照片创意工坊
+^https://yixiu\.tuanduixiangce\.com/api/v1/ad/config url reject
+^https?://yixiu\.tuanduixiangce\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xinyanxiangji.js
+[mitm]
+hostname = yixiu.tuanduixiangce.com
