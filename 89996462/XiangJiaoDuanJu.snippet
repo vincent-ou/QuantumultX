@@ -1,0 +1,6 @@
+# XiangJiaoDuanJu — 规则（配合 xiangjiaoduanju.js 使用）
+[rewrite_local]
+^http[s]?:\/\/8.149.129.124/api/account/v1 url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/xiangjiaoduanju.js
+
+[mitm]
+hostname = 8.149.129.124
