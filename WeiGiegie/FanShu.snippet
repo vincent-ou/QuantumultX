@@ -1,0 +1,6 @@
+# 帆书 — 规则（配合 fanshu.js 使用）
+[rewrite_local]
+^https?:\/\/.+dushu365.com\/(sns-orchestration-system\/homePage\/api\/v100\/myPage|smart-orch\/program|smart-orch\/course\/v100\/info|innovation-orchestration\/api\/ebook\/v100\/ebookInfo) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/fanshu.js
+
+[mitm]
+hostname = .dushu365.com,gw2.dushu365.com,gw1.dushu365.com
