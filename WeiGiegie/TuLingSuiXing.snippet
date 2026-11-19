@@ -1,0 +1,6 @@
+# 途灵随行 — 规则（配合 tulingsuixing.js 使用）
+[rewrite_local]
+# >途灵随行—情侣定位家庭位置共享（永久会员）
+^https?://locnew\-api\.shoujicad\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/tulingsuixing.js
+[mitm]
+hostname = locnew-api.shoujicad.com
