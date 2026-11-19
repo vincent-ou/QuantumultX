@@ -1,0 +1,6 @@
+# 计步器 StepsApp — 规则（配合 jibuqistepsapp.js 使用）
+[rewrite_local]
+# >计步器 StepsApp（恢复购买）
+^https?://api\.revenuecat\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/jibuqistepsapp.js
+[mitm]
+hostname = api.revenuecat.com
