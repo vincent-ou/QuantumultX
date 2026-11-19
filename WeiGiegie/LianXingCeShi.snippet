@@ -1,0 +1,6 @@
+# 脸型测试 — 规则（配合 lianxingceshi.js 使用）
+[rewrite_local]
+^https?:\/\/app.faxingwu.com\/index.php\/(face\/(user\/checkVip|login\/getUserInfo2)|v1\/mt\/appfacebookdesign).*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/lianxingceshi.js
+
+[mitm]
+hostname = app.faxingwu.com
