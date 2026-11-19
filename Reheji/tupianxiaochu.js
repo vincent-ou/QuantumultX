@@ -1,4 +1,6 @@
 /* 图片消除 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽图片消除，权益与产品与合集一致
  * 权益 Pro，产品 com.skysoft.removalfree.subscription.newyearly（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 com.skysoft.removalfree 的请求（图片消除），不影响其他 App
