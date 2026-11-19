@@ -1,4 +1,6 @@
 /* Fonts — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽Fonts，权益与产品与合集一致
  * 权益 fonts_premium，产品 lifetime（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 Themy 的请求（Fonts），不影响其他 App
