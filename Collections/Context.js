@@ -1,4 +1,7 @@
-/* Context — RevenueCat 订阅解锁（plus，context_1y，年付，到期 2099-09-09） / 清理整理：Muse — 去作者推广与原版链接，变量名中性化，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = rc.visionarytech.ltd */
+/* Context — RevenueCat 订阅解锁（plus，context_1y，年付，到期 2099-09-09）
+ * 原作者：chxm1023
+ * 适配版本：未注明
+ * 清理整理：Muse — 去作者推广与原版链接，变量名中性化，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = rc.visionarytech.ltd */
 
 const ddm = {};
 const obj = JSON.parse(typeof $response != "undefined" && $response.body || null);
