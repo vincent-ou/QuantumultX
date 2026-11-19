@@ -1,4 +1,6 @@
 /* 目标地图 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽目标地图，权益与产品与合集一致
  * 权益 pro，产品 com.happydogteam.relax.lifetimePro（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 %E7%9B%AE%E6%A0%87%E5%9C%B0%E5%9B%BE 的请求（目标地图），不影响其他 App
