@@ -1,0 +1,6 @@
+# 666书友会 — 规则（配合 666shuyouhui.js 使用）
+[rewrite_local]
+https?:\/\/app.666syh.com\/cloud\/api-(mall\/book\/(online\/getOnlineLearnDel|book\/getVideoDel)|member\/user\/memberDetail).*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/666shuyouhui.js
+
+[mitm]
+hostname = app.666syh.com
