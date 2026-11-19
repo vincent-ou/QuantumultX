@@ -1,0 +1,6 @@
+# 千变语言 — 规则（配合 qianbianyuyan.js 使用）
+[rewrite_local]
+# >千变语言（永久会员）
+^https?://www\.helloshiyu\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/qianbianyuyan.js
+[mitm]
+hostname = www.helloshiyu.com
