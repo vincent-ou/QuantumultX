@@ -1,0 +1,5 @@
+# 且听 — 规则（配合 qieting.js 使用）
+[rewrite_local]
+^https?://.*\.erduoshuku\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/qieting.js
+[mitm]
+hostname = *.erduoshuku.cn
