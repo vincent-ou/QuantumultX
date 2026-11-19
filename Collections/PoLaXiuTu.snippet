@@ -1,0 +1,6 @@
+# 泼辣修图 — 规则（配合 polaxiutu.js 使用）
+[rewrite_local]
+^https?:\/\/api\.polaxiong\.com\/.+\/payments\/(profiles\/.+\/subscription|appleiap\/receipts\/confirmation) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/polaxiutu.js
+
+[mitm]
+hostname = api.polaxiong.com
