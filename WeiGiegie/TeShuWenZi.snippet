@@ -1,0 +1,6 @@
+# 特殊文字 — 规则（配合 teshuwenzi.js 使用）
+[rewrite_local]
+# >特殊文字-特殊字体转换app（永久会员）
+^https?://fancytext\.ycase\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/teshuwenzi.js
+[mitm]
+hostname = fancytext.ycase.cn
