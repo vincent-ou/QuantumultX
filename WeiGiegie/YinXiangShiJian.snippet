@@ -1,0 +1,6 @@
+# 印象时间 — 规则（配合 yinxiangshijian.js 使用）
+[rewrite_local]
+# >印象时间（永久会员）
+^https?://app\.yinxiang\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yinxiangshijian.js
+[mitm]
+hostname = app.yinxiang.com
