@@ -1,4 +1,7 @@
-/* 泼辣修图 — 解锁会员 / 清理整理：Muse — 原版为 jsjiami 混淆，已在 Node 沙箱执行验证并还原为明文逻辑；去作者推广，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = api.polaxiong.com */
+/* 泼辣修图 — 解锁会员
+ * 原作者：chxm1023
+ * 适配版本：未注明
+ * 清理整理：Muse — 原版为 jsjiami 混淆，已在 Node 沙箱执行验证并还原为明文逻辑；去作者推广，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = api.polaxiong.com */
 
 var obj = null;
 if ($request.url.indexOf("confirmation") != -1) {
