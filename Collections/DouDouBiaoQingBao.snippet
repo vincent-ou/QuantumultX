@@ -1,0 +1,6 @@
+# 逗逗表情包 — 规则（配合 doudoubiaoqingbao.js 使用）
+[rewrite_local]
+^https?:\/\/www\.dbbqb\.com\/api\/(refresh\/token|login|sms\/register|user\/expire|orderForm) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/doudoubiaoqingbao.js
+
+[mitm]
+hostname = www.dbbqb.com
