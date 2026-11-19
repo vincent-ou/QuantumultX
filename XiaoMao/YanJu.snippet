@@ -1,0 +1,8 @@
+# 言橘 — 规则（配合 yanju.js 使用）
+
+[rewrite_local]
+http:\/\/.+.wscreativity\.com\/yanju\/.+\.(jpg|png) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/yanju.js
+https:\/\/yanju63resapi\.wscreativity\.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/yanju.js
+
+[mitm]
+hostname = *.wscreativity.com
