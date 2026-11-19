@@ -1,0 +1,7 @@
+# 天天短剧 — 规则（配合 tiantianduanju.js 使用）
+[rewrite_local]
+# >天天短剧
+^https?://api\.maibiq\.top/center-system/app-api/v1/banner/list url reject-dict
+^https?://api\.maibiq\.top/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/tiantianduanju.js
+[mitm]
+hostname = api.maibiq.top
