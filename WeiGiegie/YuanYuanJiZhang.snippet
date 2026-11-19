@@ -1,0 +1,6 @@
+# 元元记账 — 规则（配合 yuanyuanjizhang.js 使用）
+[rewrite_local]
+# > 元元记账-ai极速语音记账
+^https?://gs\.gateway\.gameley\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yuanyuanjizhang.js
+[mitm]
+hostname = gs.gateway.gameley.cn
