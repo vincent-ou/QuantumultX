@@ -1,4 +1,6 @@
 /* StayOff — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽StayOff，权益与产品与合集一致
  * 权益 Plus，产品 so_lt_1299（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 StayOff 的请求（StayOff），不影响其他 App
