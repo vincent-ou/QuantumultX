@@ -1,6 +1,6 @@
 # 这两个配置能解锁的 App 清单
 
-来源：RevenueCat 合集（Reheji，433 个 App）及 ddgksf2013 补充的 76 个 App，共 509 个。`iTunes.conf` 是通用的收据伪造，没有固定清单，见文末说明。
+来源：RevenueCat 合集（Reheji，433 个 App）及 ddgksf2013 补充的 75 个 App，共 508 个。`iTunes.conf` 是通用的收据伪造，没有固定清单，见文末说明。
 
 类型：终身 = 到期写 null（不过期）；年付 = 到期写 2099-09-09；其他 = 合集里的特殊订阅。
 链接点开是 App Store 搜索，直接搜到对应 App。
@@ -267,7 +267,7 @@
 - [NeatNook](https://apps.apple.com/cn/search?term=NeatNook)
 - [Dedupe](https://apps.apple.com/cn/search?term=Dedupe)
 
-## 年付（200 个）
+## 年付（199 个）
 
 - [VSCO](https://apps.apple.com/cn/search?term=VSCO) — VSCO-照片与视频编辑
 - [灵活计算器](https://apps.apple.com/cn/search?term=%E7%81%B5%E6%B4%BB%E8%AE%A1%E7%AE%97%E5%99%A8)
@@ -449,7 +449,6 @@
 - [ScientificCalculator](https://apps.apple.com/cn/search?term=ScientificCalculator)
 - [1LemonKeepAccounts](https://apps.apple.com/cn/search?term=1LemonKeepAccounts)
 - [To Me](https://apps.apple.com/cn/search?term=To%20Me)
-- [言外筆記](https://apps.apple.com/cn/search?term=%E8%A8%80%E5%A4%96%E7%AD%86%E8%A8%98)
 - [Budget Flow](https://apps.apple.com/cn/search?term=Budget%20Flow)
 - [G E I S T](https://apps.apple.com/cn/search?term=G%20E%20I%20S%20T)
 - [FaceMa](https://apps.apple.com/cn/search?term=FaceMa)
