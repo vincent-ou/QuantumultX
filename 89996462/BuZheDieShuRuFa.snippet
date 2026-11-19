@@ -1,0 +1,6 @@
+# 不折叠输入法 — 规则（配合 buzhedieshurufa.js 使用）
+[rewrite_local]
+^http[s]?:\/\/api.keyboard.buzhedie.com\/input\/member_info\/ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/buzhedieshurufa.js
+
+[mitm]
+hostname = api.keyboard.buzhedie.com
