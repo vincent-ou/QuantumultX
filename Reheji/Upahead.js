@@ -1,4 +1,6 @@
 /* upahead — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽upahead，权益与产品与合集一致
  * 权益 Pro access，产品 com.smartitfarmer.MakeUpAssistant.UNLIMITED（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 %E5%87%B9%E5%87%B8%E5%95%A6%E6%9F%A5%E5%A6%86 的请求（upahead），不影响其他 App
