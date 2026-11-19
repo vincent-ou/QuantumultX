@@ -1,0 +1,7 @@
+# 哔哩哔哩 — 规则（配合 bilibili.js 使用）
+[rewrite_local]
+^http[s]?:\/\/((app|api)\.(\w{2,15})?\.(com|cn)).*player\.(v3|v2|v1).Play(URL|View).*$ url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/bilibili.js
+
+[mitm]
+
+hostname = *.biliapi.*, *.bilibili.*
