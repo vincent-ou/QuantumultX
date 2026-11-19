@@ -1,0 +1,6 @@
+# 小荷听书 — 规则（配合 xiaohetingshu.js 使用）
+[rewrite_local]
+# > 小荷听书 解锁vip，付费
+^https?://xiaohe\.sjs\.com\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xiaohetingshu.js
+[mitm]
+hostname = xiaohe.sjs.com.cn
