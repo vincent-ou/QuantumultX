@@ -1,0 +1,9 @@
+/* 好事发生 — 解锁订阅
+ * 原作者：89996462
+ * 适配版本：2.0
+ * 清理整理：Muse — 还原 jsjiami/sojson 混淆为明文，去作者推广信息（变量名仍为还原后的 _0x 命名），逻辑与数值与原版一致
+ * [rewrite_local]
+ * [mitm] hostname = api.revenuecat.com
+ */
+
+var obj=JSON['parse']($response["body"]);var _0x86e0ba={};_0x86e0ba["unsubscribe_detected_at"]=null;_0x86e0ba["expires_date"]='2099-11-22T13:41:30Z';_0x86e0ba["is_sandbox"]=![];_0x86e0ba["refunded_at"]=null;_0x86e0ba["auto_resume_date"]=null;_0x86e0ba["grace_period_expires_date"]=null;_0x86e0ba["period_type"]='trial';_0x86e0ba["purchase_date"]='2022-11-15T13:41:30Z';_0x86e0ba["billing_issues_detected_at"]=null;_0x86e0ba["ownership_type"]="PURCHASED";_0x86e0ba["store"]="app_store";_0x86e0ba["original_purchase_date"]="2022-11-15T13:41:31Z";var _0x575f6f={};_0x575f6f['goodhappens_basic_forever']=_0x86e0ba;var _0x26a1e1={};_0x26a1e1["expires_date"]="2099-11-22T13:41:30Z";_0x26a1e1["purchase_date"]="2022-11-15T13:41:30Z";_0x26a1e1["product_identifier"]="goodhappens_basic_forever";_0x26a1e1["grace_period_expires_date"]=null;var _0x367255={};_0x367255["pro"]=_0x26a1e1;var _0x3fc9cf={};_0x3fc9cf["last_seen"]="2022-11-15T13:37:45Z";_0x3fc9cf["first_seen"]="2022-11-15T13:37:45Z";_0x3fc9cf["original_application_version"]='12';_0x3fc9cf["other_purchases"]={};_0x3fc9cf["management_url"]="https://apps.apple.com/account/subscriptions";_0x3fc9cf["subscriptions"]=_0x575f6f;_0x3fc9cf["entitlements"]=_0x367255;_0x3fc9cf["original_purchase_date"]='2022-11-15T13:36:14Z';_0x3fc9cf["original_app_user_id"]='$RCAnonymousID:634bd7bc33e2403d90bdaf9bd4f5ef69';_0x3fc9cf["non_subscriptions"]={};var _0x413915={};_0x413915["request_date_ms"]=0x1847b867871;_0x413915["request_date"]="2022-11-15T13:42:01Z";_0x413915["subscriber"]=_0x3fc9cf;obj=_0x413915;var _0x50f628={};_0x50f628["body"]=JSON["stringify"](obj);$done(_0x50f628);
