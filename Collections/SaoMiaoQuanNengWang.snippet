@@ -1,0 +1,7 @@
+# 扫描全能王 — 规则（配合 saomiaoquannengwang.js 使用）
+
+[rewrite_local]
+^https?:\/\/.*\.(intsig\.net|camscanner\.com) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/saomiaoquannengwang.js
+
+[mitm]
+hostname = *.camscanner.com, *.intsig.net
