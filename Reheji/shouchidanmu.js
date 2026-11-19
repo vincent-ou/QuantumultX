@@ -1,4 +1,6 @@
 /* 手持弹幕 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽手持弹幕，权益与产品与合集一致
  * 权益 Pro access，产品 com.tech.LedScreen.VIPALL（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 %E6%89%8B%E6%8C%81%E5%BC%B9%E5%B9%95 的请求（手持弹幕），不影响其他 App
