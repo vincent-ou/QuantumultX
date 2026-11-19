@@ -1,0 +1,7 @@
+# AdGuard — 规则（配合 AdGuard.js 使用）
+
+[rewrite_local]
+^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/AdGuard.js
+
+[mitm]
+hostname = mobile-api.adguard.org
