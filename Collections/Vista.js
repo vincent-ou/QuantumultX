@@ -1,4 +1,7 @@
-/* Vista — 解锁 VIP / 清理整理：Muse — 去作者推广（作者 handle/Telegram/原版链接/短链）、去作者身份写入，保留用户自己身份字段，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = open3.vistastory.com */
+/* Vista — 解锁 VIP
+ * 原作者：chxm1023
+ * 适配版本：未注明
+ * 清理整理：Muse — 去作者推广（作者 handle/Telegram/原版链接/短链）、去作者身份写入，保留用户自己身份字段，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = open3.vistastory.com */
 
 var obj = JSON.parse($response.body);
 const subscription = {      "userId" : 666666,      "beginTime" : 1666666666666,      "id" : 188888,      "endTime" : 4092599349000,      "createTimeFormat" : "2022-10-25 10:57:46",      "createTime" : 1666666666666,      "isActive" : 1    };
