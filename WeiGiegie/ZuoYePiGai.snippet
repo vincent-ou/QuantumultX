@@ -1,0 +1,6 @@
+# 作业批改 — 规则（配合 zuoyepigai.js 使用）
+[rewrite_local]
+# >作业批改-家长辅导作业工具（永久会员）
+^https?://appss\.rhinoxlab\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/zuoyepigai.js
+[mitm]
+hostname = appss.rhinoxlab.com
