@@ -1,0 +1,7 @@
+# 熊猫睡眠 — 规则（配合 xiongmaoshuimian.js 使用）
+[rewrite_local]
+^http[s]?:\/\/sleep.navolove.com\/api\/refresh_user_info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/xiongmaoshuimian.js
+
+[mitm]
+
+hostname = sleep.navolove.com
