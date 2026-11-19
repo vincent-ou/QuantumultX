@@ -1,0 +1,6 @@
+# picma — 规则（配合 picma.js 使用）
+[rewrite_local]
+# >picma - ai照片修复上色，找回你我当年回忆
+^https?://api\.magictiger\.ai/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/picma.js
+[mitm]
+hostname = api.magictiger.ai
