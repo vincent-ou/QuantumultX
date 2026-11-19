@@ -1,0 +1,7 @@
+# 网速管家 — 规则（配合 wangsuguanjia.js 使用）
+
+[rewrite_local]
+^https?:\/\/api.*\.speedtest\.cn\/user\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/wangsuguanjia.js
+
+[mitm]
+hostname = api*.speedtest.cn
