@@ -1,0 +1,6 @@
+# 中医方剂 — 规则（配合 zhongyifangji.js 使用）
+[rewrite_local]
+# >中医方剂（解锁会员）
+^https?://medicine\-books\.meappstore\.top/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/zhongyifangji.js
+[mitm]
+hostname = medicine-books.meappstore.top
