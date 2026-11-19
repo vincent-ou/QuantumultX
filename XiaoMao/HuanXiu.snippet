@@ -1,0 +1,8 @@
+# 幻休 — 规则（配合 huanxiu.js 使用）
+
+[rewrite_local]
+https:\/\/api\.shaolinzen\.com\/user\/v1\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/huanxiu.js
+https:\/\/api\.shaolinzen\.com\/system\/v1\/mime url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/huanxiu.js
+
+[mitm]
+hostname = api.shaolinzen.com
