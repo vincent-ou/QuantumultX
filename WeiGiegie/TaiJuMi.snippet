@@ -1,0 +1,6 @@
+# 泰剧迷 — 规则（配合 taijumi.js 使用）
+[rewrite_local]
+# >泰剧迷-泰剧tv (去广告)
+^https?://api\.dingcy\.top/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/taijumi.js
+[mitm]
+hostname = api.dingcy.top
