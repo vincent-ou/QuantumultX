@@ -1,0 +1,6 @@
+# Flowkey — 规则（配合 Flowkey.js 使用）
+[rewrite_local]
+^http[s]?:\/\/graphql.flowkey.com.cn\/graphql url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/Flowkey.js
+
+[mitm]
+hostname = graphql.flowkey.com.cn
