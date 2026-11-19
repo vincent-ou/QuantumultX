@@ -1,0 +1,7 @@
+# 有诗 — 规则（配合 youshi.js 使用）
+[rewrite_local]
+^http[s]?:\/\/(youshiapp.com|judouapp.com|lengapp.com)(/api/v1/users/me|/api/v2/mine/profile|/api/v1/mine) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/youshi.js
+
+[mitm]
+
+hostname = (youshiapp.com|judouapp.com|lengapp.com)
