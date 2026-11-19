@@ -1,0 +1,7 @@
+# 小南斗 — 规则（配合 xiaonandou.js 使用）
+[rewrite_local]
+# >小南斗（永久会员）
+^https?://papi\.xiaonandou\.com.cn/moria/assist/assistVipCheck url reject-dict
+^https?://papi\.xiaonandou\.com\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xiaonandou.js
+[mitm]
+hostname = papi.xiaonandou.com.cn
