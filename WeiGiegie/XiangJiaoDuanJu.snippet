@@ -1,0 +1,6 @@
+# 香蕉短剧 — 规则（配合 xiangjiaoduanju.js 使用）
+[rewrite_local]
+# >
+^https?://\*/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xiangjiaoduanju.js
+[mitm]
+hostname = *
