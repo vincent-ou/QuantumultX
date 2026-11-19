@@ -1,0 +1,7 @@
+# 舞蹈生 — 规则（配合 wudaosheng.js 使用）
+[rewrite_local]
+# >舞蹈生
+^https://apidance\.ctwh77\.com/api/appsplash/detail url reject
+^https?://apidance\.ctwh77\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/wudaosheng.js
+[mitm]
+hostname = apidance.ctwh77.com
