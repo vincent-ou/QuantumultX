@@ -1,0 +1,6 @@
+# 乐拍 — 规则（配合 lepai.js 使用）
+[rewrite_local]
+^https?:\/\/lepai-api\.faceqianyan\.com\/(apple\/product|account\/profile|faceFusion|toolCollection) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/lepai.js
+
+[mitm]
+hostname = lepai-api.faceqianyan.com
