@@ -1,0 +1,7 @@
+# 极简扫描 — 规则（配合 jijiansaomiao.js 使用）
+
+[rewrite_local]
+^https?:\/\/cn\.czur\.cc\/api\/.+\/User\/info?(.*?) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/jijiansaomiao.js
+
+[mitm]
+hostname = cn.czur.cc
