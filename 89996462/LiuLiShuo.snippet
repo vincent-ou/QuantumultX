@@ -1,0 +1,6 @@
+# 流利说 — 规则（配合 liulishuo.js 使用）
+[rewrite_local]
+^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/liulishuo.js
+
+[mitm]
+hostname = vira.llsapp.com
