@@ -1,0 +1,6 @@
+# 美妆相机 — 规则（配合 meizhuangxiangji.js 使用）
+[rewrite_local]
+^https?:\/\/api.(revenuecat|account.meitu).com\/(v1\/subscribers|v1\/receipts|users\/show_current.json) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/meizhuangxiangji.js
+
+[mitm]
+hostname = api.revenuecat.com,api.account.meitu.com
