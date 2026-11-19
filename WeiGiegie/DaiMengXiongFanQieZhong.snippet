@@ -1,0 +1,7 @@
+# 呆萌熊番茄钟 — 规则（配合 daimengxiongfanqiezhong.js 使用）
+[rewrite_local]
+^https?:\/\/appss.rhinox.cn\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/daimengxiongfanqiezhong.js
+^https://ad\.rhinox\.cn/client/sdk/getData url reject
+
+[mitm]
+hostname = ad.rhinox.cn,standard.rhinoxlab.com.appss.rhinoxlab.com,appss.rhinox.cn
