@@ -1,0 +1,6 @@
+# 轻音社 — 规则（配合 qingyinshe.js 使用）
+[rewrite_local]
+# > 轻音社vip
+^https?://fuciyuanbang\.ciyuans\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/qingyinshe.js
+[mitm]
+hostname = fuciyuanbang.ciyuans.com
