@@ -1,0 +1,6 @@
+# 疯狂背单词 — 规则（配合 fengkuangbeidanci.js 使用）
+[rewrite_local]
+^https?:\/\/api.fengkuangapp.com\/account\/grant\/detail\/info\/ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/fengkuangbeidanci.js
+
+[mitm]
+hostname = api.fengkuangapp.com
