@@ -1,0 +1,6 @@
+# 句读 — 规则（配合 judu.js 使用）
+[rewrite_local]
+^http[s]?:\/\/judouapp.com\/api\/v2\/mine\/profile url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/judu.js
+
+[mitm]
+hostname = judouapp.com
