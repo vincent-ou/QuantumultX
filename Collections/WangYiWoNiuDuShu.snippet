@@ -1,0 +1,7 @@
+# 网易蜗牛读书 — 规则（配合 wangyiwoniudushu.js 使用）
+
+[rewrite_local]
+^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/wangyiwoniudushu.js
+
+[mitm]
+hostname = p.du.163.com
