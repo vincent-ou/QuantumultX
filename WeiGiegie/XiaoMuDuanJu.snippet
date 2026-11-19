@@ -1,0 +1,6 @@
+# 小木短剧 — 规则（配合 xiaomuduanju.js 使用）
+[rewrite_local]
+# > 小木短剧 - 解锁付费视频
+^https?://nj\.xiaomumedia\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xiaomuduanju.js
+[mitm]
+hostname = nj.xiaomumedia.com
