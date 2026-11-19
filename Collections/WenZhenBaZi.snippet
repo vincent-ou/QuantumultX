@@ -1,0 +1,6 @@
+# 问真八字 — 规则（配合 wenzhenbazi.js 使用）
+[rewrite_local]
+^https?:\/\/bzpp3\.iwzbz\.com\/api\/.+\/user\/getvipinfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/wenzhenbazi.js
+
+[mitm]
+hostname = bzpp3.iwzbz.com
