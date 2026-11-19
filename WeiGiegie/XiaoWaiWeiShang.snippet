@@ -1,0 +1,6 @@
+# 小歪微商 — 规则（配合 xiaowaiweishang.js 使用）
+[rewrite_local]
+# > 小歪微商vip
+^https?://xw\.jietuguanjia\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xiaowaiweishang.js
+[mitm]
+hostname = xw.jietuguanjia.com
