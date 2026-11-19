@@ -1,0 +1,6 @@
+# 硬汗健身 — 规则（配合 yinghanjianshen.js 使用）
+[rewrite_local]
+# >硬汗健身-专业健身计划app覆盖器械居家多场景
+^https?://api\.dailyworkout\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yinghanjianshen.js
+[mitm]
+hostname = api.dailyworkout.cn,121.41.11.0
