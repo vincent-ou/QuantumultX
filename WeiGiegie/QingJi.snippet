@@ -1,0 +1,6 @@
+# 轻记 — 规则（配合 qingji.js 使用）
+[rewrite_local]
+# > 轻记-备忘记录笔记、日记便签和清单待办（永久会员）
+^https?://app\.yinxiang\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/qingji.js
+[mitm]
+hostname = app.yinxiang.com
