@@ -1,0 +1,7 @@
+# 短视频剪辑 — 规则（配合 duanshipinjianji.js 使用）
+[rewrite_local]
+^https?:\/\/appss.rhinox.cn\/app\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/duanshipinjianji.js
+^https://ad\.rhinox\.cn/client/sdk/getData url reject
+
+[mitm]
+hostname = ad.rhinox.cn,appss.rhinoxlab.com,appss.rhinox.cn
