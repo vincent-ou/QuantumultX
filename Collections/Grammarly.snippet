@@ -1,0 +1,6 @@
+# Grammarly — 规则（配合 Grammarly.js 使用）
+[rewrite_local]
+^https?:\/\/.*\.grammarly\.com\/(api\/v\d\/subscription|v\d\/user\/oranonymous) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Grammarly.js
+
+[mitm]
+hostname = *.grammarly.com
