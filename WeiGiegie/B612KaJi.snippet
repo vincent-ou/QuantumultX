@@ -1,0 +1,6 @@
+# B612咔叽 — 规则（配合 b612kaji.js 使用）
+[rewrite_local]
+^https?:\/\/user-kaji-api.b612kaji.com\/v1\/(purchase\/subscription\/subscriber\/status|purchase\/item\/user\/info) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/b612kaji.js
+
+[mitm]
+hostname = purchase-qingtu-api.b612kaji.com,api-qingtu.kajicam.com,user-kaji-api.b612kaji.com
