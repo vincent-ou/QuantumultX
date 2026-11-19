@@ -1,4 +1,6 @@
 /* Currency — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽Currency，权益与产品与合集一致
  * 权益 plus，产品 com.jeffreygrossman.currencyapp.iap.plus（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 Currency 的请求（Currency），不影响其他 App
