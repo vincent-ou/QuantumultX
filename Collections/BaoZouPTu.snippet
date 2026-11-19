@@ -1,0 +1,6 @@
+# 暴走P图 — 规则（配合 baozouptu.js 使用）
+[rewrite_local]
+^https?:\/\/api\.intelimeditor\.com\/user\/loginByThirdPlatformApp url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/baozouptu.js
+
+[mitm]
+hostname = api.intelimeditor.com
