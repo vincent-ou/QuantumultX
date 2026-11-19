@@ -1,0 +1,6 @@
+# 点点穿书 — 规则（配合 diandianchuanshu.js 使用）
+[rewrite_local]
+^https:\/\/api\.ddcsai\.com\/(device|step1|account).*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/diandianchuanshu.js
+
+[mitm]
+hostname = api.ddcsai.com
