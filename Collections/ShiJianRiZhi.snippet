@@ -1,0 +1,6 @@
+# 时间日志 — 规则（配合 shijianrizhi.js 使用）
+[rewrite_local]
+^http:\/\/liujia95\.xyz\/v\d\/user\/(get_user|register) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/shijianrizhi.js
+
+[mitm]
+hostname = liujia95.xyz
