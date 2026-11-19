@@ -1,0 +1,7 @@
+# 甜盐相机 — 规则（配合 tianyanxiangji.js 使用）
+[rewrite_local]
+^http[s]?:\/\/purchase-tianyan-api.tianyancam.com/v1/purchase/subscription/subscriber/status url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/tianyanxiangji.js
+
+[mitm]
+
+hostname = purchase-tianyan-api.tianyancam.com
