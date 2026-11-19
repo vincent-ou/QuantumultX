@@ -1,0 +1,7 @@
+# 每天读点故事 — 规则（配合 meitiandudiangushi.js 使用）
+[rewrite_local]
+^https?:\/\/apipc01.gushi.cn\/(v9\/articles|audio|collection\/audios|v3\/app\/config\/check|users\/vipinfos|v6\/chapters) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/meitiandudiangushi.js
+^https?:\/\/apipc01.gushi.cn\/v5\/advertisements\? url reject-dict
+
+[mitm]
+hostname = apipc01.gushi.cn
