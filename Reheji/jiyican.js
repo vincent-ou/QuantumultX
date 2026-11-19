@@ -1,4 +1,6 @@
 /* 记一餐 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽记一餐，权益与产品与合集一致
  * 合集未提供权益名，仅注入订阅；产品 202602071529（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 me.xgmm.meallog 的请求（记一餐），不影响其他 App
