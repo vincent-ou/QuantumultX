@@ -1,0 +1,6 @@
+# 熊猫客 — 规则（配合 xiongmaoke.js 使用）
+[rewrite_local]
+# >熊猫客-全球自然探索指南
+^https?://shopapi\.pandatrek\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xiongmaoke.js
+[mitm]
+hostname = shopapi.pandatrek.cn
