@@ -1,0 +1,6 @@
+# Airdroid Cast — 规则（配合 AirdroidCast.js 使用）
+[rewrite_local]
+^https?:\/\/(pay|id-cast)\.airdroid\.cn\/(cast\/getUserPaymentInfo|user\/getuserinfo) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/AirdroidCast.js
+
+[mitm]
+hostname = *.airdroid.cn
