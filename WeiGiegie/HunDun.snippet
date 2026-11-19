@@ -1,0 +1,6 @@
+# 混沌 — 规则（配合 hundun.js 使用）
+[rewrite_local]
+^https?:\/\/((course)|(user)|(capi)).hundun.cn\/.*(course_detail|user_info|member_home_page).*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/hundun.js
+
+[mitm]
+hostname = hundun.cn
