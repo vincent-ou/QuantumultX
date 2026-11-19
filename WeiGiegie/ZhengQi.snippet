@@ -1,0 +1,6 @@
+# 正气 — 规则（配合 zhengqi.js 使用）
+[rewrite_local]
+# > 正气-戒色助手
+^https?://api\.zhengqi100\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/zhengqi.js
+[mitm]
+hostname = api.zhengqi100.com,apio.zhengqi100.com
