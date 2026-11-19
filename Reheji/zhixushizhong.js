@@ -1,4 +1,6 @@
 /* 秩序时钟 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽秩序时钟，权益与产品与合集一致
  * 权益 lifetime，产品 com.metaorder.orderclocko.lifetime（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 %E7%A7%A9%E5%BA%8F%E6%97%B6%E9%92%9F 的请求（秩序时钟），不影响其他 App
