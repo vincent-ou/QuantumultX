@@ -1,0 +1,6 @@
+# 心光 — 规则（配合 xinguang.js 使用）
+[rewrite_local]
+# > 心光-ai-生活记录伴侣
+^https?://moolight\.online/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xinguang.js
+[mitm]
+hostname = moolight.online
