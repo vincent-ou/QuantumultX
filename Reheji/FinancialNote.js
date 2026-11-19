@@ -1,4 +1,6 @@
 /* FinancialNote — RevenueCat 订阅解锁（单独版）
+ * 原作者：ddgksf2013
+ * 适配版本：未注明
  * 清理整理：Muse — 从 ddgksf2013 RevenueCat 映射单抽FinancialNote，权益与产品与映射一致
  * 权益 category，产品 category（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 FinancialNote 的请求（FinancialNote），不影响其他 App
