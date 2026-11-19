@@ -1,0 +1,7 @@
+# 声波助手 — 规则（配合 shengbozhushou.js 使用）
+
+[rewrite_local]
+^https?:\/\/api\.yonekura\.cn\/.+\/uicommon\/getuser url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/shengbozhushou.js
+
+[mitm]
+hostname = api.yonekura.cn
