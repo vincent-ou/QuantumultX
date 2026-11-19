@@ -65,7 +65,6 @@
 | 忙豆听书 | WeiGiegie | 未注明 | 忙豆听书 解锁付费听书购买下载 |
 | 忙豆听书请求体 | WeiGiegie | 未注明 | 忙豆听书 解锁付费听书购买下载 |
 | 好芳法课堂 | WeiGiegie | 2.5.1 | 好芳法课堂 |
-| 嘿嘿漫画 | WeiGiegie | 2.0.6 | 嘿嘿漫画 |
 | 喜马拉雅国际版 | WeiGiegie | 通用 | 喜马拉雅国际版VIP音频解析 + 课程授权解锁 + 页面广告清理 |
 | 喜马拉雅H5会员 | WeiGiegie | h5 | himalaya vip |
 | 哈梨冥想 | WeiGiegie | 1.3.9 | 哈梨冥想-heartly lab冥想减压安眠白噪音 |
@@ -77,7 +76,6 @@
 | 江湖小说 | WeiGiegie | 2.4.0 | 江湖小说 |
 | 酵母菌 | WeiGiegie | 1.6.8 | 酵母菌 |
 | 识日JLPT | WeiGiegie | 1.1.0 | 识日jlpt-最新jlpt历年真题全覆盖 |
-| 姬漫社 | WeiGiegie | 未注明 | 姬漫社,解锁=视频,漫画,写真,动漫。 无需登录！ |
 | 金牌翻译官 | WeiGiegie | 1.3.0 | 金牌翻译官 |
 | 今日水印拍照相机 | WeiGiegie | 1.7 | 今日水印拍照相机 Pro |
 | 句读 | WeiGiegie | 4.3.0 | 句读 |
@@ -106,12 +104,10 @@
 | 历史年轮 | WeiGiegie | 1.3.0 | 历史年轮 |
 | LuckPik | WeiGiegie | 1.0.0 | LuckPik 恢复购买 |
 | 脸型测试 | WeiGiegie | 1.4.1 | 脸型测试-测脸型配发型小助手 |
-| 漫画大全 | WeiGiegie | 6.0.2 | 漫画大全-高清漫画阅读 |
 | 漫客宅 | WeiGiegie | 未注明 | 漫客宅,会员漫画小说解锁 |
 | 漫熊 | WeiGiegie | 6.5 | 漫熊 |
 | 面包FM | WeiGiegie | 3.3.7 | 面包fm 解锁vip，付费讲书 |
 | 面包拼图 | WeiGiegie | 1.0.9 | 面包拼图 |
-| 魅.舞直播 | WeiGiegie | 未注明 | 魅.舞直播++ 解锁付费房 |
 | 咪咕视频 | WeiGiegie | 6.5.30 | vip |
 | 咪咕视频请求头 | WeiGiegie | 6.5.30 | 咪咕视频请求头 |
 | 芒果TV请求头 | WeiGiegie | 未注明 | 芒果TV请求头 |
@@ -178,7 +174,6 @@
 | 日语趣配音 | WeiGiegie | 1.7.5 | 零基础学日语 |
 | 任意水印相机 | WeiGiegie | 1.6.1 | 会员解锁 |
 | 十点读书 | WeiGiegie | 6.11.1 | 会员,去广告 |
-| 绅士 | WeiGiegie | 3.2 | 摄影者的天堂 |
 | 识日 | WeiGiegie | 2.1.5 | 背日语-查日语单词-大家的日语 |
 | 薯条漫画 | WeiGiegie | 1.3.2 | 热门耽美bl漫画 |
 | 丝域 | WeiGiegie | 1.3 | model |
