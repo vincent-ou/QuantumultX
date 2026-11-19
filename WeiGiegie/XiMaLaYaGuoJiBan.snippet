@@ -1,0 +1,6 @@
+# 喜马拉雅国际版 — 规则（配合 ximalayaguojiban.js 使用）
+[rewrite_local]
+^https?:\/\/.+himalaya\.com\/(himalaya-portal\/(track\/urlEncode|v1\/course)|courses\/\d+) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/ximalayaguojiban.js
+
+[mitm]
+hostname = api.himalaya.com,*.himalaya.com,apisg.himalaya.com,www.himalaya.com
