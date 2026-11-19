@@ -1,0 +1,7 @@
+# SNOW — 规则（配合 SNOW.js 使用）
+
+[rewrite_local]
+^https?:\/\/.*\.snow\.me\/v\d\/purchase\/subscription\/subscriber\/status url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/SNOW.js
+
+[mitm]
+hostname = *.snow.me
