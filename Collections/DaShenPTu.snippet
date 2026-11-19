@@ -1,0 +1,7 @@
+# 大神P图 — 规则（配合 dashenptu.js 使用）
+
+[rewrite_local]
+^https?:\/\/.*\.(videoshowiosglobalserver|enjoy-mobi)\.com\/zone\/.+\/(iosPayClient\/(payVerify|imeiVerify)|startPageAd\/getAds) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/dashenptu.js
+
+[mitm]
+hostname = *.videoshowiosglobalserver.com, *.enjoy-mobi.com
