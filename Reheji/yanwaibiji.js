@@ -1,4 +1,6 @@
 /* 言外笔记 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽言外笔记，权益与产品与合集一致
  * 权益 Premium，产品 io.innerpeace.yiye.lifetime.forYearly（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 io.innerpeace.yiye 的请求（言外笔记），不影响其他 App
