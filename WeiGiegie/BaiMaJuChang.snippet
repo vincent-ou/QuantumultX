@@ -1,0 +1,6 @@
+# 白马剧场 — 规则（配合 baimajuchang.js 使用）
+[rewrite_local]
+^https?:\/\/theater-api.sylangyue.xyz\/api\/(playlet\/episode|user\/info) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/baimajuchang.js
+
+[mitm]
+hostname = theater-api.sylangyue.xyz
