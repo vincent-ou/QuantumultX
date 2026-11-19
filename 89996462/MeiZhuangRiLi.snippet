@@ -1,0 +1,8 @@
+# 美妆日历 — 规则（配合 meizhuangrili.js 使用）
+[rewrite_local]
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/meizhuangrili.js
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/meizhuangrili.js
+
+[mitm]
+
+hostname = api.revenuecat.com
