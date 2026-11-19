@@ -1,0 +1,399 @@
+/* VipPatch — 通用会员解锁引擎
+ * 原作者：小帽
+ * 适配版本：未注明
+ * 清理整理：Muse — 去除作者推广/外链与多平台兼容代码，仅保留 Quantumult X 逻辑，逻辑与数值与原版一致
+ * [rewrite_local]
+ * [mitm] hostname = *
+ */
+//==================== 运行配置 ====================
+const CONFIG = {
+  discoveryMode: false, // 未配置规则时：false=静默放行（默认）；true=把捕获到的 host/path + 可复制配置打到 QX 日志（不弹窗）
+};
+
+//==================== BoxJS 实时配置（覆盖式单条规则，免改代码）====================
+// 配合 BoxJS 订阅 rewrite/boxJS/XiaoMaoReverseTools.json 使用
+function readBox(key, def, type) {
+  let raw = null;
+  try { if (typeof $prefs !== 'undefined' && $prefs) raw = $prefs.valueForKey(key); } catch (e) {}
+  const empty = raw === null || raw === undefined || String(raw).trim() === '';
+  const s = empty ? '' : String(raw).trim();
+  try {
+    switch (type) {
+      case 'bool': return empty ? def : /^(1|true|yes|on)$/i.test(s);
+      case 'int': { if (empty) return def; const n = parseInt(s, 10); return isNaN(n) ? def : n; }
+      case 'list': {
+        const src = empty ? (Array.isArray(def) ? def.join('\n') : String(def == null ? '' : def)) : s;
+        return src.split(/[,\n]/).map((x) => x.trim()).filter(Boolean);
+      }
+      case 'regex': {
+        if (empty) return def;
+        if (s.charAt(0) === '/') {
+          const m = s.match(/^\/(.*)\/([gimsuy]*)$/);
+          return m ? new RegExp(m[1], m[2] || 'i') : new RegExp(s, 'i');
+        }
+        return new RegExp(s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+      }
+      case 'json': { if (empty) return def; try { return JSON.parse(s); } catch (e) { return def; } }
+      default: return empty ? def : s;
+    }
+  } catch (e) { return def; }
+}
+
+CONFIG.discoveryMode = readBox('vipDiscovery', CONFIG.discoveryMode, 'bool');
+CONFIG.notify = readBox('vipNotify', true, 'bool');
+
+//==================== 规则配置区 ====================
+
+const RULES = [
+  // ===== 示例1：常见"用户信息"接口，一次性打通常见字段 =====
+  {
+    name: '用户信息解锁',
+    host: '', // 留空 = 未配置；改成你的目标 host 才生效（支持 '*.example.com' / 'api.*.com'）
+    path: /\/user\/(info|profile|center)/i,
+
+    // 快捷开关：这些字段会被置为 truthy 值（true / 1）
+    vipFields: ['is_vip', 'isVip', 'vip', 'is_member', 'isMember', 'is_pro', 'isPro', 'isPay', 'is_pay'],
+
+    // 时间类字段：置为远期时间戳（秒或毫秒自适应原值）
+    timeFields: [
+      'expire_time', 'expireTime', 'vip_expire_time', 'vipExpireTime',
+      'expired_at', 'expiredAt', 'deadline', 'end_time', 'endTime',
+      'member_end_time', 'memberEndTime', 'subscription_end',
+    ],
+    timeValue: '2099-12-31', // 远期时间，也可写 'now+3650d'
+
+    // 类型/等级字段
+    typeFields: { member_type: 1, vip_type: 1, user_type: 1, level: 9, vip_level: 9 },
+
+    // 显式改写（最高优先级，会覆盖上面的快捷开关）
+    patches: [
+      // { path: 'data.vip_info.name', value: 'SVIP' },
+      // { path: 'data.vip_info.is_forever', value: true },
+    ],
+
+    // 删除这些字段（有些接口靠"字段不存在"判定未付费）
+    deletes: [
+      // 'data.ad_config',
+      // 'data.pay_wall',
+    ],
+  },
+
+  // ===== 示例2：权益列表，把 locked 全开 =====
+  {
+    name: '权益列表',
+    host: '',
+    path: /\/privilege|benefit|rights/i,
+    patches: [
+      // { path: 'data.list', transform: 'unlockAll' },
+    ],
+  },
+
+  // ===== 示例3：整体替换（返回一个已付费模板）=====
+  // {
+  //   name: '整体替换',
+  //   host: '',
+  //   path: /\/entitlement/i,
+  //   whole: {
+  //     code: 0,
+  //     data: { vip: true, expire_time: 4102444800, level: 9 },
+  //   },
+  // },
+];
+
+//==================== BoxJS 一键规则（免改代码，由订阅参数生成，插入到 RULES 最前）====================
+(function applyBoxRule() {
+  const h = readBox('vipHost', '', 'str');
+  if (!h) return; // 未填域名则不启用本卡片规则，仍可用内联 RULES
+  const rule = {
+    name: 'BoxJS一键配置',
+    host: h,
+    path: readBox('vipPath', '', 'regex') || /\/.*/i,
+    vipFields: readBox('vipVipFields', ['is_vip', 'isVip', 'vip', 'is_member', 'isMember', 'is_pro', 'isPro', 'isPay', 'is_pay'], 'list'),
+    timeFields: readBox('vipTimeFields', [], 'list'),
+    timeValue: readBox('vipTimeValue', '2099-12-31', 'str'),
+    typeFields: {},
+    patches: [],
+    deletes: readBox('vipDeleteFields', [], 'list'),
+  };
+  const lvl = readBox('vipLevelFields', [], 'list');
+  const lvlVal = readBox('vipLevelValue', 9, 'int');
+  lvl.forEach((f) => { rule.typeFields[f] = lvlVal; });
+  const whole = readBox('vipWholeJson', null, 'json');
+  if (whole && typeof whole === 'object') rule.whole = whole;
+  RULES.unshift(rule);
+})();
+
+//==================== 引擎（一般不用改）=====================
+
+function matchHost(ruleHost, host) {
+  // 仅显式填 '*' 才全匹配；留空视为"未配置"，不在此兜底
+  if (ruleHost === '*') return true;
+  // 前缀 '*.'(如 '*.example.com') → 后缀匹配（含多级子域）
+  if (ruleHost.indexOf('*.') === 0) {
+    const suffix = ruleHost.slice(1); // '.example.com'
+    return host === suffix.slice(1) || host.endsWith(suffix);
+  }
+  // 任意位置 '*' 通配（如 'api.*.com' 'a*.example.com'）
+  if (ruleHost.indexOf('*') >= 0) {
+    const re = new RegExp(
+      '^' +
+        ruleHost
+          .replace(/[.+?^${}()|[\]\\]/g, '\\$&') // 转义正则元字符
+          .replace(/\*/g, '[^.]*') + // '*' = 任意非点字符段
+        '$'
+    );
+    return re.test(host);
+  }
+  return host === ruleHost;
+}
+
+// 路径前两段生成可复制正则（去掉动态 id，用户可再微调）
+function buildPathRegex(path) {
+  const segs = path.split('/').filter(Boolean).slice(0, 2);
+  const lit = segs.map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('\\/');
+  return '/' + lit + '/i';
+}
+
+// 生成"可复制的专属配置"引导文本（捕获真实 host/path 后给出）
+function buildConfigGuide(host, path, file, qxType, scriptCfg) {
+  const esc = host.replace(/\./g, '\\.');
+  const name = file.split('/').pop();
+  return [
+    '【' + name + ' · 捕获到目标】',
+    'host = ' + host,
+    'path = ' + path,
+    '',
+    '复制下面这段到 QX 配置，即可锁定你的专属目标（脚本名已是完整远程地址，QX 资源引入直接拉取）：',
+    '',
+    '[rewrite_local]',
+    '^https?://' + esc + '/ url ' + qxType + ' ' + file,
+    '',
+    '[mitm]',
+    'hostname = ' + host,
+    '',
+    '// ' + name + ' 配置区',
+    scriptCfg,
+    '',
+  ].join('\n');
+}
+
+function pick(obj, path) {
+  const ks = path.split('.');
+  let cur = obj;
+  for (const k of ks) {
+    if (cur == null) return undefined;
+    cur = cur[k];
+  }
+  return cur;
+}
+
+function setPath(obj, path, val) {
+  const ks = path.split('.');
+  let cur = obj;
+  for (let i = 0; i < ks.length - 1; i++) {
+    const k = ks[i];
+    if (cur[k] == null || typeof cur[k] !== 'object') cur[k] = {};
+    cur = cur[k];
+  }
+  cur[ks[ks.length - 1]] = val;
+}
+
+function delPath(obj, path) {
+  const ks = path.split('.');
+  let cur = obj;
+  for (let i = 0; i < ks.length - 1; i++) {
+    if (cur == null) return;
+    cur = cur[ks[i]];
+  }
+  if (cur) delete cur[ks[ks.length - 1]];
+}
+
+// 递归查找所有同名 key 并改写（不关心层级）
+function patchByKey(node, key, fn, depth) {
+  if (!node || typeof node !== 'object' || depth > 8) return 0;
+  let n = 0;
+  if (Array.isArray(node)) {
+    node.forEach((v) => {
+      n += patchByKey(v, key, fn, depth + 1);
+    });
+    return n;
+  }
+  for (const k of Object.keys(node)) {
+    if (k === key && typeof node[k] !== 'object') {
+      node[k] = fn(node[k]);
+      n++;
+    }
+    if (node[k] && typeof node[k] === 'object') {
+      n += patchByKey(node[k], key, fn, depth + 1);
+    }
+  }
+  return n;
+}
+
+// 解锁数组里所有项（用于权益列表）
+function unlockAll(list) {
+  if (!Array.isArray(list)) return 0;
+  let n = 0;
+  list.forEach((it) => {
+    if (it && typeof it === 'object') {
+      ['locked', 'is_lock', 'isLock', 'is_locked', 'need_vip', 'needVip', 'restricted'].forEach((k) => {
+        if (k in it) {
+          it[k] = false;
+          n++;
+        }
+      });
+      ['unlocked', 'is_unlock', 'isUnlock', 'owned', 'has_right', 'available'].forEach((k) => {
+        if (k in it) {
+          it[k] = true;
+          n++;
+        }
+      });
+      if ('status' in it && (it.status === 0 || it.status === 2)) {
+        it.status = 1;
+        n++;
+      }
+    }
+  });
+  return n;
+}
+
+// 把时间值统一成秒/毫秒时间戳（跟随原值量级）
+function toStamp(dateStr, ref) {
+  const t = new Date(dateStr.replace(/-/g, '/')).getTime();
+  if (isNaN(t)) return ref;
+  return t > 1e12 ? Math.floor(t / 1000) : Math.floor(t / 1000);
+}
+
+function timePatchFn(ref) {
+  return function (v) {
+    if (typeof v !== 'number') return v;
+    // 原值是毫秒（13位）就返回毫秒，秒（10位）就返回秒
+    const base = toStamp(CONFIG_TIME_VALUE, v);
+    return String(v).length >= 13 ? base * 1000 : base;
+  };
+}
+
+let CONFIG_TIME_VALUE = '2099-12-31';
+
+const url = $request.url;
+// QX 的 JSC 没有 URL 全局对象，用正则提取
+let host = (url.match(/^https?:\/\/([^\/?#]+)/) || [])[1] || url;
+host = host.split(':')[0];
+const _path = (url.match(/^https?:\/\/[^\/?#]+([^?#]*)/) || [,'/'])[1] || '/';
+
+let hit = null;
+for (const r of RULES) {
+  if (!r.host) continue; // 未配置 host 的规则跳过，仅作引导
+  if (!matchHost(r.host, host)) continue;
+  if (r.path && !r.path.test(url)) continue;
+  hit = r;
+  break;
+}
+
+// 没命中任何已配置规则时：
+// - discoveryMode=false（默认）→ 静默放行，不弹通知、不刷日志
+// - discoveryMode=true → 仅把捕获到的 host/path + 可复制配置打到 QX 日志（不弹窗），供你之后锁定目标
+const _setupKey = 'vipPatch_setup_hint';
+if (!hit) {
+  // 首次进入未配置态：弹一次提醒（告知当前状态 + 用完及时关掉 MITM），避免只在日志里没人看到
+  if (!$prefs.valueForKey(_setupKey)) {
+    $prefs.setValueForKey('1', _setupKey);
+    const modeTxt = CONFIG.discoveryMode
+      ? '发现模式已开启：会在 QX 日志打印捕获到的 host/path（不弹窗）。拿到目标后请在 BoxJS 关掉『发现模式』并填『目标域名』；研究完毕请及时关闭 MITM / 本工具，勿长期用 * 抓全量流量。'
+      : '未配置规则（目标域名为空），当前静默放行（不处理任何响应）。请到 BoxJS『会员解锁』卡片的『目标域名』填入你的目标 host 锁定目标；研究完毕请及时关闭 MITM / 本工具，勿长期用 * 抓全量流量。';
+    $notify('逆向工具箱 · 未配置提醒（仅提示一次）', host, modeTxt.slice(0, 900));
+  }
+  if (CONFIG.discoveryMode) {
+    const _gk = 'vipPatch_cap_' + host;
+    if (!$prefs.valueForKey(_gk)) {
+      $prefs.setValueForKey('1', _gk);
+      const scriptCfg =
+        "RULES: [\n" +
+        "  {\n" +
+        "    name: '我的解锁',\n" +
+        "    host: '" + host + "',\n" +
+        "    path: " + buildPathRegex(_path) + ",\n" +
+        "    vipFields: ['is_vip', 'vip', 'is_member'],\n" +
+        "    timeFields: ['expire_time', 'vip_expire_time'],\n" +
+        "  },\n" +
+        "]";
+      const g = buildConfigGuide(host, _path, '', 'script-response-body', scriptCfg);
+      console.log('[vip_patch · 发现] ' + g);
+    }
+  } else {
+    console.log('[vip_patch] 未配置规则，已静默放行。到 BoxJS『会员解锁』卡片填『目标域名』后生效；开启『发现模式』可在 QX 日志查看捕获到的 host/path。');
+  }
+}
+
+function main() {
+if (hit.whole) {
+  console.log('[vip_patch] ' + hit.name + ' 整体替换');
+  $done({ body: JSON.stringify(hit.whole) });
+  return;
+}
+
+let obj = null;
+try {
+  obj = JSON.parse($response.body);
+} catch (e) {
+  console.log('[vip_patch] ' + hit.name + ' 响应非 JSON，跳过');
+  $done({});
+  return;
+}
+
+if (hit.timeValue) CONFIG_TIME_VALUE = hit.timeValue;
+
+let changes = [];
+
+// 1. 快捷开关：VIP 布尔字段
+(hit.vipFields || []).forEach((k) => {
+  const n = patchByKey(obj, k, () => true);
+  if (n) changes.push(k + '→true (' + n + ')');
+});
+
+// 2. 时间字段
+(hit.timeFields || []).forEach((k) => {
+  const n = patchByKey(obj, k, timePatchFn());
+  if (n) changes.push(k + '→' + CONFIG_TIME_VALUE + ' (' + n + ')');
+});
+
+// 3. 类型/等级字段
+if (hit.typeFields) {
+  for (const k of Object.keys(hit.typeFields)) {
+    const n = patchByKey(obj, k, () => hit.typeFields[k]);
+    if (n) changes.push(k + '→' + hit.typeFields[k] + ' (' + n + ')');
+  }
+}
+
+// 4. 显式改写
+(hit.patches || []).forEach((p) => {
+  if (!p || !p.path) return;
+  if (p.transform === 'unlockAll') {
+    const n = unlockAll(pick(obj, p.path));
+    if (n) changes.push(p.path + ' unlockAll (' + n + ')');
+    return;
+  }
+  setPath(obj, p.path, p.value);
+  changes.push(p.path + '→' + JSON.stringify(p.value));
+});
+
+// 5. 删除字段
+(hit.deletes || []).forEach((p) => {
+  delPath(obj, p);
+  changes.push(p + ' deleted');
+});
+
+if (changes.length) {
+  console.log('[vip_patch] ' + hit.name + '\n  ' + changes.join('\n  '));
+  $done({ body: JSON.stringify(obj) });
+} else {
+  console.log('[vip_patch] ' + hit.name + ' 无字段命中（规则与响应结构不匹配）');
+  $done({});
+}
+}
+
+if (hit) {
+  main();
+} else {
+  $done({});
+}
