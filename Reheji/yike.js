@@ -1,4 +1,6 @@
 /* 一刻 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽一刻，权益与产品与合集一致
  * 权益 YiKe - Light Journaling Pro，产品 yike_pro（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 YiKe 的请求（一刻），不影响其他 App
