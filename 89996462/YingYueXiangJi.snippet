@@ -1,0 +1,6 @@
+# 映月相机 — 规则（配合 yingyuexiangji.js 使用）
+[rewrite_local]
+^http[s]?:\/\/aifaceapi.meetboxs.com\/api\/v1\/user\/account\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/yingyuexiangji.js
+
+[mitm]
+hostname = aifaceapi.meetboxs.com
