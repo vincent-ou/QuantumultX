@@ -1,0 +1,6 @@
+# 漫画大全 — 规则（配合 manhuadaquan.js 使用）
+[rewrite_local]
+http:\/\/server.007manhua.com\/daquan2_rest.action\?(type=(mine5&userId|restore)|manhua) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/manhuadaquan.js
+
+[mitm]
+hostname = server.007manhua.com
