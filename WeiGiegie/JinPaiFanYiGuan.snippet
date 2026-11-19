@@ -1,0 +1,6 @@
+# 金牌翻译官 — 规则（配合 jinpaifanyiguan.js 使用）
+[rewrite_local]
+^https?:\/\/mv-ps.xdplt.com\/api\/v1\/(user|payment\/apple\/pay\/verify)\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/jinpaifanyiguan.js
+
+[mitm]
+hostname = mv-ps.xdplt.com
