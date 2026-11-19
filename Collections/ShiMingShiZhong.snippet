@@ -1,0 +1,6 @@
+# 使命时钟 — 规则（配合 shimingshizhong.js 使用）
+[rewrite_local]
+^https?:\/\/api\.alar\.my\/v\d\/subscription\/sync url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/shimingshizhong.js
+
+[mitm]
+hostname = api.alar.my
