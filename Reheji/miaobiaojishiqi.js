@@ -1,4 +1,6 @@
 /* 秒表计时器 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽秒表计时器，权益与产品与合集一致
  * 权益 remove_ads，产品 hasen_stopwatch_remove_ads（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 stopwatch 的请求（秒表计时器），不影响其他 App
