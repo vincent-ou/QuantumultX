@@ -1,0 +1,6 @@
+# 趣配音 — 规则（配合 qupeiyin.js 使用）
+[rewrite_local]
+# > 趣配音
+^https?://apis40\.qupeiyin\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/qupeiyin.js
+[mitm]
+hostname = apis40.qupeiyin.com
