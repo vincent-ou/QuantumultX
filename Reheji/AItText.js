@@ -1,4 +1,6 @@
 /* AItText — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽AItText，权益与产品与合集一致
  * 权益 Pro，产品 com.curiouscreatorsco.ChatLLM.pro.lifetime.notrial.150_00（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 ChatLLM 的请求（AItText），不影响其他 App
