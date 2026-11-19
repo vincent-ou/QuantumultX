@@ -1,0 +1,7 @@
+# 一寸证件照 — 规则（配合 yicunzhengjianzhao.js 使用）
+[rewrite_local]
+^http[s]?:\/\/idp2api.netpock.com\/api\/user_info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/yicunzhengjianzhao.js
+
+[mitm]
+
+hostname = idp2api.netpock.com
