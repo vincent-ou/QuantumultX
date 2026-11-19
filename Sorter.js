@@ -1,4 +1,6 @@
 /* Sorter — 相册整理终身解锁
+原作者：chxm1023（iTunes 清单）
+适配版本：未注明
 清理整理：Muse — 拦截苹果 buy.itunes.apple.com/verifyReceipt，仅对 Sorter（PhotosSorter）改写收据，注入终身内购 sorter.pro.ipa，到期 2099-09-09；其它 App 原样放行。
 [rewrite_local]
 [mitm] hostname = buy.itunes.apple.com */
