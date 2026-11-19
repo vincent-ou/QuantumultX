@@ -1,0 +1,7 @@
+# 多彩相册 — 规则（配合 duocaixiangce.js 使用）
+[rewrite_local]
+^http[s]?:\/\/photo.yuan9.cn\/api\/Auth\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/duocaixiangce.js
+
+[mitm]
+
+hostname = photo.yuan9.cn
