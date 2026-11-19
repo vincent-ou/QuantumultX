@@ -1,0 +1,7 @@
+# Weather Fit — 规则（配合 WeatherFit.js 使用）
+[rewrite_local]
+^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/WeatherFit.js
+
+[mitm]
+
+hostname = api.revenuecat.com
