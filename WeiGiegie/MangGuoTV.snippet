@@ -1,0 +1,7 @@
+# 芒果TV — 规则（配合 mangguotv.js 使用）
+[rewrite_local]
+^https?:\/\/.*mgtv.com.*(GetUserInfo|module\/list\?_support|app\/bdboot|pullReleaseInfo|floor\/detail|video\/source|entry\?_support).*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/mangguotv.js
+^https?://mobile.da.mgtv.com\/m\/page url reject
+
+[mitm]
+hostname = mgtv.com,hb-boom.api.mgtv.com,*.api.mgtv.com,mobile-stream.api.mgtv.com,hb-boom.api.mgtv.com,mobile-stream.api.mgtv.com,nuc.api.mgtv.com,111.31.104.108,111.31.104.*,111.31.104.96,*.api.mgtv.com,iphone.v0.mgtv.com,api.data.mgtv.com,*.*.mgtv.*
