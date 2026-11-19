@@ -1,0 +1,7 @@
+# MOJi辞書 — 规则（配合 mojicishu.js 使用）
+[rewrite_local]
+^https:\/\/api\.mojidict\.com\/parse\/functions\/getNPrivileges url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/mojicishu.js
+
+[mitm]
+
+hostname = api.mojidict.com
