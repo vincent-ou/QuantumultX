@@ -1,0 +1,6 @@
+# MIX — 规则（配合 MIX.js 使用）
+[rewrite_local]
+^https?:\/\/cdn-bm\.camera360\.com\/api\/(mix\/(getinfo|purchase|recovery)|iap\/check-receipt) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/MIX.js
+
+[mitm]
+hostname = cdn-bm.camera360.com
