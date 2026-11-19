@@ -1,0 +1,6 @@
+# 万年历 — 规则（配合 wannianli.js 使用）
+[rewrite_local]
+^https?:\/\/.*\.jiemengjia\.com\/(member\/(member_info|pay_verify_new|create_order)|dialogue\/adspace) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/wannianli.js
+
+[mitm]
+hostname = *.jiemengjia.com
