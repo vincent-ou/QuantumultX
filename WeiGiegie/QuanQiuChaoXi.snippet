@@ -1,0 +1,6 @@
+# 全球潮汐 — 规则（配合 quanqiuchaoxi.js 使用）
+[rewrite_local]
+# > 全球潮汐-全球天气预报及离线潮汐
+^https?://g\.catches\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/quanqiuchaoxi.js
+[mitm]
+hostname = g.catches.com
