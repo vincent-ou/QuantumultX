@@ -1,0 +1,6 @@
+# SpoonMe — 规则（配合 SpoonMe.js 使用）
+[rewrite_local]
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/SpoonMe.js
+
+[mitm]
+hostname = api.revenuecat.com, api.rc-backup.com
