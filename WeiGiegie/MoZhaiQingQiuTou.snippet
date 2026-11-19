@@ -1,0 +1,6 @@
+# 墨摘请求头 — 规则（配合 mozhaiqingqiutou.js 使用）
+[rewrite_local]
+^https?:\/\/api.juzikong.com\/mobi\/mooz\/am\/(explore\/getTagCateConfig|music\/getBgmList) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/mozhaiqingqiutou.js
+
+[mitm]
+hostname = api.juzikong.com
