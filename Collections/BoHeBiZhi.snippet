@@ -1,0 +1,6 @@
+# 薄荷壁纸 — 规则（配合 bohebizhi.js 使用）
+[rewrite_local]
+^https?:\/\/.*\.whalean\.com\/(poseidon-service\/api\/user|member\/userMemberHomePageV2|hestia-service\/api\/wpUser\/getUserInfo) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/bohebizhi.js
+
+[mitm]
+hostname = *.whalean.com
