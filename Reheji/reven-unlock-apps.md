@@ -1,11 +1,11 @@
 # 这两个配置能解锁的 App 清单
 
-来源：RevenueCat 合集（Reheji，433 个 App）。`iTunes.conf` 是通用的收据伪造，没有固定清单，见文末说明。
+来源：RevenueCat 合集（Reheji，433 个 App）及 ddgksf2013 补充的 76 个 App，共 509 个。`iTunes.conf` 是通用的收据伪造，没有固定清单，见文末说明。
 
 类型：终身 = 到期写 null（不过期）；年付 = 到期写 2099-09-09；其他 = 合集里的特殊订阅。
 链接点开是 App Store 搜索，直接搜到对应 App。
 
-## 终身（244 个）
+## 终身（258 个）
 
 - [开睡](https://apps.apple.com/cn/search?term=%E5%BC%80%E7%9D%A1) — 开睡:白噪音助眠与睡眠记录
 - [ThinkAction](https://apps.apple.com/cn/search?term=ThinkAction) — ThinkAction-想做
@@ -252,7 +252,22 @@
 - [图图记账](https://apps.apple.com/cn/search?term=%E5%9B%BE%E5%9B%BE%E8%AE%B0%E8%B4%A6)
 - [1Blocker](https://apps.apple.com/cn/search?term=1Blocker) — 1Blocker-广告拦截
 
-## 年付（138 个）
+- [Wake Music](https://apps.apple.com/cn/search?term=Wake%20Music)
+- [SleepMaster](https://apps.apple.com/cn/search?term=SleepMaster)
+- [MusicBox](https://apps.apple.com/cn/search?term=MusicBox)
+- [Grain](https://apps.apple.com/cn/search?term=Grain)
+- [Sofa](https://apps.apple.com/cn/search?term=Sofa)
+- [Today App](https://apps.apple.com/cn/search?term=Today%20App)
+- [Reflix](https://apps.apple.com/cn/search?term=Reflix)
+- [PhotoMark](https://apps.apple.com/cn/search?term=PhotoMark)
+- [SimpleScan](https://apps.apple.com/cn/search?term=SimpleScan)
+- [BlackBox](https://apps.apple.com/cn/search?term=BlackBox)
+- [alcohol.tracker](https://apps.apple.com/cn/search?term=alcohol.tracker)
+- [FormScanner](https://apps.apple.com/cn/search?term=FormScanner)
+- [NeatNook](https://apps.apple.com/cn/search?term=NeatNook)
+- [Dedupe](https://apps.apple.com/cn/search?term=Dedupe)
+
+## 年付（200 个）
 
 - [VSCO](https://apps.apple.com/cn/search?term=VSCO) — VSCO-照片与视频编辑
 - [灵活计算器](https://apps.apple.com/cn/search?term=%E7%81%B5%E6%B4%BB%E8%AE%A1%E7%AE%97%E5%99%A8)
@@ -392,6 +407,69 @@
 - [Scanner Pro](https://apps.apple.com/cn/search?term=Scanner%20Pro) — Scanner Pro-文档扫描
 - [Pillow](https://apps.apple.com/cn/search?term=Pillow) — Pillow-睡眠周期跟踪
 - [Tiao](https://apps.apple.com/cn/search?term=Tiao)
+
+- [Plan](https://apps.apple.com/cn/search?term=Plan)
+- [Haushaltsbuch](https://apps.apple.com/cn/search?term=Haushaltsbuch)
+- [FinancialNote](https://apps.apple.com/cn/search?term=FinancialNote)
+- [Chronicling](https://apps.apple.com/cn/search?term=Chronicling)
+- [markbuy](https://apps.apple.com/cn/search?term=markbuy)
+- [Precious](https://apps.apple.com/cn/search?term=Precious)
+- [GBA](https://apps.apple.com/cn/search?term=GBA)
+- [ShowCal](https://apps.apple.com/cn/search?term=ShowCal)
+- [Zero](https://apps.apple.com/cn/search?term=Zero)
+- [mark_cup](https://apps.apple.com/cn/search?term=mark_cup)
+- [StepUp](https://apps.apple.com/cn/search?term=StepUp)
+- [Notedrafts](https://apps.apple.com/cn/search?term=Notedrafts)
+- [Rats Project](https://apps.apple.com/cn/search?term=Rats%20Project)
+- [AudioPlayer](https://apps.apple.com/cn/search?term=AudioPlayer)
+- [screenhop](https://apps.apple.com/cn/search?term=screenhop)
+- [Aula](https://apps.apple.com/cn/search?term=Aula)
+- [Bend](https://apps.apple.com/cn/search?term=Bend)
+- [Monetal](https://apps.apple.com/cn/search?term=Monetal)
+- [OneBox](https://apps.apple.com/cn/search?term=OneBox)
+- [Taskbit](https://apps.apple.com/cn/search?term=Taskbit)
+- [DecibelMeter](https://apps.apple.com/cn/search?term=DecibelMeter)
+- [Duplete](https://apps.apple.com/cn/search?term=Duplete)
+- [Ooga](https://apps.apple.com/cn/search?term=Ooga)
+- [My Jump Lab](https://apps.apple.com/cn/search?term=My%20Jump%20Lab)
+- [Paku](https://apps.apple.com/cn/search?term=Paku)
+- [Awesome Habits](https://apps.apple.com/cn/search?term=Awesome%20Habits)
+- [Planny](https://apps.apple.com/cn/search?term=Planny)
+- [Locket](https://apps.apple.com/cn/search?term=Locket)
+- [YzyFit](https://apps.apple.com/cn/search?term=YzyFit)
+- [PastePal](https://apps.apple.com/cn/search?term=PastePal)
+- [Fiery](https://apps.apple.com/cn/search?term=Fiery)
+- [Spektr](https://apps.apple.com/cn/search?term=Spektr)
+- [Tasks](https://apps.apple.com/cn/search?term=Tasks)
+- [Blurer](https://apps.apple.com/cn/search?term=Blurer)
+- [Everlog](https://apps.apple.com/cn/search?term=Everlog)
+- [reader](https://apps.apple.com/cn/search?term=reader)
+- [GetFace](https://apps.apple.com/cn/search?term=GetFace)
+- [Period Calendar](https://apps.apple.com/cn/search?term=Period%20Calendar)
+- [ScientificCalculator](https://apps.apple.com/cn/search?term=ScientificCalculator)
+- [1LemonKeepAccounts](https://apps.apple.com/cn/search?term=1LemonKeepAccounts)
+- [To Me](https://apps.apple.com/cn/search?term=To%20Me)
+- [言外筆記](https://apps.apple.com/cn/search?term=%E8%A8%80%E5%A4%96%E7%AD%86%E8%A8%98)
+- [Budget Flow](https://apps.apple.com/cn/search?term=Budget%20Flow)
+- [G E I S T](https://apps.apple.com/cn/search?term=G%20E%20I%20S%20T)
+- [FaceMa](https://apps.apple.com/cn/search?term=FaceMa)
+- [Focused Work](https://apps.apple.com/cn/search?term=Focused%20Work)
+- [GoToSleep](https://apps.apple.com/cn/search?term=GoToSleep)
+- [kegel](https://apps.apple.com/cn/search?term=kegel)
+- [Ochi](https://apps.apple.com/cn/search?term=Ochi)
+- [universal](https://apps.apple.com/cn/search?term=universal)
+- [AI Art Generator](https://apps.apple.com/cn/search?term=AI%20Art%20Generator)
+- [GoodThing](https://apps.apple.com/cn/search?term=GoodThing)
+- [Reels Editor](https://apps.apple.com/cn/search?term=Reels%20Editor)
+- [jizhi](https://apps.apple.com/cn/search?term=jizhi)
+- [MindBreathYoga](https://apps.apple.com/cn/search?term=MindBreathYoga)
+- [MetadataEditor](https://apps.apple.com/cn/search?term=MetadataEditor)
+- [查妆妆](https://apps.apple.com/cn/search?term=%E6%9F%A5%E5%A6%86%E5%A6%86)
+- [WidgetCat](https://apps.apple.com/cn/search?term=WidgetCat)
+- [Emphasis](https://apps.apple.com/cn/search?term=Emphasis)
+- [streamer](https://apps.apple.com/cn/search?term=streamer)
+- [Blackout](https://apps.apple.com/cn/search?term=Blackout)
+- [Budgetify](https://apps.apple.com/cn/search?term=Budgetify)
 
 ## 其他（51 个）
 
