@@ -1,0 +1,6 @@
+# 有心跳 — 规则（配合 youxintiao.js 使用）
+[rewrite_local]
+# > 有心跳-舞蹈-跳舞-学舞神器
+^https?://api\.train2win\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/youxintiao.js
+[mitm]
+hostname = api.train2win.cn
