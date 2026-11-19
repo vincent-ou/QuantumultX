@@ -1,0 +1,7 @@
+# 百度贴吧 — 规则（配合 baidutieba.js 使用）
+
+[rewrite_local]
+https?:\/\/wapp\.baidu\.com\/p\/[0-9]{3,}\?query url script-response-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/baidutieba.js
+
+[mitm]
+hostname = wapp.baidu.com
