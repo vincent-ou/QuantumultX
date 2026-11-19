@@ -1,0 +1,6 @@
+# ticking — 规则（配合 ticking.js 使用）
+[rewrite_local]
+# > ticking
+^https?://todo\.i99yun\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/ticking.js
+[mitm]
+hostname = todo.i99yun.com
