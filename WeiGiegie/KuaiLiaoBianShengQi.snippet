@@ -1,0 +1,6 @@
+# 快聊变声器 — 规则（配合 kuailiaobianshengqi.js 使用）
+[rewrite_local]
+^https?:\/\/voiceapi.jimetec.com\/user\/myInfo\?sysOs url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/kuailiaobianshengqi.js
+
+[mitm]
+hostname = voiceapi.jimetec.com
