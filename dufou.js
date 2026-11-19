@@ -1,4 +1,6 @@
 /* 读否 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023（Reheji 合集）
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽读否，权益与产品与合集一致
  * 权益 ready_pro，产品 ready_pro_50_1y（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 CharingCrossRoad 的请求（读否），不影响其他 App
