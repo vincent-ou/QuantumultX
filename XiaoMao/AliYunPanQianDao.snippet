@@ -1,0 +1,7 @@
+# 阿里云盘签到 — 规则（配合 aliyunpanqiandao.js 使用）
+
+[rewrite_local]
+https:\/\/member\.aliyundrive\.com\/v1\/activity\/sign_in_reward url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/aliyunpanqiandao.js
+
+[mitm]
+hostname = member.aliyundrive.com,auth.alipan.com,aliyundrive.alipan.com
