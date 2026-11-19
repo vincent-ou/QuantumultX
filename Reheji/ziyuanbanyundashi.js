@@ -1,4 +1,6 @@
 /* 资源搬运大师 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽资源搬运大师，权益与产品与合集一致
  * 权益 SaveTikYoutu_common，产品 LifetimeSubscription（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 %E8%B5%84%E6%BA%90%E6%90%AC%E8%BF%90%E5%A4%A7%E5%B8%88 的请求（资源搬运大师），不影响其他 App
