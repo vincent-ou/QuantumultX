@@ -1,0 +1,6 @@
+# 文字转语音助手 — 规则（配合 wenzizhuanyuyinzhushou.js 使用）
+[rewrite_local]
+# >文字转语音助手 vip
+^https?://text\-to\-speech\.xinmengmakeji\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/wenzizhuanyuyinzhushou.js
+[mitm]
+hostname = text-to-speech.xinmengmakeji.com
