@@ -1,0 +1,6 @@
+# 漫熊 — 规则（配合 manxiong.js 使用）
+[rewrite_local]
+^https?:\/\/cb.uvogin.xyz\/(auth\/getUserByUserid|comic\/getComicDetialByid) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/manxiong.js
+
+[mitm]
+hostname = cb.uvogin.xyz
