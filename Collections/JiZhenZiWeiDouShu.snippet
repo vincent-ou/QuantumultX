@@ -1,0 +1,6 @@
+# 吉真紫微斗数 — 规则（配合 jizhenziweidoushu.js 使用）
+[rewrite_local]
+^https?:\/\/zwpp\.wzbz123\.com\/api\/.+\/user\/getzwvipinfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/jizhenziweidoushu.js
+
+[mitm]
+hostname = zwpp.wzbz123.com
