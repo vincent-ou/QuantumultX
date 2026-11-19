@@ -1,0 +1,6 @@
+# 全本小说&淘小说 — 规则（配合 quanbenxiaoshuotaoxiaoshuo.js 使用）
+[rewrite_local]
+# > 全本小说&淘小说 解锁vip，
+^https?://tfbook\.taoyuewenhua\.net/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/quanbenxiaoshuotaoxiaoshuo.js
+[mitm]
+hostname = tfbook.taoyuewenhua.net,tybook.taoyuewenhua.net
