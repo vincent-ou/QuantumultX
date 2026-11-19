@@ -1,0 +1,6 @@
+# 地震预警 — 规则（配合 dizhenyujing.js 使用）
+[rewrite_local]
+^http[s]?:\/\/mobile-new.chinaeew.cn\/v1\/order\/apple\/vip url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/dizhenyujing.js
+
+[mitm]
+hostname = mobile-new.chinaeew.cn
