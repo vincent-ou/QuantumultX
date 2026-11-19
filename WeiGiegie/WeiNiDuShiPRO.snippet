@@ -1,0 +1,6 @@
+# 为你读诗pro — 规则（配合 weinidushipro.js 使用）
+[rewrite_local]
+# > 为你读诗pro
+^https?://app\.thepoemforyou\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/weinidushipro.js
+[mitm]
+hostname = app.thepoemforyou.com
