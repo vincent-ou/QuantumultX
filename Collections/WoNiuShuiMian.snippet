@@ -1,0 +1,7 @@
+# 蜗牛睡眠 — 规则（配合 woniushuimian.js 使用）
+
+[rewrite_local]
+^https?:\/\/snailsleep\.net\/snail\/v\d\/profile\/get.+ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/woniushuimian.js
+
+[mitm]
+hostname = snailsleep.net
