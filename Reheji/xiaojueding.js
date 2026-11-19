@@ -1,0 +1,75 @@
+/* 小决定 — RevenueCat 订阅解锁（单独版）
+ * 清理整理：Muse — 从 RevenueCat 合集中单抽小决定，权益与产品与合集一致
+ * 权益 com.nixwang.decision.entitlements.pro，产品 com.nixwang.decision.pro.annual（年付），到期日 2099-09-09
+ * 只处理 User-Agent 或 Bundle ID 含 Decision 的请求（小决定），不影响其他 App
+ * 已有真实有效订阅时不覆盖（以服务器返回为准）
+ * [rewrite_local]
+ * [mitm] hostname = api.revenuecat.com, api.rc-backup.com
+ */
+
+(function () {
+  var APP_KEY = 'Decision';
+  var ENTITLEMENT = 'com.nixwang.decision.entitlements.pro';
+  var PRODUCT_ID = 'com.nixwang.decision.pro.annual';
+  var EXPIRES = '2099-09-09T09:09:09Z';
+
+  var headers = $request.headers || {};
+  var ua = headers['User-Agent'] || headers['user-agent'] || '';
+  var bundleId = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'] || '';
+
+  // 不是小决定的请求，原样放过。
+  if (ua.indexOf(APP_KEY) === -1 && bundleId.indexOf(APP_KEY) === -1) {
+    $done({});
+    return;
+  }
+
+  var obj;
+  try {
+    obj = JSON.parse($response.body || '{}');
+  } catch (e) {
+    $done({});
+    return;
+  }
+
+  var subscriber = obj.subscriber;
+  if (!subscriber) {
+    $done({});
+    return;
+  }
+
+  // 已有真实有效订阅时不覆盖。
+  var existing = subscriber.entitlements && subscriber.entitlements[ENTITLEMENT];
+  if (existing && existing.expires_date) {
+    var exp = new Date(existing.expires_date).getTime();
+    if (!isNaN(exp) && exp > Date.now()) {
+      $done({});
+      return;
+    }
+  }
+
+  var now = new Date().toISOString();
+  subscriber.entitlements = subscriber.entitlements || {};
+  subscriber.subscriptions = subscriber.subscriptions || {};
+
+  subscriber.entitlements[ENTITLEMENT] = {
+    expires_date: EXPIRES,
+    grace_period_expires_date: null,
+    product_identifier: PRODUCT_ID,
+    purchase_date: now
+  };
+
+  subscriber.subscriptions[PRODUCT_ID] = {
+    expires_date: EXPIRES,
+    grace_period_expires_date: null,
+    purchase_date: now,
+    original_purchase_date: now,
+    period_type: 'normal',
+    store: 'app_store',
+    is_sandbox: false,
+    unsubscribe_detected_at: null,
+    billing_issues_detected_at: null,
+    ownership_type: 'PURCHASED'
+  };
+
+  $done({ body: JSON.stringify(obj) });
+})();
