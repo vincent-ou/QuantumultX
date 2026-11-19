@@ -1,0 +1,7 @@
+# 喜马拉雅极速版 — 规则（配合 ximalayajisuban.js 使用）
+[rewrite_local]
+# >喜马拉雅极速版
+^https?://adse\.+ximalaya\.com/ url reject-dict
+^https?://43\.175\.170\./.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/ximalayajisuban.js
+[mitm]
+hostname = 43.175.170.
