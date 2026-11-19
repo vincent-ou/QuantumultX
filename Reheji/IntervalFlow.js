@@ -1,4 +1,6 @@
 /* intervalFlow — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽intervalFlow，权益与产品与合集一致
  * 权益 All Access，产品 wodtimer_lf（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 intervalFlow 的请求（intervalFlow），不影响其他 App
