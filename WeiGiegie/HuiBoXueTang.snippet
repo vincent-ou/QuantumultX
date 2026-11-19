@@ -1,0 +1,6 @@
+# 汇播学堂 — 规则（配合 huiboxuetang.js 使用）
+[rewrite_local]
+^https?:\/\/(huibo.hcbnjy.com\/api\/huibo-gzh\/(course\/getCourseItem\?id|my\/getUserInfoResult)|app.666syh.com\/cloud\/api-mall\/huibo\/learnDetail).*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/huiboxuetang.js
+
+[mitm]
+hostname = app.666syh.com,huibo.hcbnjy.com
