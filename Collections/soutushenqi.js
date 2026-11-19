@@ -1,4 +1,7 @@
-/* 搜图神器 — 解锁会员 / 清理整理：Muse — 去除作者推广与原版链接，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = *.soutushenqi.com */
+/* 搜图神器 — 解锁会员
+ * 原作者：chxm1023
+ * 适配版本：1.7.3
+ * 清理整理：Muse — 去除作者推广与原版链接，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = *.soutushenqi.com */
 
 
 var body = $response.body;
