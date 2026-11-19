@@ -1,0 +1,6 @@
+# 快速水印 — 规则（配合 kuaisushuiyin.js 使用）
+[rewrite_local]
+^https?:\/\/api-qsy\.iiitool\.com\/user\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/kuaisushuiyin.js
+
+[mitm]
+hostname = api-qsy.iiitool.com
