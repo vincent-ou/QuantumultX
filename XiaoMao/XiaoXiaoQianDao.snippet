@@ -1,0 +1,10 @@
+# 小小签到 — 规则（配合 xiaoxiaoqiandao.js 使用）
+
+[task_local]
+0 0 10 * * ? https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/xiaoxiaoqiandao.js, tag=🐣XiaoMao_小小签到_自动获取金币, enabled=false
+
+[rewrite_local]
+https:\/\/api-xcx-qunsou\.weiyoubot\.cn\/xcx\/checkin\/v3\/vip url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/xiaoxiaoqiandao.js
+
+[mitm]
+hostname = api-xcx-qunsou.weiyoubot.cn
