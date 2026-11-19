@@ -1,0 +1,6 @@
+# 识日 — 规则（配合 shiri.js 使用）
+[rewrite_local]
+# > 识日-背日语-查日语单词-大家的日语
+^https?://shiri\.jingqueyun\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/shiri.js
+[mitm]
+hostname = shiri.jingqueyun.com
