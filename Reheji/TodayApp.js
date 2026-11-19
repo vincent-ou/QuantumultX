@@ -1,4 +1,6 @@
 /* Today App — RevenueCat 订阅解锁（单独版）
+ * 原作者：ddgksf2013
+ * 适配版本：未注明
  * 清理整理：Muse — 从 ddgksf2013 RevenueCat 映射单抽Today App，权益与产品与映射一致
  * 权益 Premium，产品 TodayApp_Lifetime（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 Today App 的请求（Today App），不影响其他 App
