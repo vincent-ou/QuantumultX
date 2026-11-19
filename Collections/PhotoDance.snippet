@@ -1,0 +1,6 @@
+# PhotoDance — 规则（配合 PhotoDance.js 使用）
+[rewrite_local]
+^https?:\/\/viart-api\.afunapp\.com\/photodance\/(user_api\/(get_user_info|visitor_login)|order_api\/apple_query) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/PhotoDance.js
+
+[mitm]
+hostname = viart-api.afunapp.com
