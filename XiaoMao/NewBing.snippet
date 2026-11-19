@@ -1,0 +1,8 @@
+# NewBing — 规则（纯规则，无逻辑脚本）
+
+[rewrite_local]
+^https?:\/\/cn\.bing\.com url 302 https://bing.com
+^https:\/\/www\.bing\.com\/(search|new) url request-header (\r\nUser-Agent:.+?)\w+\/[\d\.]+(\r\n) request-header $1AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0$2
+
+[mitm]
+hostname = www.bing.com,cn.bing.com
