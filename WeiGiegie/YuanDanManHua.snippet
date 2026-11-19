@@ -1,0 +1,6 @@
+# 原耽漫画 — 规则（配合 yuandanmanhua.js 使用）
+[rewrite_local]
+# >原耽漫画
+^https?://\*/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yuandanmanhua.js
+[mitm]
+hostname = *
