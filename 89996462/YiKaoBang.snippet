@@ -1,0 +1,7 @@
+# 医考帮 — 规则（配合 yikaobang.js 使用）
+[rewrite_local]
+^http[s]?:\/\/api.yikaobang.com.cn\/index.php\/curriculum\/main\/detail url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/yikaobang.js
+
+[mitm]
+
+hostname = api.yikaobang.com.cn
