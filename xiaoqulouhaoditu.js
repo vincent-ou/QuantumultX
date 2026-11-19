@@ -1,7 +1,7 @@
 /* 小区楼号地图 — 快递外卖极速导航
  * 原作者：WeiGiegie
- * 适配版本：1.0.10
- * 清理整理：Muse — v3-debug 2026-11-19 22:19：临时调试版，打印 getUserById 完整返回，定位试用期来源；确认后恢复正式版
+ * 适配版本：1.0.10 / 2.0.2
+ * 清理整理：Muse — getUserById 返回扁平对象（无 data 字段），直接改 isIOSVip 等标志位；2026-11-19 在 2.0.2 上验证可用
  * [rewrite_local]
  * [mitm] hostname = mp.zhuzixi.cn
  */
@@ -9,10 +9,7 @@ var body = $response.body || "";
 try {
   var obj = JSON.parse(body);
   if (obj && typeof obj === "object" && !Array.isArray(obj)) {
-    var url = ($request && $request.url) || "";
-    if (url.indexOf("getUserById") !== -1) {
-      console.log("[XQLH v3] RAW=" + body);
-    }
+    var before = obj.isIOSVip;
     if ("isIOSVip" in obj) obj.isIOSVip = true;
     if ("isAndroidVip" in obj) obj.isAndroidVip = true;
     if ("isHarmonyVip" in obj) obj.isHarmonyVip = true;
@@ -29,12 +26,9 @@ try {
       obj.data.isActive = true;
       if ("trialEnd" in obj.data) obj.data.trialEnd = FAR;
     }
-    if (url.indexOf("getUserById") !== -1) {
-      console.log("[XQLH v3] FIXED=" + JSON.stringify(obj));
-    }
+    console.log("[XQLH] isIOSVip " + before + "->" + obj.isIOSVip);
   }
   $done({ body: JSON.stringify(obj) });
 } catch (e) {
-  console.log("[XQLH v3] parse error: " + e.message);
   $done({ body: body });
 }
