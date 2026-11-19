@@ -1,0 +1,14 @@
+# 酷安 — 规则（配合 kuan.js 使用）
+
+[rewrite_local]
+https:\/\/api[0-9]*\.coolapk\.com\/v6\/feed\/detail url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/kuan.js
+https:\/\/api[0-9]*\.coolapk\.com\/v6\/account\/loadConfig url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/kuan.js
+https:\/\/api[0-9]*\.coolapk\.com\/v6\/user\/(profile|space) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/kuan.js
+https:\/\/api[0-9]*\.coolapk\.com\/v6\/feed\/(replyList|replyDetail) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/kuan.js
+https:\/\/api[0-9]*\.coolapk\.com\/v6\/main\/indexV8 url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/kuan.js
+https:\/\/api[0-9]*\.coolapk\.com\/v6\/page\/dataList url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/kuan.js
+https:\/\/api[0-9]*\.coolapk\.com\/v6\/main\/init url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/kuan.js
+https:\/\/api[0-9]*\.coolapk\.com\/v6\/topic\/newTagDetail url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/kuan.js
+
+[mitm]
+hostname = api.coolapk.com,api2.coolapk.com
