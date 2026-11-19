@@ -1,0 +1,7 @@
+# 易颜证件照 — 规则（配合 yiyanzhengjianzhao.js 使用）
+[rewrite_local]
+# > 易颜证件照-智能美颜证件照制作 （永久会员）
+# > 风云学习宝-中小学试卷题库精选 试卷宝ai写作 （永久会员）
+^https?://fufei\.cfcpe\.com\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yiyanzhengjianzhao.js
+[mitm]
+hostname = fufei.cfcpe.com.cn
