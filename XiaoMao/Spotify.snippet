@@ -1,0 +1,7 @@
+# Spotify — 规则（配合 Spotify.js 使用）
+
+[rewrite_local]
+^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/Spotify.js
+
+[mitm]
+hostname = spclient.wg.spotify.com
