@@ -1,0 +1,7 @@
+# 和讯财经 — 规则（配合 hexuncaijing.js 使用）
+
+[rewrite_local]
+https:\/\/(wapi|nwapi)\.hexun\.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/hexuncaijing.js
+
+[mitm]
+hostname = wapi.hexun.com,nwapi.hexun.com
