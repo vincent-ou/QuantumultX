@@ -1,0 +1,8 @@
+# 金牌翻译官 — 规则（配合 jinpaifanyiguan.js 使用）
+
+[rewrite_local]
+https:\/\/api\.helix\.ymxiaoze\.top\/v1\/apple\/subscriptions url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/jinpaifanyiguan.js
+https:\/\/mv-ps\.xdplt\.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/jinpaifanyiguan.js
+
+[mitm]
+hostname = mv-ps.xdplt.com,api.helix.ymxiaoze.top
