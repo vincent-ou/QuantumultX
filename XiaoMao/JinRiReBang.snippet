@@ -1,0 +1,12 @@
+# 今日热榜 — 规则（配合 jinrirebang.js 使用）
+
+[rewrite_local]
+https:\/\/api2\.tophub\.app\/account\/sync url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/jinrirebang.js
+https:\/\/api2\.tophub\.app\/my\/items url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/jinrirebang.js
+https:\/\/api2\.tophub\.app\/my\/alerts\/items url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/jinrirebang.js
+https:\/\/api2\.tophub\.app\/my\/channels\/.+\/items url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/jinrirebang.js
+https:\/\/api2\.tophub\.app\/explore url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/jinrirebang.js
+https:\/\/api2\.tophub\.app\/remai\/recommend\/taobao url reject-dict
+
+[mitm]
+hostname = api2.tophub.app
