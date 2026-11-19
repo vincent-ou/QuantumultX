@@ -1,0 +1,6 @@
+# 粤语学习通 — 规则（配合 yueyuxuexitong.js 使用）
+[rewrite_local]
+# > 粤语学习通-学说广东话粤语学习翻译词典
+^https?://api\.528529\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yueyuxuexitong.js
+[mitm]
+hostname = api.528529.com
