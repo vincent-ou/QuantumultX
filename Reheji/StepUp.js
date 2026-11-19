@@ -1,4 +1,6 @@
 /* StepUp — RevenueCat 订阅解锁（单独版）
+ * 原作者：ddgksf2013
+ * 适配版本：未注明
  * 清理整理：Muse — 从 ddgksf2013 RevenueCat 映射单抽StepUp，权益与产品与映射一致
  * 权益 premiun，产品 premiun（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 StepUp 的请求（StepUp），不影响其他 App
