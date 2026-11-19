@@ -1,0 +1,6 @@
+# 全民幸福舍 — 规则（配合 quanminxingfushe.js 使用）
+[rewrite_local]
+# > 全民幸福舍&课程+会员解锁
+^https?://api\.qmxfs\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/quanminxingfushe.js
+[mitm]
+hostname = api.qmxfs.com
