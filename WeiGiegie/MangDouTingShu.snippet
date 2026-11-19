@@ -1,0 +1,11 @@
+# 忙豆听书 — 规则（配合 mangdoutingshu.js 使用）
+[rewrite_local]
+^https?:\/\/md.liaoliaoy.com\/listen\/api\/getUserInfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/mangdoutingshu.js
+^https?://case-cdn\.oceanplayable\.com url reject
+^https?://ios\.bugly\.qq\.com url reject
+^https?://ulogs\.um.*\.com url reject
+^https?://token\.safebrowsing\.apple url reject
+^https?://toblog\.ctobsnssdk\.com url reject
+
+[mitm]
+hostname = md.liaoliaoy.com,www.yueliangfm.com,ios.bugly.qq.com,ulogs.umeng.com,ulogs.umengcloud.com,*toutiao.com,toblog.ctobsnssdk.com,token.safebrowsing.apple,toblog.ctobsnssdk.com
