@@ -1,0 +1,7 @@
+# 番茄短剧 — 规则（配合 fanqieduanju2.js 使用）
+[rewrite_local]
+^https?:\/\/fqapi.tiantiangf.cn\/center-(biz|admin)\/app-api\/v1\/(users\/me|skitsLists\/frontCheck) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/fanqieduanju2.js
+^https?://fqapi\.tiantiangf\.cn/center-system/app-api/v1/banner/list url reject-dict
+
+[mitm]
+hostname = fqapi.tiantiangf.cn
