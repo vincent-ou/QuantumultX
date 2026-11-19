@@ -1,0 +1,6 @@
+# touchretouch — 规则（配合 touchretouch.js 使用）
+[rewrite_local]
+# >touchretouch-消除笔及p图修图软件-神奇橡皮擦（恢复购买）
+^https?://api\.revenuecat\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/touchretouch.js
+[mitm]
+hostname = api.revenuecat.com
