@@ -1,7 +1,7 @@
-/* Sorter — 相册整理终身解锁
-原作者：chxm1023（iTunes 清单）
+/* Sorter — 相册整理 Pro + Max 解锁
+清理整理：Muse — 拦截苹果 buy.itunes.apple.com/verifyReceipt，仅对 Sorter（PhotosSorter）改写收据，注入 Pro（sorter.pro.ipa）与 Max 候选产品（sorter.max.ipa 等），到期 2099-09-09；其它 App 原样放行。
+原作者：chxm1023
 适配版本：未注明
-清理整理：Muse — 拦截苹果 buy.itunes.apple.com/verifyReceipt，仅对 Sorter（PhotosSorter）改写收据，注入终身内购 sorter.pro.ipa，到期 2099-09-09；其它 App 原样放行。
 [rewrite_local]
 [mitm] hostname = buy.itunes.apple.com */
 
@@ -33,36 +33,60 @@
   var PURCHASE = "2025-09-09 09:09:09 Etc/GMT";
   var PURCHASE_PST = "2025-09-09 09:09:09 America/Los_Angeles";
   var PURCHASE_MS = "1757408949000";
-  var TXN = "49000" + String(Math.floor(Math.random() * 10000000000)).padStart(10, "0");
 
-  var entry = {
-    quantity: "1",
-    product_id: "sorter.pro.ipa",
-    transaction_id: TXN,
-    original_transaction_id: TXN,
-    purchase_date: PURCHASE,
-    purchase_date_ms: PURCHASE_MS,
-    purchase_date_pst: PURCHASE_PST,
-    original_purchase_date: PURCHASE,
-    original_purchase_date_ms: PURCHASE_MS,
-    original_purchase_date_pst: PURCHASE_PST,
-    expires_date: EXPIRE,
-    expires_date_ms: EXPIRE_MS,
-    expires_date_pst: EXPIRE_PST,
-    is_trial_period: "false",
-    is_in_intro_offer_period: "false",
-    in_app_ownership_type: "PURCHASED",
-    web_order_line_item_id: "1000000" + String(Math.floor(Math.random() * 10000000000)).padStart(10, "0")
-  };
+  function makeEntry(productId, isLifetime) {
+    var txn = "49000" + String(Math.floor(Math.random() * 10000000000)).padStart(10, "0");
+    var e = {
+      quantity: "1",
+      product_id: productId,
+      transaction_id: txn,
+      original_transaction_id: txn,
+      purchase_date: PURCHASE,
+      purchase_date_ms: PURCHASE_MS,
+      purchase_date_pst: PURCHASE_PST,
+      original_purchase_date: PURCHASE,
+      original_purchase_date_ms: PURCHASE_MS,
+      original_purchase_date_pst: PURCHASE_PST,
+      is_trial_period: "false",
+      is_in_intro_offer_period: "false",
+      in_app_ownership_type: "PURCHASED",
+      web_order_line_item_id: "1000000" + String(Math.floor(Math.random() * 10000000000)).padStart(10, "0")
+    };
+    if (!isLifetime) {
+      e.expires_date = EXPIRE;
+      e.expires_date_ms = EXPIRE_MS;
+      e.expires_date_pst = EXPIRE_PST;
+    }
+    return e;
+  }
 
-  obj.receipt.in_app = [entry];
-  obj.latest_receipt_info = [entry];
-  obj.pending_renewal_info = [{
-    product_id: "sorter.pro.ipa",
-    original_transaction_id: TXN,
-    auto_renew_product_id: "sorter.pro.ipa",
-    auto_renew_status: "1"
-  }];
+  // Pro（已购，保留）+ Max 候选产品 ID（按 sorter.pro.ipa 的命名规律推断，一次注入多个，App 只认它自己的那个）
+  var entries = [
+    makeEntry("sorter.pro.ipa", true),
+    makeEntry("sorter.max.ipa", true),
+    makeEntry("sorter.max.lifetime", true),
+    makeEntry("sorter.pro.max", true),
+    makeEntry("sorter.pro.to.max", true),
+    makeEntry("sorter.max.yearly", false),
+    makeEntry("sorter.max.annual", false)
+  ];
+
+  obj.receipt.in_app = entries;
+  obj.latest_receipt_info = entries;
+  obj.pending_renewal_info = [
+    {
+      product_id: "sorter.max.yearly",
+      original_transaction_id: entries[5].original_transaction_id,
+      auto_renew_product_id: "sorter.max.yearly",
+      auto_renew_status: "1"
+    },
+    {
+      product_id: "sorter.pro.ipa",
+      original_transaction_id: entries[0].original_transaction_id,
+      auto_renew_product_id: "sorter.pro.ipa",
+      auto_renew_status: "1"
+    }
+  ];
   // 伪造 latest_receipt（base64），与原版做法一致
   var seed = "Sorter" + Date.now() + "_" + Math.random();
   obj.latest_receipt = btoa(seed + seed);
