@@ -1,0 +1,6 @@
+# 京东比价 — 规则（配合 jingdongbijia.js 使用）
+[rewrite_local]
+^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/jingdongbijia.js
+
+[mitm]
+hostname = in.m.jd.com
