@@ -1,0 +1,6 @@
+# 水印全能王 — 规则（配合 shuiyinquannengwang.js 使用）
+[rewrite_local]
+^https?:\/\/water.*\.yunxiaoguo\.cn\/user\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/shuiyinquannengwang.js
+
+[mitm]
+hostname = water*.yunxiaoguo.cn
