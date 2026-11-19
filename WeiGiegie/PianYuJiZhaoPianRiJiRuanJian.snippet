@@ -1,0 +1,6 @@
+# 片羽集照片日记软件 — 规则（配合 pianyujizhaopianrijiruanjian.js 使用）
+[rewrite_local]
+# > 片羽集照片日记软件
+^https?://lentoapp\.com:8091/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/pianyujizhaopianrijiruanjian.js
+[mitm]
+hostname = lentoapp.com:8091
