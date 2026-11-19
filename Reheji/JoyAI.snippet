@@ -1,0 +1,6 @@
+# Joy AI — 规则（配合 JoyAI.js 使用）
+[rewrite_local]
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Reheji/JoyAI.js
+
+[mitm]
+hostname = api.revenuecat.com, api.rc-backup.com
