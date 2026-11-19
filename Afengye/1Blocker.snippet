@@ -1,0 +1,6 @@
+# 1Blocker — 规则（配合 1Blocker.js 使用）
+[rewrite_local]
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/.+$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Afengye/1Blocker.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/.+$) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Afengye/1Blocker.js
+[mitm]
+hostname = api.revenuecat.com, api.rc-backup.com
