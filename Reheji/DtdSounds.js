@@ -1,4 +1,6 @@
 /* Dtd Sounds — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽Dtd Sounds，权益与产品与合集一致
  * 权益 pro，产品 com.dtd.aroundu.life（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 dtdvibe 的请求（Dtd Sounds），不影响其他 App
