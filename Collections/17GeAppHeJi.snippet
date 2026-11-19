@@ -1,0 +1,6 @@
+# 17个APP合集 — 规则（配合 17geappheji.js 使用）
+[rewrite_local]
+^https:\/\/.*api\.quthing\.com\/(.+\/vip|vip|student|user|appearance|background|rest) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/17geappheji.js
+
+[mitm]
+hostname = *api.quthing.com
