@@ -1,0 +1,6 @@
+# flomo — 规则（配合 Flomo.js 使用）
+[rewrite_local]
+^https:\/\/fl.*app\.com\/api\/v\d\/user\/me url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Flomo.js
+
+[mitm]
+hostname = fl*app.com
