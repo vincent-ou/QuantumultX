@@ -1,0 +1,6 @@
+# 少年得到 — 规则（配合 shaoniandedao.js 使用）
+[rewrite_local]
+# > 少年得到 解锁课程vip
+^https?://\*igetcool\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/shaoniandedao.js
+[mitm]
+hostname = *igetcool.com
