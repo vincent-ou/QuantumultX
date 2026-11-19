@@ -1,0 +1,6 @@
+# 睡眠助手 — 规则（配合 shuimianzhushou.js 使用）
+[rewrite_local]
+# >睡眠助手-专注白噪音冥想助眠（永久会员）
+^https?://www\.helloshiyu\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/shuimianzhushou.js
+[mitm]
+hostname = www.helloshiyu.com
