@@ -1,0 +1,9 @@
+# 微博 — 规则（配合 weibo.js 使用）
+
+[rewrite_local]
+https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/weibo.js
+https:\/\/api\.weibo\.cn\/device\/get url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/weibo.js
+https:\/\/weibointl\.api\.weibo\.cn\/portal\.php url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/weibo.js
+
+[mitm]
+hostname = new.vip.weibo.cn,api.weibo.cn,weibointl.api.weibo.cn
