@@ -1,0 +1,6 @@
+# 小麦在线 — 规则（配合 xiaomaizaixian.js 使用）
+[rewrite_local]
+^https?:\/\/www\.xiaomaigongkao\.com\/AppApi\/(vip|StartPage\/welcome|Member\/indexHangingWindow|Course\/(curriculum|details)) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/xiaomaizaixian.js
+
+[mitm]
+hostname = www.xiaomaigongkao.com
