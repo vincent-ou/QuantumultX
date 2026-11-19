@@ -1,0 +1,6 @@
+# 一草亭读书 — 规则（配合 yicaotingdushu.js 使用）
+[rewrite_local]
+# > 一草亭读书 Vip
+^https?://m\.yicaoting\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yicaotingdushu.js
+[mitm]
+hostname = m.yicaoting.com
