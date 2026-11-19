@@ -1,0 +1,6 @@
+# Keep — 规则（配合 Keep.js 使用）
+[rewrite_local]
+^https?:\/\/(api|kit).gotokeep\.com\/(nuocha|gerudo|athena|nuocha\/plans|suit\/v5\/smart|kprime\/v4\/suit\/sales)\/ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/Keep.js
+
+[mitm]
+hostname = api.gotokeep.com,kit.gotokeep.com,*.gotokeep.*,120.53.74.*,162.14.5.*,42.187.199.*,101.42.124.*
