@@ -1,0 +1,6 @@
+# 录音专家 — 规则（配合 luyinzhuanjia.js 使用）
+[rewrite_local]
+^http:\/\/luyintu\.cushuikeji\.cn\/tuv2\.(user\/info|order\/comboDuration|home\/activityAlert) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/luyinzhuanjia.js
+
+[mitm]
+hostname = luyintu.cushuikeji.cn
