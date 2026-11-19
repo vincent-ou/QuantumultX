@@ -315,7 +315,29 @@ const list = {
   'TT': { tp: 'timea', hx: 'hxpda', id: "com.55panda.hicalculator.year_sub" },  //TT_私密相册管家
   'Focos': { tp: 'timea', hx: 'hxpda', id: "com.focos.1w_t4_1w" },  //Focos
   'ProKnockOut': { tp: 'timed', hx: 'hxpda', id: "com.knockout.SVIP.50off", ids: "com.knockout.1year.AIVIP" },  //ProKnockOut
-  'com.teadoku.flashnote': { tp: 'timea', hx: 'hxpda', id: "pro_ios_ipad_mac" }  //AnkiNote
+  'com.teadoku.flashnote': { tp: 'timea', hx: 'hxpda', id: "pro_ios_ipad_mac" },  //AnkiNote
+  // ===== ddgksf2013 BuyiTunes 合并（2026-11-19） =====
+  'net.shinyfrog.bear-iOS': { tp: 'timea', hx: 'hxpda', id: "net.shinyfrog.bear_iOS.pro_yearly_subscription_bis" },  //bear
+  'com.yengshine.proccd': { tp: 'timea', hx: 'hxpda', id: "com.yengshine.proccd.year" },  //proccd
+  'com.lifubing.lbs.stepOfLife': { tp: 'timea', hx: 'hxpda', id: "com.lifubing.lbs.stepOfLife.plus.year" },  //ss
+  'com.calc.iphone': { tp: 'timea', hx: 'hxpda', id: "calc_Unlock_1" },  //Calculator
+  'com.inturnex.Sticker-Maker': { tp: 'timeb', hx: 'hxpda', id: "com.inturnex.Sticker_Maker.full_access" },  //Sticker
+  'FuYuan.inkDiary': { tp: 'timea', hx: 'hxpda', id: "FuYuan.inkDiary.YearB.Pro" },  //Secai
+  'com.anycasesolutions.SexTracker': { tp: 'timea', hx: 'hxpda', id: "com.anycasesolutions.SexTracker.3mon" },  //SexTracker
+  'com.jianili.pawff': { tp: 'timea', hx: 'hxpda', id: "com.jianili.pawff.pro.monthly" },  //pawff
+  'com.meditation.heartratehrv': { tp: 'timeb', hx: 'hxpda', id: "lifetimeusa" },  //meditation
+  'com.tianlang.gifmaker': { tp: 'timeb', hx: 'hxpda', id: "com.tianlang.gifmaker.forever" },  //gifmaker
+  'com.lixkit.diary': { tp: 'timea', hx: 'hxpda', id: "com.lixkit.diary.permanent_68" },  //diary
+  'com.touchbits.subscriptions': { tp: 'timea', hx: 'hxpda', id: "com.touchbits.subscriptions.iap.pro.yearly" },  //dyt
+  'org.zrey.money': { tp: 'timeb', hx: 'hxpda', id: "org.zrey.money.lifetime" },  //costmemo
+  'com.sfun.snapedit': { tp: 'timea', hx: 'hxpda', id: "com.moiseum.dailyart.subscription.Patron" },  //weikeMusic
+  'com.polygitapp.polygit': { tp: 'timea', hx: 'hxpda', id: "com.polygitapp.polygit.pro.yearly" },  //polygit
+  'com.sm.widget': { tp: 'timea', hx: 'hxpda', id: "com.sm.widget.Pro" },  //colorwidget
+  'linsen.camera.app': { tp: 'timea', hx: 'hxpda', id: "linsen.camera.App.yearly" },  //shiguangxiangji
+  'com.moiseum.dailyart': { tp: 'timea', hx: 'hxpda', id: "com.moiseum.dailyart.subscription.monthly" },  //dailyart
+  'com.verycoolapp.epubreader': { tp: 'timeb', hx: 'hxpda', id: "Epub Reader_ProVersion" },  //epubreader
+  'com.daymore.Across': { tp: 'timeb', hx: 'hxpda', id: "com.daymore.across.lifetime" },  //daymore
+  'com.jyys.jianmovie': { tp: 'timea', hx: 'hxpda', id: "com.year.jianying" }  //jianmovie
 };
 
 // ===== 自动App分组 =====
