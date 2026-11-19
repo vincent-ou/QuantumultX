@@ -1,0 +1,6 @@
+# 熊猫脑洞小说 — 规则（配合 xiongmaonaodongxiaoshuo.js 使用）
+[rewrite_local]
+# >熊猫脑洞小说 VIP
+^https?://xiaoshuo\.xmxsapp\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xiongmaonaodongxiaoshuo.js
+[mitm]
+hostname = xiaoshuo.xmxsapp.com
