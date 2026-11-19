@@ -1,0 +1,6 @@
+# 魔图 — 规则（配合 motu.js 使用）
+[rewrite_local]
+^http[s]?:\/\/pay-motu.doglobal.net/pay/apple/check url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/motu.js
+
+[mitm]
+hostname = pay-motu.doglobal.net
