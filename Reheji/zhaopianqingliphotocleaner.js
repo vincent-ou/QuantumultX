@@ -1,4 +1,6 @@
 /* 照片清理Photo Cleaner — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽照片清理Photo Cleaner，权益与产品与合集一致
  * 权益 premium，产品 com.monocraft.photocleaner.lifetime.3（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 Photo%20Cleaner 的请求（照片清理Photo Cleaner），不影响其他 App
