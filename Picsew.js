@@ -1,6 +1,8 @@
 /*
 Picsew 拼图 — 标准版 & 专业版解锁
 
+原作者：XiaoMao
+适配版本：3.9.5
 清理整理：Muse — 仅去作者推广、加 bundle_id 保护，逻辑与数值与原版一致。
            （逻辑原版是 sojson.v4 混淆，已还原。）
            拦截苹果 buy.itunes.apple.com/verifyReceipt，替换 receipt 为
