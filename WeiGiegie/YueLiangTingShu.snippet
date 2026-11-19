@@ -1,0 +1,12 @@
+# 月亮听书 — 规则（配合 yueliangtingshu.js 使用）
+[rewrite_local]
+# > 月亮听书 解锁付费听书购买
+# > 去广告
+^https?://case-cdn\.oceanplayable\.com url reject
+^https?://ios\.bugly\.qq\.com url reject
+^https?://ulogs\.um.*\.com url reject
+^https?://token\.safebrowsing\.apple url reject
+^https?://toblog\.ctobsnssdk\.com url reject
+^https?://www\.yueliangfm\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yueliangtingshu.js
+[mitm]
+hostname = www.yueliangfm.com,ios.bugly.qq.com,ulogs.umeng.com,ulogs.umengcloud.com,
