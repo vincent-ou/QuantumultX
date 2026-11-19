@@ -1,0 +1,6 @@
+# 指南针GPS — 规则（配合 zhinanzhengps.js 使用）
+[rewrite_local]
+^http[s]?:\/\/compass.xinzhi.space\/api\/v1\/isVip url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/zhinanzhengps.js
+
+[mitm]
+hostname = compass.xinzhi.space
