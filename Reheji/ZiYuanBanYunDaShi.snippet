@@ -1,0 +1,6 @@
+# 资源搬运大师 — 规则（配合 ziyuanbanyundashi.js 使用）
+[rewrite_local]
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Reheji/ziyuanbanyundashi.js
+
+[mitm]
+hostname = api.revenuecat.com, api.rc-backup.com
