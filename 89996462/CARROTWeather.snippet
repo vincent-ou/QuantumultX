@@ -1,0 +1,6 @@
+# CARROTWeather — 规则（配合 CARROTWeather.js 使用）
+[rewrite_local]
+^https:\/\/carrotweather\.herokuapp\.com\/parse\/functions\/findSubscriptionsForUserId url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/CARROTWeather.js
+
+[mitm]
+hostname = carrotweather.herokuapp.com
