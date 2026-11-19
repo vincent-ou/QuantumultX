@@ -1,0 +1,7 @@
+# 乃糖小组件 — 规则（配合 naitangxiaozujian.js 使用）
+
+[rewrite_local]
+^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/naitangxiaozujian.js
+
+[mitm]
+hostname = *.aoscdn.com, *.apsapp.cn
