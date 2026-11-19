@@ -1,0 +1,7 @@
+# 哔哩哔哩大会员 — 规则（配合 bilibilidahuiyuan.js 使用）
+[rewrite_local]
+^https?:\/\/app.bilibili.com\/x\/v2\/(account\/(myinfo|mine)|(feed\/index))\? url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/bilibilidahuiyuan.js
+^https?:\/\/app.bilibili.com\/bilibili.app.playerunite.v1.Player\/PlayViewUnite url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/bilibilidahuiyuan.js
+
+[mitm]
+hostname = .bilibili.*,*.biliapi.*,111.31.33.*,111.6.167.*,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,grpc.biliapi.net
