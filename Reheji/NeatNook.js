@@ -1,4 +1,6 @@
 /* NeatNook — RevenueCat 订阅解锁（单独版）
+ * 原作者：ddgksf2013
+ * 适配版本：未注明
  * 清理整理：Muse — 从 ddgksf2013 RevenueCat 映射单抽NeatNook，权益与产品与映射一致
  * 权益 com.neatnook.pro，产品 com.neatnook.pro.forever（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 NeatNook 的请求（NeatNook），不影响其他 App
