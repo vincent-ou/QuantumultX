@@ -1,0 +1,6 @@
+# 十点读书 — 规则（配合 shidiandushu.js 使用）
+[rewrite_local]
+# > 十点读书会员
+^https?://api\.read10\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/shidiandushu.js
+[mitm]
+hostname = api.read10.cn
