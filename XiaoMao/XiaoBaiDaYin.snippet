@@ -1,0 +1,8 @@
+# 小白学习打印 — 规则（配合 xiaobaidayin.js 使用）
+
+[rewrite_local]
+https:\/\/cdn-h\.gongfudou\.com\/.+\.(jpg|png) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/xiaobaidayin.js
+https:\/\/api\.xbxxhz\.com\/graphql url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/xiaobaidayin.js
+
+[mitm]
+hostname = api.xbxxhz.com,cdn-h.gongfudou.com
