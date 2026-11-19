@@ -1,0 +1,6 @@
+# 吉真万年历 — 规则（配合 jizhenwannianli.js 使用）
+[rewrite_local]
+^https?:\/\/calendarsrv\.iwzwh\.com\/api\/.+\/user\/getvipinfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/jizhenwannianli.js
+
+[mitm]
+hostname = calendarsrv.iwzwh.com
