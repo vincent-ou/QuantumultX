@@ -1,0 +1,10 @@
+# Apple Developer — 规则（配合 AppleDeveloper.js 使用）
+
+[task_local]
+0 0 1 * * ? https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/AppleDeveloper.js, tag=XiaoMao_Beta更新, enabled=true
+
+[rewrite_local]
+https:\/\/developer\.apple\.com\/download url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/AppleDeveloper.js
+
+[mitm]
+hostname = developer.apple.com
