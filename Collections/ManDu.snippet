@@ -1,0 +1,6 @@
+# 漫读 — 规则（配合 mandu.js 使用）
+[rewrite_local]
+^http:\/\/enjoy_reading_pro\.particlethink\.com:8083\/app\/api\/v\d\/user\/is_vip url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/mandu.js
+
+[mitm]
+hostname = enjoy_reading_pro
