@@ -1,0 +1,6 @@
+# FaceLab — 规则（配合 FaceLab.js 使用）
+[rewrite_local]
+^https?:\/\/subscription-api\.lyrebirdstudio\.net\/subscriptions\/apple\/(verify|status|decode-apple-receipt) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/FaceLab.js
+
+[mitm]
+hostname = subscription-api.lyrebirdstudio.net
