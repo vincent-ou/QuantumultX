@@ -1,0 +1,6 @@
+# 有道翻译官 — 规则（配合 youdaofanyiguan.js 使用）
+[rewrite_local]
+# > 有道翻译官-107种语言翻译
+^https?://dict\-ai\-subtitle\.youdao\.com/.* url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/youdaofanyiguan.js
+[mitm]
+hostname = dict-ai-subtitle.youdao.com
