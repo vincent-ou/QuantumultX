@@ -1,0 +1,10 @@
+# 逆向工具链 — 规则（配合 SignLab.js / RespInspector.js / AdBlock.js / VipPatch.js 使用）
+
+[rewrite_local]
+https?:\/\/ url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/SignLab.js
+https?:\/\/ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/RespInspector.js
+https?:\/\/ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/AdBlock.js
+https?:\/\/ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/VipPatch.js
+
+[mitm]
+hostname = *
