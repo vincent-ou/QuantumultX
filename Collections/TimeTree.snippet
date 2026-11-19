@@ -1,0 +1,6 @@
+# TimeTree — 规则（配合 TimeTree.js 使用）
+[rewrite_local]
+^https?:\/\/api\.timetreeapp\.com\/.+\/user\/subscription url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/TimeTree.js
+
+[mitm]
+hostname = api.timetreeapp.com
