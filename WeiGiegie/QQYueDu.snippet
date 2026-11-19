@@ -1,0 +1,6 @@
+# QQ阅读 — 规则（配合 qqyuedu.js 使用）
+[rewrite_local]
+# > qq阅读会员！
+^https?://.*\.reader\.qq\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/qqyuedu.js
+[mitm]
+hostname = *.reader.qq.com
