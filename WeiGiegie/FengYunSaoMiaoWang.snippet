@@ -1,0 +1,6 @@
+# 风云扫描王 — 规则（配合 fengyunsaomiaowang.js 使用）
+[rewrite_local]
+^https?:\/\/xieyi.cfcpe.com.cn\/api\/client\/info.*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/fengyunsaomiaowang.js
+
+[mitm]
+hostname = xieyi.cfcpe.com.cn
