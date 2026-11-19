@@ -1,4 +1,6 @@
 /* Sofa — RevenueCat 订阅解锁（单独版）
+ * 原作者：ddgksf2013
+ * 适配版本：未注明
  * 清理整理：Muse — 从 ddgksf2013 RevenueCat 映射单抽Sofa，权益与产品与映射一致
  * 权益 super，产品 sofa_family_29999_onetime（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 Sofa 的请求（Sofa），不影响其他 App
