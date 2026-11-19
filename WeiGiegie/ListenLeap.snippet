@@ -1,0 +1,6 @@
+# ListenLeap — 规则（配合 ListenLeap.js 使用）
+[rewrite_local]
+^https?://.+listenleap\.com/front-api/user/getUserInfoByUserToken url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/ListenLeap.js
+
+[mitm]
+hostname = www.listenleap.com,api.listenleap.com
