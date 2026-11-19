@@ -1,0 +1,6 @@
+# 暖悦 — 规则（配合 nuanyue.js 使用）
+[rewrite_local]
+# > 暖悦-ai大姨妈记录月经期助手
+^https?://gs\.gateway\.gameley\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/nuanyue.js
+[mitm]
+hostname = gs.gateway.gameley.cn
