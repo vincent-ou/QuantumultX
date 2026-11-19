@@ -1,4 +1,6 @@
 /* 谜底黑胶 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽谜底黑胶，权益与产品与合集一致
  * 权益 Entitlement.Pro，产品 tech.miidii.MDVinyl.lifetime（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 %E8%B0%9C%E5%BA%95%E9%BB%91%E8%83%B6 的请求（谜底黑胶），不影响其他 App
