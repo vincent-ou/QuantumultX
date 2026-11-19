@@ -1,0 +1,6 @@
+# 新语听书 — 规则（配合 xinyutingshu.js 使用）
+[rewrite_local]
+# >新语听书 Unlock 会员课程
+^https?://api\.xinyulib\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xinyutingshu.js
+[mitm]
+hostname = api.xinyulib.com,i.xinyulib.com.cn
