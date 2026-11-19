@@ -1,0 +1,6 @@
+# 配音师 — 规则（配合 peiyinshi.js 使用）
+[rewrite_local]
+# >配音师-文字转语音助手 Unlock VIP+配音课
+^https?://\*/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/peiyinshi.js
+[mitm]
+hostname = *
