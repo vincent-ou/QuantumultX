@@ -1,0 +1,8 @@
+# 音乐搜索 — 规则（配合 yinyuesousuo.js 使用）
+
+[rewrite_local]
+^https:\/\/(?:m|www)\.baidu\.com\/s\?.*?[?&](?:word|wd)=(?:md|ml)%23[^&]+ url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/yinyuesousuo.js
+^https?:\/\/(?:[a-zA-Z0-9-]+\.)?google\.[a-zA-Z.]+\/search\?[^&]*q=(md|ml)%23([^&]+) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/yinyuesousuo.js
+
+[mitm]
+hostname = m.baidu.com,www.baidu.com,www.google.*
