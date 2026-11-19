@@ -1,0 +1,6 @@
+# Everyday — 规则（配合 Everyday.js 使用）
+[rewrite_local]
+^https?:\/\/api\.everyday\.app\/(users|makeIosSubscription) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Everyday.js
+
+[mitm]
+hostname = api.everyday.app
