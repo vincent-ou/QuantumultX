@@ -1,0 +1,6 @@
+# 星空外语 — 规则（配合 xingkongwaiyu.js 使用）
+[rewrite_local]
+# > 星空外语-ai英语口语练习-雅思口语真题-ai外教一对一陪练
+^https?://api\.skyai\.tech/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xingkongwaiyu.js
+[mitm]
+hostname = api.skyai.tech
