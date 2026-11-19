@@ -1,0 +1,6 @@
+# 哈梨冥想 — 规则（配合 halimingxiang.js 使用）
+[rewrite_local]
+^https?:\/\/svc.heartlylab.com\/api\/v1\/(app\/user\/apple_login|user\/vip\/info) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/halimingxiang.js
+
+[mitm]
+hostname = svc.heartlylab.com
