@@ -1,4 +1,7 @@
-/* Grammarly — 订阅解锁 / 清理整理：Muse — 去作者推广与原版链接，变量名中性化，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = *.grammarly.com */
+/* Grammarly — 订阅解锁
+ * 原作者：David_Hex01
+ * 适配版本：未注明
+ * 清理整理：Muse — 去作者推广与原版链接，变量名中性化，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = *.grammarly.com */
 
 let vip = JSON.parse($response.body);
 
