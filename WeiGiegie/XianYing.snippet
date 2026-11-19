@@ -1,0 +1,5 @@
+# 现映 — 规则（配合 xianying.js 使用）
+[rewrite_local]
+^https?://xianying\-api\.fansxiaoshuo\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xianying.js
+[mitm]
+hostname = xianying-api.fansxiaoshuo.cn
