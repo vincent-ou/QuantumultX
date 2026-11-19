@@ -1,0 +1,7 @@
+# 嘿嘿漫画 — 规则（配合 heiheimanhua.js 使用）
+[rewrite_local]
+^https?:\/\/api.manxinao.com\/api\/User\/getBalance url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/heiheimanhua.js
+^https?:\/\/api.manxinao.com\/api\/Commodity\/(buychapter|chadetail) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/heiheimanhua.js
+
+[mitm]
+hostname = api.manxinao.com
