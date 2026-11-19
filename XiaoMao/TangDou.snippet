@@ -1,0 +1,8 @@
+# 糖豆视频 — 规则（配合 tangdou.js 使用）
+
+[rewrite_local]
+https:\/\/aa\.tangdou\.com:12308 url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/tangdou.js
+https:\/\/api-h5\.tangdou\.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/tangdou.js
+
+[mitm]
+hostname = aa.tangdou.com,api-h5.tangdou.com
