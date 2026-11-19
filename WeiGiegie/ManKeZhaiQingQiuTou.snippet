@@ -1,0 +1,6 @@
+# 漫客宅请求头 — 规则（配合 mankezhaiqingqiutou.js 使用）
+[rewrite_local]
+^https?:\/\/(comic|story).mkzcdn.com\/chapter\/(content\/v1|read\/check).*$ url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/mankezhaiqingqiutou.js
+
+[mitm]
+hostname = member.mkzcdn.com,comic.mkzcdn.com,base.mkzcdn.com
