@@ -1,0 +1,6 @@
+# 13个APP解锁全家桶 — 规则（配合 13geappjiesuoquanjiatong.js 使用）
+[rewrite_local]
+^https?:\/\/(appss|standard)\.(rhinox.*|linhongshi)\.com\/.+\/account\/getAccountInfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/13geappjiesuoquanjiatong.js
+
+[mitm]
+hostname = standard.rhinox*.com, appss.rhinox*.com, appss.linhongshi.com
