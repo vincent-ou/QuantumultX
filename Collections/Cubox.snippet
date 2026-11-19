@@ -1,0 +1,7 @@
+# Cubox — 规则（配合 Cubox.js 使用）
+
+[rewrite_local]
+^https?:\/\/cubox\.(pro|cc)\/.+\/api\/userInfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Cubox.js
+
+[mitm]
+hostname = cubox.*
