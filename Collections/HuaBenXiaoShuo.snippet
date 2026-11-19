@@ -1,0 +1,6 @@
+# 话本小说 — 规则（配合 huabenxiaoshuo.js 使用）
+[rewrite_local]
+^https?:\/\/.*\.ihuaben\.com\/(api\/userinfo|book\/app\/(vipReadWaitSeconds|book)|function\/bookservice\/authorInfo) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/huabenxiaoshuo.js
+
+[mitm]
+hostname = *.ihuaben.com
