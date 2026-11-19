@@ -1,0 +1,6 @@
+# Slidebox — 规则（配合 Slidebox.js 使用）
+[rewrite_local]
+^https?:\/\/.*-slidebox-ios-prod\.cloudfunctions\.net\/api.+ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Slidebox.js
+
+[mitm]
+hostname = *-slidebox-ios-prod.cloudfunctions.net
