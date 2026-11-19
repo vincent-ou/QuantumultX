@@ -1,4 +1,6 @@
 /* OpsCat — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽OpsCat，权益与产品与合集一致
  * 权益 OpsCat - Server Monitor & SSH Pro，产品 LifetimeAccessOps（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 OpsCat 的请求（OpsCat），不影响其他 App
