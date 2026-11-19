@@ -1,4 +1,6 @@
 /* Gear浏览器 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽Gear浏览器，权益与产品与合集一致
  * 权益 subscription，产品 com.gear.app.yearly（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 Gear 的请求（Gear浏览器），不影响其他 App
