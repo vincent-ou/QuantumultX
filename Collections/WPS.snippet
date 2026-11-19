@@ -1,0 +1,6 @@
+# WPS — 规则（配合 WPS.js 使用）
+[rewrite_local]
+^https?:\/\/(vas|account|drive)\.wps\.cn\/(query\/api\/.+\/list_purchase_info|api\/(v\d\/spaces|users\/.+\/overview)) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/WPS.js
+
+[mitm]
+hostname = *.wps.cn
