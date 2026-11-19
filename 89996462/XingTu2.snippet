@@ -1,0 +1,7 @@
+# 醒图 — 规则（配合 xingtu2.js 使用）
+[rewrite_local]
+^https:\/\/commerce-api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/xingtu2.js
+
+[mitm]
+
+hostname = *faceu*, *retouchpics*
