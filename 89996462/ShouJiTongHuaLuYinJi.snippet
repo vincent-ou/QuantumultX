@@ -1,0 +1,7 @@
+# 手机通话录音机 — 规则（配合 shoujitonghualuyinji.js 使用）
+[rewrite_local]
+^https:\/\/api\.tapeacall\.com\/v3\/receipt url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/shoujitonghualuyinji.js
+
+[mitm]
+
+hostname = api.tapeacall.com
