@@ -1,0 +1,7 @@
+# 配音秀 — 规则（配合 peiyinxiu.js 使用）
+
+[rewrite_local]
+^https?:\/\/iosapi\.peiyinxiu\.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/peiyinxiu.js
+
+[mitm]
+hostname = iosapi.peiyinxiu.com
