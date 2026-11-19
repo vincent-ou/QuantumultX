@@ -1,0 +1,81 @@
+/* 语音计算器 — RevenueCat 订阅解锁（单独版）
+ * 清理整理：Muse — 从 RevenueCat 合集中单抽语音计算器，权益与产品与合集一致
+ * 权益 Pro access，产品 com.tech.counter.All（终身），到期日 null（终身不过期）
+ * 只处理 User-Agent 或 Bundle ID 含 %E8%AF%AD%E9%9F%B3%E8%AE%A1%E7%AE%97%E5%99%A8 的请求（语音计算器），不影响其他 App
+ * 已有真实有效订阅时不覆盖（以服务器返回为准）
+ * [rewrite_local]
+ * [mitm] hostname = api.revenuecat.com, api.rc-backup.com
+ */
+
+(function () {
+  var APP_KEY = '%E8%AF%AD%E9%9F%B3%E8%AE%A1%E7%AE%97%E5%99%A8';
+  var ENTITLEMENT = 'Pro access';
+  var PRODUCT_ID = 'com.tech.counter.All';
+  var EXPIRES = null; // 终身，不过期
+
+  var headers = $request.headers || {};
+  var ua = headers['User-Agent'] || headers['user-agent'] || '';
+  var bundleId = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'] || '';
+
+  // 不是语音计算器的请求，原样放过。
+  if (ua.indexOf(APP_KEY) === -1 && bundleId.indexOf(APP_KEY) === -1) {
+    $done({});
+    return;
+  }
+
+  var obj;
+  try {
+    obj = JSON.parse($response.body || '{}');
+  } catch (e) {
+    $done({});
+    return;
+  }
+
+  var subscriber = obj.subscriber;
+  if (!subscriber) {
+    $done({});
+    return;
+  }
+
+  // 已有真实有效订阅时不覆盖（终身 null 或未到期的日期都算有效）。
+  var existing = subscriber.entitlements && subscriber.entitlements[ENTITLEMENT];
+  if (existing) {
+    if (existing.expires_date === null) {
+      $done({});
+      return;
+    }
+    if (existing.expires_date) {
+      var exp = new Date(existing.expires_date).getTime();
+      if (!isNaN(exp) && exp > Date.now()) {
+        $done({});
+        return;
+      }
+    }
+  }
+
+  var now = new Date().toISOString();
+  subscriber.entitlements = subscriber.entitlements || {};
+  subscriber.subscriptions = subscriber.subscriptions || {};
+
+  subscriber.entitlements[ENTITLEMENT] = {
+    expires_date: EXPIRES,
+    grace_period_expires_date: null,
+    product_identifier: PRODUCT_ID,
+    purchase_date: now
+  };
+
+  subscriber.subscriptions[PRODUCT_ID] = {
+    expires_date: EXPIRES,
+    grace_period_expires_date: null,
+    purchase_date: now,
+    original_purchase_date: now,
+    period_type: 'normal',
+    store: 'app_store',
+    is_sandbox: false,
+    unsubscribe_detected_at: null,
+    billing_issues_detected_at: null,
+    ownership_type: 'PURCHASED'
+  };
+
+  $done({ body: JSON.stringify(obj) });
+})();
