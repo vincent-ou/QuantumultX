@@ -1,0 +1,8 @@
+# DaisyFaceYoga — 规则（配合 DaisyFaceYoga.js 使用）
+
+[rewrite_local]
+https:\/\/api\.adapty\.io\/api\/v1\/sdk\/purchase\/app-store\/original-transaction-id\/validate url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/DaisyFaceYoga.js
+https:\/\/api\.onesignal\.com\/apps\/.+\/users\/by\/onesignal_id url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/DaisyFaceYoga.js
+
+[mitm]
+hostname = api.adapty.io,api.onesignal.com
