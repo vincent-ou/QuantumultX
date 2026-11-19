@@ -1,0 +1,6 @@
+# 一键抠图 — 规则（配合 yijiankoutu.js 使用）
+[rewrite_local]
+^https?:\/\/api\.mattingm\.com\/receipt_api\/user\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/yijiankoutu.js
+
+[mitm]
+hostname = api.mattingm.com
