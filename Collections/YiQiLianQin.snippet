@@ -1,0 +1,6 @@
+# 一起练琴 — 规则（配合 yiqilianqin.js 使用）
+[rewrite_local]
+^https?:\/\/api\.(.*lianqin.*|mangofuture)\.(com|cn)\/client\/v\d\/(user_vip|my_info) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/yiqilianqin.js
+
+[mitm]
+hostname = api.*lianqin*.*, api.mangofuture.cn
