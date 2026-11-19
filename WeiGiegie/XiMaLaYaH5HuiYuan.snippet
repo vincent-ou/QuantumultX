@@ -1,0 +1,6 @@
+# 喜马拉雅H5会员 — 规则（配合 ximalayah5huiyuan.js 使用）
+[rewrite_local]
+^https?:\/\/www\.himalaya\.com\/courses\/\d+ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/ximalayah5huiyuan.js
+
+[mitm]
+hostname = www.himalaya.com,apisg.himalaya.com,183.232.157.73:13037,cdn.himalaya.com:443,*.himalaya.*,api.himalaya.com
