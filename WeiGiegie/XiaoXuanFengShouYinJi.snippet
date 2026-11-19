@@ -1,0 +1,6 @@
+# 小旋风收音机 — 规则（配合 xiaoxuanfengshouyinji.js 使用）
+[rewrite_local]
+# > 小旋风恢复购买
+^https?://49\.232\.234\.212/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xiaoxuanfengshouyinji.js
+[mitm]
+hostname = 49.232.234.212
