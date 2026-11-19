@@ -1,0 +1,7 @@
+# 来音智能陪练 — 规则（配合 laiyinzhinengpeilian.js 使用）
+[rewrite_local]
+^http[s]?:\/\/(partner-ai-api.quthing.com|partner-ai-api.quthing.com)(/ai/vip/state|/student/info/h5) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/laiyinzhinengpeilian.js
+
+[mitm]
+
+hostname = (partner-ai-api.quthing.com|partner-ai-api.quthing.com)
