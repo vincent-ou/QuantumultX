@@ -1,0 +1,6 @@
+# 漫森短剧 — 规则（配合 mansenduanju.js 使用）
+[rewrite_local]
+^https?:\/\/man.api.mansenwenhua77.com\/app\/(my-home\/user\/info|login\/apple) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/mansenduanju.js
+
+[mitm]
+hostname = man.api.mansenwenhua77.com
