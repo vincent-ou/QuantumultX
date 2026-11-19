@@ -1,4 +1,6 @@
 /* Transmission服务器 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽Transmission服务器，权益与产品与合集一致
  * 权益 Premium，产品 200002（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 transmission_ui 的请求（Transmission服务器），不影响其他 App
