@@ -1,0 +1,7 @@
+# DailyArt — 规则（配合 DailyArt.js 使用）
+
+[rewrite_local]
+^https?:\/\/api\.getdailyart\.com\/api\/(subscription\/verified|auth\/login|check-logged) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/DailyArt.js
+
+[mitm]
+hostname = api.getdailyart.com
