@@ -1,0 +1,7 @@
+# 知音漫客 — 规则（配合 zhiyinmanke.js 使用）
+[rewrite_local]
+# >知音漫客 解锁会员+付费
+^https?://api-cdn\.kaimanhua\.com/advertiseapi/app/advertise/getappadvertise url reject
+^https?://apigate\.kaimanhua\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/zhiyinmanke.js
+[mitm]
+hostname = apigate.kaimanhua.com,api-cdn.kaimanhua.com
