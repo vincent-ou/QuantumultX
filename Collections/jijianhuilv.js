@@ -1,4 +1,7 @@
-/* 极简汇率 — 解锁会员 / 清理整理：Muse — 去除作者推广与原版链接，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = xremit.xcurrency.com, explorer.tratao.com */
+/* 极简汇率 — 解锁会员
+ * 原作者：chxm1023
+ * 适配版本：未注明
+ * 清理整理：Muse — 去除作者推广与原版链接，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = xremit.xcurrency.com, explorer.tratao.com */
 
 
 var resp = JSON.parse($response.body);
