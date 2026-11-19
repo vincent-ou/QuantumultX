@@ -1,0 +1,6 @@
+# 大神水印 — 规则（配合 dashenshuiyin.js 使用）
+[rewrite_local]
+^http[s]?:\/\/mars.inout.top\/user\/get_user_info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/dashenshuiyin.js
+
+[mitm]
+hostname = mars.inout.top
