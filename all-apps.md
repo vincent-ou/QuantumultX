@@ -6,11 +6,11 @@
 
 | 文件夹 | 行数 | 说明 |
 | --- | --- | --- |
-| root | 19 | 根目录 standalone 脚本（19 对） |
+| root | 20 | 根目录 standalone 脚本（20 对） |
 | Reheji | 508 | Reheji/（RevenueCat 合集，508 对） |
 | Collections | 232 | Collections/（chxm1023 单个 App 合集，232 行；227 个 .js，12 条共享脚本） |
 | XiaoMao | 431 | XiaoMao/（小帽 boxJS，431 行；434 对减 3 个已删除） |
-| WeiGiegie | 269 | WeiGiegie/（WeiGiegie 666，269 行；274 对减 5 个已删除） |
+| WeiGiegie | 268 | WeiGiegie/（WeiGiegie 666，268 行；274 对减 5 个已删除、1 个已移至根目录） |
 | 89996462 | 464 | 89996462/（89996462 ycdz/gx，464 对） |
 | Afengye | 118 | Afengye/（afengye crack.js，118 对） |
 
@@ -1825,7 +1825,7 @@
 | 小木短剧 | WeiGiegie | 1.0.6 | `WeiGiegie/xiaomuduanju.js` | App 专属 |
 | 小南斗 | 89996462 | 1.23.4 | `89996462/xiaonandou.js` | App 专属 |
 | 小南斗 | WeiGiegie | 1.23.4 | `WeiGiegie/xiaonandou.js` | App 专属 |
-| 小区楼号地图 | WeiGiegie | 1.0.10 | `WeiGiegie/xiaoqulouhaoditu.js` | App 专属 |
+| 小区楼号地图 | WeiGiegie | 1.0.10 | `xiaoqulouhaoditu.js` | App 专属 |
 | 小时尚 | chxm1023 | 未注明 | `Collections/xiaoshishang.js` | App 专属 |
 | 小守护 | chxm1023 | 未注明 | `Reheji/xiaoshouhu.js` | RevenueCat（终身） |
 | 小睡眠 | 小帽 | 未注明 | `XiaoMao/xiaoshuimian.js` | App 专属 |
