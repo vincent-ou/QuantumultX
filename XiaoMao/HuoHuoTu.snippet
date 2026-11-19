@@ -1,0 +1,10 @@
+# 火火兔 — 规则（配合 huohuotu.js 使用）
+
+[task_local]
+0 0 9 * * ? https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/huohuotu.js, tag=🐰XiaoMao_火火兔刷激励, enabled=false
+
+[rewrite_local]
+https:\/\/api\.cloud\.alilo\.com\.cn\/api\/v4\/user-activation\/check-sowing url script-request-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/huohuotu.js
+
+[mitm]
+hostname = api.cloud.alilo.com.cn
