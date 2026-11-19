@@ -1,0 +1,6 @@
+# 恋相遇 — 规则（配合 lianxiangyu.js 使用）
+[rewrite_local]
+^http[s]?:\/\/ms.51wnl-cq.com\/userApi\/getUserDetail url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/lianxiangyu.js
+
+[mitm]
+hostname = (ms.51wnl-cq.com|lxy.51wnl-cq.com)
