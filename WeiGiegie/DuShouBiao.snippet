@@ -1,0 +1,6 @@
+# 读手表 — 规则（配合 dushoubiao.js 使用）
+[rewrite_local]
+^https:\/\/watch\.taotiangou\.cn\/prod-api\/watch\/insight\/userInfo\/getUserMemberInfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/dushoubiao.js
+
+[mitm]
+hostname = watch.taotiangou.cn
