@@ -1,0 +1,6 @@
+# 秒解析 — 规则（配合 miaojiexi.js 使用）
+[rewrite_local]
+^https?:\/\/tcb-api\.tencentcloudapi\.com\/web url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/miaojiexi.js
+
+[mitm]
+hostname = tcb-api.tencentcloudapi.com
