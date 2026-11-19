@@ -1,0 +1,6 @@
+# KKJianPan2 — 规则（配合 kkjianpan2.js 使用）
+[rewrite_local]
+^https?:\/\/kk\.weshine\.im\/v1\.0\/text2voice\/(checkCount|consumeCount|createTtsAudio) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/kkjianpan2.js
+
+[mitm]
+hostname = kk.weshine.im
