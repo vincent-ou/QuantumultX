@@ -1,0 +1,7 @@
+# 套路键盘 — 规则（配合 taolujianpan.js 使用）
+[rewrite_local]
+^http[s]?:\/\/api.taolujianpan.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/taolujianpan.js
+
+[mitm]
+
+hostname = api.taolujianpan.com
