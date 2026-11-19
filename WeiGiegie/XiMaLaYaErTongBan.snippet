@@ -1,0 +1,8 @@
+# 喜马拉雅儿童版 — 规则（配合 ximalayaertongban.js 使用）
+[rewrite_local]
+# > 喜马拉雅儿童版会员
+# > 开屏去广告
+^https?://xxm\.ximalaya\.com/mobile/album/ad/asaActivate url reject-200
+^https?://xxm\.ximalaya\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/ximalayaertongban.js
+[mitm]
+hostname = xxm.ximalaya.com,
