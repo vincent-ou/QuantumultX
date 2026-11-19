@@ -1,4 +1,6 @@
 /* 衣记Thinglog — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽衣记Thinglog，权益与产品与合集一致
  * 权益 pro_access，产品 com.dyl.thinglog.lifetime（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 stufflog 的请求（衣记Thinglog），不影响其他 App
