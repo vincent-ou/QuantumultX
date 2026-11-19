@@ -1,4 +1,6 @@
 /* KidsBeeTV少儿英语启蒙动画 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽KidsBeeTV少儿英语启蒙动画，权益与产品与合集一致
  * 权益 Subscriber，产品 kidsbeetv.lifetime.subscription.ios（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 kiddztube 的请求（KidsBeeTV少儿英语启蒙动画），不影响其他 App
