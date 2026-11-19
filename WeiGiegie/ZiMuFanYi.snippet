@@ -1,0 +1,6 @@
+# 字幕翻译 — 规则（配合 zimufanyi.js 使用）
+[rewrite_local]
+# >字幕翻译-实时视频字幕识别视频翻译软件（永久会员）
+^https?://zimu\.yunmiaomiao\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/zimufanyi.js
+[mitm]
+hostname = zimu.yunmiaomiao.cn
