@@ -1,0 +1,6 @@
+# 闹钟 — 规则（配合 naozhong.js 使用）
+[rewrite_local]
+^http[s]?:\/\/nao.ganbuguo.com\/user\/userinfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/naozhong.js
+
+[mitm]
+hostname = nao.ganbuguo.com
