@@ -1,0 +1,6 @@
+# 帆书请求体 — 规则（配合 fanshuqingqiuti.js 使用）
+[rewrite_local]
+^https?:\/\/.+dushu365.com\/resource-orchestration-system\/book\/v101\/content url script-request-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/fanshuqingqiuti.js
+
+[mitm]
+hostname = .dushu365.com,gw2.dushu365.com,gw1.dushu365.com
