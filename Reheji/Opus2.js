@@ -1,4 +1,6 @@
 /* Opus — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽Opus，权益与产品与合集一致
  * 权益 Single，产品 opus.lifetime（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 ip_tv_react_native 的请求（Opus），不影响其他 App
