@@ -1,0 +1,7 @@
+# 我听 — 规则（配合 woting.js 使用）
+[rewrite_local]
+# > 我听 解锁vip电子书,讲书
+^https://api\.wotingfm\.com/wt-api/ad/list-by-ad-type url reject
+^https?://api\.wotingfm\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/woting.js
+[mitm]
+hostname = api.wotingfm.com
