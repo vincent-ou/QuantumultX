@@ -1,0 +1,6 @@
+# 姬漫社 — 规则（配合 jimanshe.js 使用）
+[rewrite_local]
+https?:\/\/oxtoon.(cyou|work|monster|net)\/((detail|comic)\/\d|buychapter).*$ url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/jimanshe.js
+
+[mitm]
+hostname = oxtoon.cyou,oxtoon.work,oxtoon.monster,oxtoon.net
