@@ -1,0 +1,6 @@
+# 傲软抠图 — 规则（配合 aoruankoutu.js 使用）
+[rewrite_local]
+^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/aoruankoutu.js
+
+[mitm]
+hostname = *.aoscdn.com, *.apsapp.cn
