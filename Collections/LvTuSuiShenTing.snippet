@@ -1,0 +1,6 @@
+# 旅途随身听 — 规则（配合 lvtusuishenting.js 使用）
+[rewrite_local]
+^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(user.*\/getInfo|guideScenic) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/lvtusuishenting.js
+
+[mitm]
+hostname = www.1314zhilv.com
