@@ -1,0 +1,6 @@
+# 有书 ,有书精读 — 规则（配合 youshuyoushujingdu.js 使用）
+[rewrite_local]
+# > 有书 ,有书精读+付费课程+有声书(电子书暂时无解)
+^https?://gongdu\.youshu\.cc/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/youshuyoushujingdu.js
+[mitm]
+hostname = gongdu.youshu.cc,sc.youshu.cc
