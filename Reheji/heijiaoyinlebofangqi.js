@@ -1,4 +1,6 @@
 /* 黑胶音乐播放器 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽黑胶音乐播放器，权益与产品与合集一致
  * 权益 com.zhuangmengting.player，产品 com.zhuangmengting.player.permanen（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 MusicPlayer 的请求（黑胶音乐播放器），不影响其他 App
