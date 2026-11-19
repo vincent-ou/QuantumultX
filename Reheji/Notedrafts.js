@@ -1,4 +1,6 @@
 /* Notedrafts — RevenueCat 订阅解锁（单独版）
+ * 原作者：ddgksf2013
+ * 适配版本：未注明
  * 清理整理：Muse — 从 ddgksf2013 RevenueCat 映射单抽Notedrafts，权益与产品与映射一致
  * 权益 pro_entitlement，产品 pro_entitlement（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 Notedrafts 的请求（Notedrafts），不影响其他 App
