@@ -1,0 +1,8 @@
+# XONE — 规则（配合 XONE.js 使用）
+[rewrite_local]
+https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers|receipts) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/XONE.js
+https:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers|receipts) url script-response-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/XONE.js
+
+[mitm]
+
+hostname = api.revenuecat.com, api.rc-backup.com
