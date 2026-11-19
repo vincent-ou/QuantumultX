@@ -1,4 +1,6 @@
 /* Convertly — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽Convertly，权益与产品与合集一致
  * 权益 Convertly Pro，产品 life_time_id（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 Image2PDF 的请求（Convertly），不影响其他 App
