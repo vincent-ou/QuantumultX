@@ -1,0 +1,6 @@
+# 航旅追踪 — 规则（配合 hanglvzhuizong.js 使用）
+[rewrite_local]
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/(\$RCAnonymousID%)?(\w)*$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/hanglvzhuizong.js
+
+[mitm]
+hostname = api.revenuecat.com
