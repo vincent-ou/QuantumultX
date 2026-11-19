@@ -1,0 +1,6 @@
+# pixart ai photo editor — 规则（配合 pixartaiphotoeditor.js 使用）
+[rewrite_local]
+# >pixart ai photo editor（永久会员）
+^https?://api\.qonversion\.io/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/pixartaiphotoeditor.js
+[mitm]
+hostname = api.qonversion.io
