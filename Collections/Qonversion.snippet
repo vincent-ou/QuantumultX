@@ -1,0 +1,7 @@
+# Qonversion — 规则（配合 Qonversion.js 使用）
+
+[rewrite_local]
+^https?:\/\/api\.qonversion\.io\/v\d\/user\/(init|purchase) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Qonversion.js
+
+[mitm]
+hostname = api.qonversion.io
