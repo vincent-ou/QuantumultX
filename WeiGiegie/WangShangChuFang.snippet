@@ -1,0 +1,6 @@
+# 网上厨房 — 规则（配合 wangshangchufang.js 使用）
+[rewrite_local]
+# >网上厨房-家常菜谱美食烘焙教程
+^https?://api\.ecook\.xiaochushuo\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/wangshangchufang.js
+[mitm]
+hostname = api.ecook.xiaochushuo.com
