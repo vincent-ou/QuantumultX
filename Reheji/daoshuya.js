@@ -1,4 +1,6 @@
 /* 倒数鸭 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽倒数鸭，权益与产品与合集一致
  * 权益 premium，产品 Lifetime（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 CountDuck 的请求（倒数鸭），不影响其他 App
