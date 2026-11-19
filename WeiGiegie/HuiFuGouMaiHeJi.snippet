@@ -1,0 +1,6 @@
+# 恢复购买合集 — 规则（配合 huifugoumaiheji.js 使用）
+[rewrite_local]
+^https?:\/\/api.revenuecat.com\/v1\/receipts url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/huifugoumaiheji.js
+
+[mitm]
+hostname = api.revenuecat.com
