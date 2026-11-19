@@ -1,0 +1,6 @@
+# Lightroom — 规则（配合 Lightroom.js 使用）
+[rewrite_local]
+^https:\/\/photos\.adobe\.io\/v2\/accounts* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/Lightroom.js
+
+[mitm]
+hostname = photos.adobe.io
