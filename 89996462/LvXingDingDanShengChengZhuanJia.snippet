@@ -1,0 +1,6 @@
+# 旅行订单生成专家 — 规则（配合 lvxingdingdanshengchengzhuanjia.js 使用）
+[rewrite_local]
+^http[s]?:\/\/ticket-api.aimusician.com.cn\/user\/info\/getMyMaterial url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/lvxingdingdanshengchengzhuanjia.js
+
+[mitm]
+hostname = ticket-api.aimusician.com.cn
