@@ -1,6 +1,8 @@
 /*
 AppRaven — 解锁会员权限
 
+原作者：XiaoMao
+适配版本：未注明
 清理整理：Muse — 仅去作者推广，逻辑与数值与原版一致。
            拦截 appraven.net 的 GraphQL 接口，字符串替换：
              "premium":false → true（会员）
