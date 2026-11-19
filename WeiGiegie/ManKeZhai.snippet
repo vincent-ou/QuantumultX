@@ -1,0 +1,6 @@
+# 漫客宅 — 规则（配合 mankezhai.js 使用）
+[rewrite_local]
+^https?:\/\/(member|comic|base).mkzcdn.com\/(user|chapter\/buy\/add|vote\/add|gift\/play\/add|advert\/app\/(read|user|task)).*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/mankezhai.js
+
+[mitm]
+hostname = member.mkzcdn.com,comic.mkzcdn.com,base.mkzcdn.com
