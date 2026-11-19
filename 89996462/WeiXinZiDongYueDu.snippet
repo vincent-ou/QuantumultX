@@ -1,0 +1,7 @@
+# 微信自动阅读 — 规则（配合 weixinzidongyuedu.js 使用）
+[rewrite_local]
+^https?://mp\.weixin\.qq\.com/s\?.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/weixinzidongyuedu.js
+
+[mitm]
+
+hostname = mp.weixin.qq.com
