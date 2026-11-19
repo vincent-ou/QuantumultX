@@ -1,0 +1,6 @@
+# 快递100收件端 — 规则（配合 kuaidi100shoujianduan.js 使用）
+[rewrite_local]
+^https?:\/\/.*\.kuaidi100\.com\/(mkt\/courier\/open|open\/test|advertisement) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/kuaidi100shoujianduan.js
+
+[mitm]
+hostname = *.kuaidi100.com
