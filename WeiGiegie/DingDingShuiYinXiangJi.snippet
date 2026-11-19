@@ -1,0 +1,6 @@
+# 盯盯水印相机 — 规则（配合 dingdingshuiyinxiangji.js 使用）
+[rewrite_local]
+^https?:\/\/camera.xinmengma.com\/api\/user url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/dingdingshuiyinxiangji.js
+
+[mitm]
+hostname = camera.xinmengma.com
