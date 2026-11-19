@@ -1,0 +1,6 @@
+# 糖果追剧 — 规则（配合 tangguozhuiju.js 使用）
+[rewrite_local]
+# > 糖果追剧-全网海量热门短剧小说
+^https?://candydjapi\.winner1319\.top/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/tangguozhuiju.js
+[mitm]
+hostname = candydjapi.winner1319.top
