@@ -1,0 +1,8 @@
+# 咪咕音乐 — 规则（配合 miguyinyue2.js 使用）
+[rewrite_local]
+^https?:\/\/app.(c|pd).nf.migu.cn\/.*\/(listen-url|music\/batchQueryMusicPolicy|download-url).*$ url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/miguyinyue2.js
+^https://app\.c\.nf\.migu\.cn/member/api/marketing/text url reject
+^https://app\.c.nf\.migu\.cn/payment/watch-ad url reject-200
+
+[mitm]
+hostname = .migu.cn
