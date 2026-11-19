@@ -1,0 +1,6 @@
+# 知识脱口秀 — 规则（配合 zhishituokouxiu.js 使用）
+[rewrite_local]
+# >知识脱口秀
+^https?://talkshow\.wfkids\.net/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/zhishituokouxiu.js
+[mitm]
+hostname = talkshow.wfkids.net
