@@ -1,0 +1,7 @@
+# 咿啦看书 — 规则（配合 yilakanshu.js 使用）
+[rewrite_local]
+^http[s]?:\/\/bookapi.ellabook.cn\/rest\/api\/service url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/yilakanshu.js
+
+[mitm]
+
+hostname = bookapi.ellabook.cn
