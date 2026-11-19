@@ -1,0 +1,6 @@
+# 牛健康 — 规则（配合 niujiankang.js 使用）
+[rewrite_local]
+^https:\/\/gw\.qnniu\.com\/api\/servlets\?endpoint=\/member_centers url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/niujiankang.js
+
+[mitm]
+hostname = gw.qnniu.com
