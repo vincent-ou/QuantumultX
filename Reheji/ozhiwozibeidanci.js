@@ -1,4 +1,6 @@
 /* 喔知Wozi背单词 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽喔知Wozi背单词，权益与产品与合集一致
  * 权益 wozi_pro_2023，产品 wozi_pro_2023（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 Wozi 的请求（喔知Wozi背单词），不影响其他 App
