@@ -1,0 +1,7 @@
+# 爱剪辑 — 规则（配合 aijianji.js 使用）
+
+[rewrite_local]
+^https?:\/\/api\.open\.loveclip\.site\/UserInfo\/(UserPersonalCoreAsync|GetUserDetail) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/aijianji.js
+
+[mitm]
+hostname = api.open.loveclip.site
