@@ -1,0 +1,7 @@
+# Soul — 规则（配合 Soul.js 使用）
+[rewrite_local]
+^http[s]?:\/\/(api-chat.soulapp.cn|.*)\/(chat/limitInfo|vip/meet/userInfo|loveBell/queryMatchSpeedupConf) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/Soul.js
+
+[mitm]
+
+hostname = (.*|api-chat.soulapp.cn)
