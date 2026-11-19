@@ -1,0 +1,6 @@
+# 凡音钢琴 — 规则（配合 fanyingangqin.js 使用）
+[rewrite_local]
+^https?:\/\/gzfanyin\.com\/api\/ums\/getMember url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/fanyingangqin.js
+
+[mitm]
+hostname = gzfanyin.com
