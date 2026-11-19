@@ -1,0 +1,13 @@
+# 黄油相机 — 规则（配合 huangyouxiangji.js 使用）
+
+[rewrite_local]
+https:\/\/api4\.bybutter\.com\/v4\/* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/huangyouxiangji.js
+https:\/\/api4\.bybutter\.com\/v4\/app\/placements\/\d\/advertisements url reject
+https:\/\/tcbox\.baidu\.com\/ztbox url reject
+https:\/\/adx-cn\.anythinktech\.com\/bid url reject
+https:\/\/bgg\.baidu\.com\/bgg\/produce url reject
+https:\/\/api4\.bybutter\.com\/v4\/shop\/banners\/recommendation url reject
+https:\/\/api4\.bybutter\.com\/v4\/shop\/orders\/apple\/receipts url reject
+
+[mitm]
+hostname = api4.bybutter.com,tcbox.baidu.com,adx-cn.anythinktech.com,bgg.baidu.com
