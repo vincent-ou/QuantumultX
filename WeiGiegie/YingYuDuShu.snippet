@@ -1,0 +1,6 @@
+# 英语读书 — 规则（配合 yingyudushu.js 使用）
+[rewrite_local]
+# > 英语读书 vip
+^https?://duoting\.tatatimes\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yingyudushu.js
+[mitm]
+hostname = duoting.tatatimes.com
