@@ -1,0 +1,6 @@
+# 火星漫画 — 规则（配合 huoxingmanhua.js 使用）
+[rewrite_local]
+^http[s]?:\/\/appapi.pipimanhua.cc url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/huoxingmanhua.js
+
+[mitm]
+hostname = appapi.pipimanhua.cc
