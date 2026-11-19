@@ -1,0 +1,6 @@
+# 医考帮 — 规则（配合 yikaobang.js 使用）
+[rewrite_local]
+# >医考帮（解锁能解锁的课程）
+^https?://api\.yikaobang\.com\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yikaobang.js
+[mitm]
+hostname = api.yikaobang.com.cn
