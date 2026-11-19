@@ -1,0 +1,7 @@
+# 灵敢提词器 — 规则（配合 lingganticiqi.js 使用）
+[rewrite_local]
+^http[s]?:\/\/teleprompter-api.quthing.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/lingganticiqi.js
+
+[mitm]
+
+hostname = teleprompter-api.quthing.com
