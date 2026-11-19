@@ -1,0 +1,6 @@
+# 视氪地图 — 规则（配合 shikeditu.js 使用）
+[rewrite_local]
+http:\/\/39\.101\.171\.199:8080\/(liteKrnaviDownloadUserData|liteKrnaviCheckToken) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/shikeditu.js
+
+[mitm]
+hostname = 39
