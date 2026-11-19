@@ -1,0 +1,6 @@
+# 全网热门短剧 — 规则（配合 quanwangremenduanju.js 使用）
+[rewrite_local]
+# >
+^https?://iosqwrmdj\.sanwubeixin\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/quanwangremenduanju.js
+[mitm]
+hostname = iosqwrmdj.sanwubeixin.cn
