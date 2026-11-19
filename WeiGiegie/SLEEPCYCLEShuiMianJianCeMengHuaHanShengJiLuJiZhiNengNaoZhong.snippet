@@ -1,0 +1,6 @@
+# sleep cycle: 睡眠监测梦话鼾声记录及智能闹钟 — 规则（配合 sleepcycleshuimianjiancemenghuahanshengjilujizhinengnaozhong.js 使用）
+[rewrite_local]
+# >sleep cycle: 睡眠监测梦话鼾声记录及智能闹钟（永久会员）
+^https?://ch\.sleepcycle\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/sleepcycleshuimianjiancemenghuahanshengjilujizhinengnaozhong.js
+[mitm]
+hostname = ch.sleepcycle.com
