@@ -1,0 +1,7 @@
+# 绘影字幕 — 规则（配合 huiyingzimu.js 使用）
+
+[rewrite_local]
+^https?:\/\/api\.bluepulse\.cn\/bluepulse-caption-server-front\/api\/.+\/user\/app-vip-info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/huiyingzimu.js
+
+[mitm]
+hostname = api.bluepulse.cn
