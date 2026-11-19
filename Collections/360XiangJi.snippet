@@ -1,0 +1,6 @@
+# 360相机 — 规则（配合 360xiangji.js 使用）
+[rewrite_local]
+^https?:\/\/.*\.camera360\.com\/(api\/(order\/purchase|iap\/check-receipt)|v\d\/operational-positions) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/360xiangji.js
+
+[mitm]
+hostname = *.camera360.com
