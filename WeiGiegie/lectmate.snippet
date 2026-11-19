@@ -1,0 +1,6 @@
+# lectmate — 规则（配合 lectmate.js 使用）
+[rewrite_local]
+# > lectmate-有道留学听课宝
+^https?://intervip\.youdao\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/lectmate.js
+[mitm]
+hostname = intervip.youdao.com
