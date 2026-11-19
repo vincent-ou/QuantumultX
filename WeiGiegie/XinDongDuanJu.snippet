@@ -1,0 +1,6 @@
+# 心动短剧 — 规则（配合 xindongduanju.js 使用）
+[rewrite_local]
+# >心动短剧-全网热门短剧海量小视频app
+^https?://dj\.vjread\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xindongduanju.js
+[mitm]
+hostname = dj.vjread.com
