@@ -1,0 +1,6 @@
+# RainViewer — 规则（配合 RainViewer.js 使用）
+[rewrite_local]
+^https?:\/\/.*\.cloudfront\.net\/(index\.php\/jsapi\/(paywall|get_story_more_info)|mobile\/verify) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/RainViewer.js
+
+[mitm]
+hostname = *.cloudfront.net, ftmailbox.cn
