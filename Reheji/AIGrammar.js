@@ -1,4 +1,6 @@
 /* AI Grammar — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽AI Grammar，权益与产品与合集一致
  * 权益 AIGrammercheckerProAccess，产品 sv.aigrammerchecker.com.lifetime（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 rewritingText 的请求（AI Grammar），不影响其他 App
