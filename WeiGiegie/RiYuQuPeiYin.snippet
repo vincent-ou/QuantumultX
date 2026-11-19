@@ -1,0 +1,6 @@
+# 日语趣配音 — 规则（配合 riyuqupeiyin.js 使用）
+[rewrite_local]
+# > 日语趣配音-零基础学日语
+^https?://japaneselar\.qupeiyin\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/riyuqupeiyin.js
+[mitm]
+hostname = japaneselar.qupeiyin.com
