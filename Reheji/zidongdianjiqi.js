@@ -1,4 +1,6 @@
 /* 自动点击器 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽自动点击器，权益与产品与合集一致
  * 权益 pro，产品 easyclicker.premium.discount2（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 EasyClicker 的请求（自动点击器），不影响其他 App
