@@ -1,0 +1,6 @@
+# Koan — 规则（配合 Koan.js 使用）
+[rewrite_local]
+^https?:\/\/koan\.bopulab\.cn\/(user\/getBriefByUserIdV3|payment\/iosIap\/receipt) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Koan.js
+
+[mitm]
+hostname = koan.bopulab.cn
