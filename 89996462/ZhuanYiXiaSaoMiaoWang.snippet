@@ -1,0 +1,7 @@
+# 转易侠扫描王 — 规则（配合 zhuanyixiasaomiaowang.js 使用）
+[rewrite_local]
+^http[s]?:\/\/vip.zhuanyixia.cn\/v1.0\/getuserinfo.php url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/zhuanyixiasaomiaowang.js
+
+[mitm]
+
+hostname = vip.zhuanyixia.cn
