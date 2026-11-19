@@ -1,0 +1,7 @@
+# VN — 规则（配合 VN.js 使用）
+
+[rewrite_local]
+^https?:\/\/api2\.vlognow\.me\/vn-pay\/api\/.+\/public\/iap\/receipt\/status?(.*?)*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/VN.js
+
+[mitm]
+hostname = api2.vlognow.me
