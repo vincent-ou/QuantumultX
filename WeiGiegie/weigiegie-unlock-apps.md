@@ -232,7 +232,6 @@
 | 课程 | WeiGiegie | 未注明 | 熊猫助眠&课程+ |
 | 小南斗 | WeiGiegie | 1.23.4 | 会员解锁 |
 | 心晴计划 | WeiGiegie | 1.4.6 | 日常计划-project50自律健身打卡-习惯养 |
-| 小区楼号地图 | WeiGiegie | 1.0.10 | 快递外卖极速导航 |
 | 迅雷 | WeiGiegie | 2.2.21 | 会员解锁 |
 | 小歪微商 | WeiGiegie | 1.0.9 | 会员解锁 |
 | 小旋风收音机 | WeiGiegie | 4.5 | 会员解锁 |
