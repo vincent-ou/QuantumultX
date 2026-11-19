@@ -1,0 +1,14 @@
+/* 必美相机 — 解锁订阅
+ * 原作者：89996462
+ * 适配版本：2.2
+ * 清理整理：Muse — 去作者推广信息与写入作者身份的字段，逻辑与数值与原版一致
+ * [rewrite_local]
+ * [mitm] hostname = iosbmxj.sanwubeixin.cn
+ */
+
+var body = $response.body.replace(/isVip":\w+/g,'isVip":true')
+.replace(/vip_time":\d+/g,'vip_time":8888888888')
+.replace(/vip_type":\d/g,'vip_type":1')
+.replace(/vip_money":\d/g,'vip_money":1')
+
+$done({ body });
