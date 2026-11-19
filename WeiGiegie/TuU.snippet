@@ -1,0 +1,7 @@
+# 兔u — 规则（配合 tuu.js 使用）
+[rewrite_local]
+# >兔u-引领广播剧潮牌 Unlock VIP SVIP
+# >开屏?
+^https?://api\.zuidie\.net/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/tuu.js
+[mitm]
+hostname = api.zuidie.net
