@@ -1,0 +1,11 @@
+# 海豚记账本 — 规则（配合 haitunjizhangben.js 使用）
+
+[rewrite_local]
+https:\/\/book\.haitunwallet\.com\/app\/config url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/haitunjizhangben.js
+https:\/\/book\.haitunwallet\.com\/app\/launchad url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/haitunjizhangben.js
+https:\/\/book\.haitunwallet\.com\/app\/upgrade url reject-200
+https:\/\/book\.haitunwallet\.com\/app\/explore\/explore url reject-dict
+https:\/\/book\.haitunwallet\.com\/app\/vip\/status url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/haitunjizhangben.js
+
+[mitm]
+hostname = book.haitunwallet.com
