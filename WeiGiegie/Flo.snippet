@@ -1,0 +1,6 @@
+# Flo — 规则（配合 Flo.js 使用）
+[rewrite_local]
+^https?:\/\/api.owhealth.com\/subscriptions\/v1\/apple.*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/Flo.js
+
+[mitm]
+hostname = api.owhealth.com
