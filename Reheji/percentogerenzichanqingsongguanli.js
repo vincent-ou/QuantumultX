@@ -1,4 +1,6 @@
 /* Percento个人资产轻松管理 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽Percento个人资产轻松管理，权益与产品与合集一致
  * 权益 premium，产品 app.percento.premium.168.lifetime（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 Percento 的请求（Percento个人资产轻松管理），不影响其他 App
