@@ -1,0 +1,7 @@
+# Wink（美图全家桶：Wink/蛋啵/潮自拍/海报工厂/Chic） — 规则（配合 wink2.js 使用）
+[rewrite_local]
+^https:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/wink2.js
+
+[mitm]
+
+hostname = api-*.meitu.com
