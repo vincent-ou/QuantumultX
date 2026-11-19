@@ -1,0 +1,6 @@
+# Foodvisor — 规则（配合 Foodvisor.js 使用）
+[rewrite_local]
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/.+$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Afengye/Foodvisor.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/.+$) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Afengye/Foodvisor.js
+[mitm]
+hostname = api.revenuecat.com, api.rc-backup.com
