@@ -1,0 +1,6 @@
+# 剪播台 — 规则（配合 jianbotai.js 使用）
+[rewrite_local]
+^https?:\/\/api-chn.jianbotaiapi.com\/api\/rest\/commerce\/integrate\/vip\/perform.*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/jianbotai.js
+
+[mitm]
+hostname = api-chn.jianbotaiapi.com
