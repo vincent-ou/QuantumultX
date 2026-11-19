@@ -1,4 +1,6 @@
 /* Snipd播客 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽Snipd播客，权益与产品与合集一致
  * 权益 premium，产品 snipd_premium_1y_7199_trial_2w_v2（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 Snipd 的请求（Snipd播客），不影响其他 App
