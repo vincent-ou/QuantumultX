@@ -1,6 +1,8 @@
 /*
 倒班助手 — 立盾卡 + 皮肤 + 头像框
 
+原作者：无（基于用户抓包自写）
+适配版本：4.4.13
 清理整理：Muse — 抓包实测后自写，逻辑与数值以实测为准。
            会员：GET /shiftassistant/rs/user/lidunka
              status → 1，remainDays → 9999，remainMonths → 999
