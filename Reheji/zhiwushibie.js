@@ -1,4 +1,6 @@
 /* 植物识别 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽植物识别，权益与产品与合集一致
  * 权益 pro，产品 moonbox.co.il.grow.lifetime.offer（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 moonbox.co.il.grow 的请求（植物识别），不影响其他 App
