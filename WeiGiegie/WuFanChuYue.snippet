@@ -1,0 +1,6 @@
+# 悟饭触悦 — 规则（配合 wufanchuyue.js 使用）
+[rewrite_local]
+# > 悟饭触悦 vip
+^https?://iosv2\.cjapi\.5fun\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/wufanchuyue.js
+[mitm]
+hostname = iosv2.cjapi.5fun.com,iosv2.cjapi.wufan88.com
