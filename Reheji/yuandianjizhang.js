@@ -1,4 +1,6 @@
 /* 圆点记账 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽圆点记账，权益与产品与合集一致
  * 权益 premium，产品 dotly_premium_1_yearly（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 Dotly 的请求（圆点记账），不影响其他 App
