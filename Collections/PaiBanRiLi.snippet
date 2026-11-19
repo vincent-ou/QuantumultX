@@ -1,0 +1,7 @@
+# 排班日历 — 规则（配合 paibanrili.js 使用）
+
+[rewrite_local]
+^https?:\/\/schedule-api\.julanling\.com\/api\/(get_member_info|vip_detail) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/paibanrili.js
+
+[mitm]
+hostname = schedule-api.julanling.com
