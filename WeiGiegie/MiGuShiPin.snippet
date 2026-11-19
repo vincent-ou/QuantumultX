@@ -1,0 +1,8 @@
+# 咪咕视频 — 规则（配合 migushipin.js 使用）
+[rewrite_local]
+^https?:\/\/(play|dis).*miguvideo.com\/(play|dis)(url|play)\/.*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/migushipin.js
+^https://.*miguvideo\.com/request/sdk url reject-200
+^https://common-sc\.miguvideo\.com/task/v7/task-list/cmvideo/visitor url reject-200
+
+[mitm]
+hostname = .miguvideo.com
