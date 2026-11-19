@@ -1,0 +1,6 @@
+# 阅读记录 — 规则（配合 yuedujilu2.js 使用）
+[rewrite_local]
+^https?:\/\/app\.yidiansz\.com\/api\/v\d\/(app\/user\/info|banner) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/yuedujilu2.js
+
+[mitm]
+hostname = app.yidiansz.com
