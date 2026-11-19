@@ -1,0 +1,8 @@
+# paf 转换器 — 规则（配合 pafzhuanhuanqi.js 使用）
+[rewrite_local]
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/pafzhuanhuanqi.js
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/pafzhuanhuanqi.js
+
+[mitm]
+
+hostname = api.revenuecat.com
