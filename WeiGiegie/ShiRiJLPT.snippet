@@ -1,0 +1,6 @@
+# 识日JLPT — 规则（配合 shirijlpt.js 使用）
+[rewrite_local]
+^http:\/\/jlpt\.jingqueyun\.com\/user\/getUserInfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/shirijlpt.js
+
+[mitm]
+hostname = jlpt.jingqueyun.com
