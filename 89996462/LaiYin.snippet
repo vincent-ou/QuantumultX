@@ -1,0 +1,7 @@
+# 来音 — 规则（配合 laiyin.js 使用）
+[rewrite_local]
+^http[s]?:\/\/.*-api.quthing.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/laiyin.js
+
+[mitm]
+
+hostname = .*-api.quthing.com
