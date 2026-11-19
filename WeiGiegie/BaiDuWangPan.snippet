@@ -1,0 +1,6 @@
+# 百度网盘 — 规则（配合 baiduwangpan.js 使用）
+[rewrite_local]
+# > 百度网盘、在线画质清晰度、体验解锁下载速度
+^https?://pan\.baidu\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/baiduwangpan.js
+[mitm]
+hostname = pan.baidu.com,
