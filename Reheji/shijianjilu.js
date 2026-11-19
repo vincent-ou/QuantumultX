@@ -1,4 +1,6 @@
 /* 时间记录 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽时间记录，权益与产品与合集一致
  * 权益 pro，产品 com.bapaws.Hours.lifetime（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 %E6%97%B6%E9%97%B4%E8%AE%B0%E5%BD%95 的请求（时间记录），不影响其他 App
