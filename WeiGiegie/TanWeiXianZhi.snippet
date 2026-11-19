@@ -1,0 +1,6 @@
+# 探味闲置 — 规则（配合 tanweixianzhi.js 使用）
+[rewrite_local]
+# > 探味闲置
+^https?://admin\.tanweixianzhi\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/tanweixianzhi.js
+[mitm]
+hostname = admin.tanweixianzhi.com
