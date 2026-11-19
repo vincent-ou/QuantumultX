@@ -1,0 +1,7 @@
+# 丝域 — 规则（配合 siyu.js 使用）
+[rewrite_local]
+# >丝域 - model
+^https://apidance\.ctwh77\.com/api/appsplash/detail url reject
+^https?://apimodel\.ctwh77\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/siyu.js
+[mitm]
+hostname = apimodel.ctwh77.com
