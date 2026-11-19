@@ -1,0 +1,7 @@
+# 中国房价 — 规则（配合 zhongguofangjia.js 使用）
+
+[rewrite_local]
+http:\/\/api\.crevalue\.cn url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/zhongguofangjia.js
+
+[mitm]
+hostname = api.crevalue.cn
