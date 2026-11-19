@@ -1,0 +1,7 @@
+# 昭昭医考 — 规则（配合 zhaozhaoyikao.js 使用）
+[rewrite_local]
+^http[s]?:\/\/api.yikao88.com\/api-shop\/course\/app\/v5\/selectDetail url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/zhaozhaoyikao.js
+
+[mitm]
+
+hostname = api.yikao88.com
