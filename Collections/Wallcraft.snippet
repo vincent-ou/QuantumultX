@@ -1,0 +1,7 @@
+# Wallcraft — 规则（配合 Wallcraft.js 使用）
+
+[rewrite_local]
+^https?:\/\/billing-ios\.wallpaperscraft\.com\/v\d\/(verify_receipt|products)\/remove_ads url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Wallcraft.js
+
+[mitm]
+hostname = billing-ios.wallpaperscraft.com
