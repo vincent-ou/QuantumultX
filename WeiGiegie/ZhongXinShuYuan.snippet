@@ -1,0 +1,6 @@
+# 中信书院 — 规则（配合 zhongxinshuyuan.js 使用）
+[rewrite_local]
+# > 中信书院 解锁vip电子书,付费电子书
+^https?://napi\.yunpub\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/zhongxinshuyuan.js
+[mitm]
+hostname = napi.yunpub.cn
