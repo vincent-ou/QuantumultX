@@ -1,4 +1,7 @@
-/* 视频图片编辑套装 — 订阅解锁 / 清理整理：Muse — 去作者推广与原版链接，变量名中性化，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = *.vlognow.me */
+/* 视频图片编辑套装 — 订阅解锁
+ * 原作者：chxm1023
+ * 适配版本：未注明
+ * 清理整理：Muse — 去作者推广与原版链接，变量名中性化，逻辑与数值与原版一致 / [rewrite_local] / [mitm] hostname = *.vlognow.me */
 
 var obj = JSON.parse($response.body);
 
