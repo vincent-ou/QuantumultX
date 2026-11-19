@@ -1,0 +1,6 @@
+# 懒人听书 — 规则（配合 lanrentingshu.js 使用）
+[rewrite_local]
+^https?:\/\/(shapi|gzapi).(mting.info|lanrentingshu.com)\/(yyting\/userclient\/ClientGetUserInfo|lrts\/cgi\/login\/accountLogin) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/lanrentingshu.js
+
+[mitm]
+hostname = shapi.mting.info,shapi.lanrentingshu.com,gzapi.lanrentingshu.com,shapi.mting.info:443
