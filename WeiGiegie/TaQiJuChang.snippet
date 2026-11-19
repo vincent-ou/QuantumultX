@@ -1,0 +1,6 @@
+# 塔奇剧场 — 规则（配合 taqijuchang.js 使用）
+[rewrite_local]
+# >塔奇剧场
+^https?://quickapi\.xiegangsir\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/taqijuchang.js
+[mitm]
+hostname = quickapi.xiegangsir.com
