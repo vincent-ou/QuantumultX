@@ -1,0 +1,7 @@
+# Agenda — 规则（配合 Agenda.js 使用）
+
+[rewrite_local]
+^https?:\/\/accounts\.agenda\.com\/users\/.*\/license url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Agenda.js
+
+[mitm]
+hostname = accounts.agenda.com
