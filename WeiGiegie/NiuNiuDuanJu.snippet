@@ -1,0 +1,6 @@
+# 牛牛短剧 — 规则（配合 niuniuduanju.js 使用）
+[rewrite_local]
+# > 牛牛短剧-短剧官方-海量热门短剧视频大全随心看
+^https?://new\.tianjinzhitongdaohe\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/niuniuduanju.js
+[mitm]
+hostname = new.tianjinzhitongdaohe.com
