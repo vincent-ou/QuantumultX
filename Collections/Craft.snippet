@@ -1,0 +1,6 @@
+# Craft — 规则（配合 Craft.js 使用）
+[rewrite_local]
+^https?:\/\/(api|docs)\.craft\.do\/(api\/)?(auth\/v\d\/profile|subscription\/(receipt|teams\/get-subscriptions)) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Craft.js
+
+[mitm]
+hostname = api.craft.do
