@@ -1,0 +1,6 @@
+# 破竹S — 规则（配合 pozhus.js 使用）
+[rewrite_local]
+# > 破竹SVIP+财富圈+部分付费直播
+^https?://www\.pozhu\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/pozhus.js
+[mitm]
+hostname = www.pozhu.com
