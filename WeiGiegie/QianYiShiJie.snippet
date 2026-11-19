@@ -1,0 +1,6 @@
+# 千亦视界 — 规则（配合 qianyishijie.js 使用）
+[rewrite_local]
+# > 千亦视界 解锁永久vip
+^https?://app\.thwlqy\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/qianyishijie.js
+[mitm]
+hostname = app.thwlqy.com
