@@ -1,0 +1,7 @@
+# Apphud — 规则（配合 Apphud.js 使用）
+
+[rewrite_local]
+^https?:\/\/.*\.apphud\.com\/v\d\/(subscriptions|customers)$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Apphud.js
+
+[mitm]
+hostname = *.apphud.com
