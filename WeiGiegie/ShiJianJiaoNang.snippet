@@ -1,0 +1,6 @@
+# 时间胶囊 — 规则（配合 shijianjiaonang.js 使用）
+[rewrite_local]
+# > 时间胶囊-写给亲爱未来的日记本
+^https?://api\.timecaps\.app/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/shijianjiaonang.js
+[mitm]
+hostname = api.timecaps.app
