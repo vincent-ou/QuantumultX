@@ -1,0 +1,6 @@
+# 懂法猫 — 规则（配合 dongfamao.js 使用）
+[rewrite_local]
+^https:\/\/app\.dongfamao\.com:443\/prod-api\/app\/user\/userInfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/dongfamao.js
+
+[mitm]
+hostname = app.dongfamao.com,app.dongfamao.com:443
