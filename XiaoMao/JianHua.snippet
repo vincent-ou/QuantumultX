@@ -1,0 +1,7 @@
+# 剪画 — 规则（配合 jianhua.js 使用）
+
+[rewrite_local]
+https:\/\/stream\.lestream\.cn\/open\/(customer|mobile)\/(get|setting) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/jianhua.js
+
+[mitm]
+hostname = stream.lestream.cn
