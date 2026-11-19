@@ -1,0 +1,8 @@
+# 全能扫描王 — 规则（配合 quannengsaomiaowang.js 使用）
+[rewrite_local]
+# > 全能扫描王 vip
+# > 开屏广告
+^https://ad\.rhinox\.cn/client/sdk/getData url reject
+^https?://ad\.rhinox\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/quannengsaomiaowang.js
+[mitm]
+hostname = ad.rhinox.cn,appss.rhinoxlab.com,appss.rhinoxlab.com
