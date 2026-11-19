@@ -1,0 +1,8 @@
+# 快看漫画 — 规则（配合 kuaikanmanhua.js 使用）
+[rewrite_local]
+^https?:\/\/.*kkmh.com\/v1\/vip\/me url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/kuaikanmanhua.js
+^https?:\/\/.*kkmh.com\/v2\/comic\/detail\/get url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/kuaikanmanhua.js
+^https?://.*kkmh.com\/v3\/ad\/show url reject-dict
+
+[mitm]
+hostname = .kkmh.com,*kkmh.com
