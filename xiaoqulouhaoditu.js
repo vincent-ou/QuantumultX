@@ -1,7 +1,7 @@
 /* 小区楼号地图 — 快递外卖极速导航
  * 原作者：WeiGiegie
  * 适配版本：1.0.10
- * 清理整理：Muse — 2026-11-19 修复：原版写 obj.data.trialEnd，但真实返回是扁平对象、无 data 字段，导致脚本一跑就崩、改写从未生效；真实会员字段是 isIOSVip/isAndroidVip/isHarmonyVip，改为置 true
+ * 清理整理：Muse — 2026-11-19 修复：原版写 obj.data.trialEnd，但真实返回是扁平对象、无 data 字段，导致脚本一跑就崩、改写从未生效；真实会员字段是 isIOSVip/isAndroidVip/isHarmonyVip，改为置 true；2026-11-19 21:57 追加：仅置 VIP 仍显示过期，试用期疑似由 createdDate 推算（创建后 7 天），一并把创建日期改到今天
  * [rewrite_local]
  * [mitm] hostname = mp.zhuzixi.cn
  */
@@ -15,6 +15,10 @@ try {
     if ("isHarmonyVip" in obj) obj.isHarmonyVip = true;
     obj.isActive = true;
     obj.isVip = true;
+    // 试用期疑似由创建日期推算：把创建日期改到今天，试用期随之顺延
+    var NOW = "2026-11-19 00:00:00";
+    if ("createdDate" in obj) obj.createdDate = NOW;
+    if ("createdDateApp" in obj) obj.createdDateApp = NOW;
     // 试用期字段（如存在则延到 2099）
     var FAR = "2099/01/01 00:00:00";
     ["trialEnd", "trialEndTime", "expireTime", "expireDate", "vipExpireTime", "endTime"].forEach(function (k) {
