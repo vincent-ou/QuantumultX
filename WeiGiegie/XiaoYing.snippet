@@ -1,0 +1,6 @@
+# 小影 — 规则（配合 xiaoying.js 使用）
+[rewrite_local]
+# > 小影vip
+^https?://api\-chn\.rthdo\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xiaoying.js
+[mitm]
+hostname = api-chn.rthdo.com
