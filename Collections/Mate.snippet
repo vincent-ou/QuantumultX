@@ -1,0 +1,7 @@
+# Mate — 规则（配合 Mate.js 使用）
+
+[rewrite_local]
+^https?:\/\/asia\.gikken\.co\/matesync\/(subscription|login|register_user|check_user) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Mate.js
+
+[mitm]
+hostname = asia.gikken.co
