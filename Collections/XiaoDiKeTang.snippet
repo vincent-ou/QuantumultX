@@ -1,0 +1,6 @@
+# 小滴课堂 — 规则（配合 xiaodiketang.js 使用）
+[rewrite_local]
+^https:\/\/api-v2\.xdclass\.net\/api\/account\/v\d\/(detail|login) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/xiaodiketang.js
+
+[mitm]
+hostname = api-v2.xdclass.net
