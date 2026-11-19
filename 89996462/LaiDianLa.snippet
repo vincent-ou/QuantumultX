@@ -1,0 +1,6 @@
+# 来电啦 — 规则（配合 laidianla.js 使用）
+[rewrite_local]
+^http[s]?:\/\/39.108.85.85:17012 url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/laidianla.js
+
+[mitm]
+hostname = 39.108.85.85:17012
