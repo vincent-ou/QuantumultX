@@ -1,0 +1,6 @@
+# Invideo — 规则（配合 Invideo.js 使用）
+[rewrite_local]
+^https:\/\/payments\.invideo\.io\/subscription url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/Invideo.js
+
+[mitm]
+hostname = payments.invideo.io
