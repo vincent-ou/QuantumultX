@@ -1,0 +1,6 @@
+# TenPercent — 规则（配合 TenPercent.js 使用）
+[rewrite_local]
+^https:\/\/api\.changecollective\.com\/api\/v\d\/user url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/TenPercent.js
+
+[mitm]
+hostname = api.changecollective.com
