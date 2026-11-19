@@ -1,0 +1,7 @@
+# iLove PDF — 规则（配合 iLovePDF.js 使用）
+
+[rewrite_local]
+^https?:\/\/service\.ilovepdf\.com\/.+\/user url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/iLovePDF.js
+
+[mitm]
+hostname = service.ilovepdf.com
