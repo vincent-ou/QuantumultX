@@ -1,0 +1,9 @@
+# 彩云天气 — 规则（配合 caiyuntianqi.js 使用）
+
+[rewrite_local]
+^https?:\/\/(ad|biz|wrapper|starplucker)\.cyapi\.cn\/.+\/((activity\?app_name|operation|config|req\?app_name=weather)|v\d\/(trial_card\/info|entries|friend_cards|token\/device)) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/caiyuntianqi.js
+^https?:\/\/(biz|wrapper|starplucker)\.cyapi\.cn\/(v\d\/user\?app_name|.+\/v\d\/(vip_info|user_detail)) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/caiyuntianqi.js
+^https?:\/\/(api|wrapper)\.cyapi\.cn\/v\d\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/caiyuntianqi.js
+
+[mitm]
+hostname = *.cyapi.cn
