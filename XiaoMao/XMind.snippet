@@ -1,0 +1,8 @@
+# XMind — 规则（配合 XMind.js 使用）
+
+[rewrite_local]
+https:\/\/www\.xmind(\.net|\.cn|\.app)\/\_res\/devices url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/XMind.js
+https:\/\/www\.xmind(\.net|\.cn|\.app)\/\_res\/profile\/.+\/ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/XMind.js
+
+[mitm]
+hostname = www.xmind.net,www.xmind.cn,www.xmind.app
