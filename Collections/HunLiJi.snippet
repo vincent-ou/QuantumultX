@@ -1,0 +1,6 @@
+# 婚礼纪 — 规则（配合 hunliji.js 使用）
+[rewrite_local]
+^https?:\/\/(api|www)\.hunliji\.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/hunliji.js
+
+[mitm]
+hostname = *.hunliji.com
