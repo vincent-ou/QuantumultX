@@ -1,0 +1,6 @@
+# 漫画园 — 规则（配合 manhuayuan.js 使用）
+[rewrite_local]
+^http:\/\/aimanhua.meidanmh.com\/chunai\/web\/(member\/memberInfo\/getEntity|cartoon\/cartoonChapter\/needVip) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/manhuayuan.js
+
+[mitm]
+hostname = aimanhua.meidanmh.com
