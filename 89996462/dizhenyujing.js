@@ -1,10 +1,11 @@
-/* 地震预警 — 解锁订阅
+/* 地震预警 — VIP 解锁
  * 原作者：89996462
- * 适配版本：2024.3.2
- * 清理整理：Muse — 去作者推广信息与写入作者身份的字段，逻辑与数值与原版一致
+ * 适配版本：1.1.5
+ * 清理整理：Muse — 去掉作者推广与原版链接，保留改写逻辑，逻辑与数值与原版一致
  * [rewrite_local]
- * [mitm] hostname = mobile-new.chinaeew.cn
+ * [mitm] hostname = app.rongfeng.work
  */
 
-var body = $response.body.replace(/endTime":\d+/g,'endTime":8888888888000')
+var body = $response.body.replace(/isForever":\d+/g,'isForever":1')
+.replace(/isVIP":\d+/g,'isVIP":1')
 $done({ body });
