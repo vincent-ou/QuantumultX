@@ -1,0 +1,7 @@
+# 搜图神器 — 规则（配合 soutushenqi.js 使用）
+
+[rewrite_local]
+^https?:\/\/.*\.soutushenqi\.com\/(api\/.+\/account\/(token|info)|cykj_community|v\d\/home\/dialog) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/soutushenqi.js
+
+[mitm]
+hostname = *.soutushenqi.com
