@@ -1,0 +1,6 @@
+# 潮自拍 — 规则（配合 chaozipai.js 使用）
+[rewrite_local]
+^https?:\/\/.+meitu.com\/(v2\/user\/vip_info_by_group|filter\/timeline|v2\/user\/info_by_entrance).json url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/chaozipai.js
+
+[mitm]
+hostname = api-sub.meitu.com,api.selfiecity.meitu.com
