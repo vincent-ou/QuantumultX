@@ -1,0 +1,7 @@
+# 小熊录屏 — 规则（配合 xiaoxiongluping.js 使用）
+[rewrite_local]
+^http[s]?:\/\/donate-api.recorder.duapps.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/xiaoxiongluping.js
+
+[mitm]
+
+hostname = donate-api.recorder.duapps.com
