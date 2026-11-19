@@ -1,0 +1,6 @@
+# 魅.舞直播 — 规则（配合 meiwuzhibo.js 使用）
+[rewrite_local]
+^https?:\/\/.+(member\/detail|user_video_async|lottery-ns) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/meiwuzhibo.js
+
+[mitm]
+hostname = qq.baiduan*.com,*wensan*com,ws.wensangq.com,45.117.11.*
