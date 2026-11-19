@@ -1,4 +1,6 @@
 /* 快制图表 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽快制图表，权益与产品与合集一致
  * 权益 unlock all，产品 qgnjs_lifetime（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 easy_chart 的请求（快制图表），不影响其他 App
