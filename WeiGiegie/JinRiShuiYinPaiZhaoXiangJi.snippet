@@ -1,0 +1,6 @@
+# 今日水印拍照相机 — 规则（配合 jinrishuiyinpaizhaoxiangji.js 使用）
+[rewrite_local]
+^https?:\/\/water-fst.yifanxinmei.com\/api\/guests\/login.*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/jinrishuiyinpaizhaoxiangji.js
+
+[mitm]
+hostname = water-fst.yifanxinmei.com
