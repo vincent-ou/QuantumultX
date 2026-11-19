@@ -1,0 +1,6 @@
+# 历史年轮 — 规则（配合 lishinianlun.js 使用）
+[rewrite_local]
+^https:\/\/www\.(yearsmap|wordvector)\.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/lishinianlun.js
+
+[mitm]
+hostname = www.yearsmap.com:443,www.yearsmap.com,www.wordvector.com
