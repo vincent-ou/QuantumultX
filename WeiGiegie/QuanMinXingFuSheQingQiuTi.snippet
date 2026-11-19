@@ -1,0 +1,5 @@
+# 全民幸福舍请求体 — 规则（配合 quanminxingfusheqingqiuti.js 使用）
+[rewrite_local]
+^https?://api\.qmxfs\.com/.* url script-request-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/quanminxingfusheqingqiuti.js
+[mitm]
+hostname = api.qmxfs.com
