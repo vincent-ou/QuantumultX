@@ -1,0 +1,6 @@
+# 问真排盘 — 规则（配合 wenzhenpaipan.js 使用）
+[rewrite_local]
+^https?:\/\/bzpp2\.iwzbz\.com\/api\/.+\/(user\/getvipinfo|User\/getWXPW) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/wenzhenpaipan.js
+
+[mitm]
+hostname = bzpp2.iwzbz.com
