@@ -1,4 +1,6 @@
 /* SimpleScan — RevenueCat 订阅解锁（单独版）
+ * 原作者：ddgksf2013
+ * 适配版本：未注明
  * 清理整理：Muse — 从 ddgksf2013 RevenueCat 映射单抽SimpleScan，权益与产品与映射一致
  * 权益 premium，产品 com.atlantia.SimpleScan.Purchases.Lifetime（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 SimpleScan 的请求（SimpleScan），不影响其他 App
