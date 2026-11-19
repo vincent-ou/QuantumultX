@@ -1,0 +1,7 @@
+# 咖映 — 规则（配合 kaying.js 使用）
+
+[rewrite_local]
+^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/kaying.js
+
+[mitm]
+hostname = *.aoscdn.com, *.apsapp.cn
