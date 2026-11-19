@@ -1,0 +1,6 @@
+# 风行视频 — 规则（配合 fengxingshipin.js 使用）
+[rewrite_local]
+^http:\/\/pvip.funshion.com\/v1\/vip\/userinfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/fengxingshipin.js
+
+[mitm]
+hostname = pvip.funshion.com,pm.funshion.com,*.funshion.com
