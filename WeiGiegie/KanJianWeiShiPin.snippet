@@ -1,0 +1,6 @@
+# 看鉴微视频 — 规则（配合 kanjianweishipin.js 使用）
+[rewrite_local]
+^https?:\/\/api.wokanjian.com.cn\/ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/kanjianweishipin.js
+
+[mitm]
+hostname = api.wokanjian.com.cn
