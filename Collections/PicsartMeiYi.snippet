@@ -1,0 +1,7 @@
+# Picsart美易 — 规则（配合 picsartmeiyi.js 使用）
+
+[rewrite_local]
+^https?:\/\/api\.meiease\.cn\/shop\/subscription\/(validate|apple\/purchases) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/picsartmeiyi.js
+
+[mitm]
+hostname = api.meiease.cn
