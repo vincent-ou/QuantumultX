@@ -1,0 +1,6 @@
+# 恋小语 — 规则（配合 lianxiaoyu3.js 使用）
+[rewrite_local]
+^http:\/\/api\.love\.823123\.com\/(facades\/open\.chat_stream|v1\/discovery\/query) url script-request-header  https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/lianxiaoyu3.js
+
+[mitm]
+hostname = api.love.823123.com
