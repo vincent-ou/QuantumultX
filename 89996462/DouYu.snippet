@@ -1,0 +1,6 @@
+# DouYu — 规则（配合 douyu.js 使用）
+[rewrite_local]
+^https:\/\/(mconf|apiv2|apiv3|rtbapi)\.douyucdn\.cn\/(resource\/common\/config\/inter_com_m_cp_recommendV2\.json|japi\/adgrowth\/report\/|japi\/dyadx\/gateway\/app\/getinfo|mgapi\/live\/match\/|mgapi\/activitync\/newusers\/popup|mgapi\/activitync\/popupWindow\/getConfig|japi\/operation\/activity\/app\/v2\/create\/panel\/bubble|japi\/sign\/app\/roomPushAd\/getinfo|resource\/common\/happy_game_m\.json|mgapi\/livencc\/appskin\/getActivityRecV3|japi\/carnivalApi\/nc\/appTask\/getRoomTask) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/douyu.js
+
+[mitm]
+hostname = mconf.douyucdn.cn, apiv2.douyucdn.cn, apiv3.douyucdn.cn, rtbapi.douyucdn.cn
