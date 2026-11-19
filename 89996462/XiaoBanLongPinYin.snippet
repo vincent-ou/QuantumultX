@@ -1,0 +1,7 @@
+# 小伴龙拼音 — 规则（配合 xiaobanlongpinyin.js 使用）
+[rewrite_local]
+^http[s]?:\/\/xblpay.youban.com\/(user|session|login).*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/xiaobanlongpinyin.js
+
+[mitm]
+
+hostname = xblpay.youban.com
