@@ -1,0 +1,8 @@
+# 咪咕视频请求头 — 规则（配合 migushipinqingqiutou.js 使用）
+[rewrite_local]
+^https?:\/\/play.miguvideo.com\/playurl\/v1\/play\/playurl\?2Kvivid=true?.*=true$ url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/migushipinqingqiutou.js
+^https://.*miguvideo\.com/request/sdk url reject-200
+^https://.*miguvideo\.com/task/v7/task-list/cmvideo/visitor url reject-200
+
+[mitm]
+hostname = .miguvideo.com
