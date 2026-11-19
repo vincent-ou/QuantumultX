@@ -1,4 +1,6 @@
 /* Emphasis — RevenueCat 订阅解锁（单独版）
+ * 原作者：ddgksf2013
+ * 适配版本：未注明
  * 清理整理：Muse — 从 ddgksf2013 RevenueCat 映射单抽Emphasis，权益与产品与映射一致
  * 权益 premium，产品 premium（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 Emphasis 的请求（Emphasis），不影响其他 App
