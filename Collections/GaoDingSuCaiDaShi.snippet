@@ -1,0 +1,6 @@
+# 高定素材大师 — 规则（配合 gaodingsucaidashi.js 使用）
+[rewrite_local]
+^https?:\/\/apps-api\.(lianaishouce|lingege)\.cn\/user\/(public\/login.*|getUserInfo) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/gaodingsucaidashi.js
+
+[mitm]
+hostname = apps-api.lianaishouce.cn, apps-api.lingege.cn
