@@ -1,0 +1,7 @@
+# 傲软PDF编辑 — 规则（配合 aoruanpdfbianji.js 使用）
+
+[rewrite_local]
+^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/aoruanpdfbianji.js
+
+[mitm]
+hostname = *.aoscdn.com, *.apsapp.cn
