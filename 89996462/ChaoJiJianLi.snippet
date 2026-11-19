@@ -1,0 +1,6 @@
+# ChaoJiJianLi — 规则（配合 chaojijianli.js 使用）
+[rewrite_local]
+^http[s]?:\/\/api.wondercv.com\/cv\/v3\/cv_accounts\/* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/chaojijianli.js
+
+[mitm]
+hostname = api.wondercv.com
