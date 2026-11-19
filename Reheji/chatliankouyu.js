@@ -1,4 +1,6 @@
 /* Chat练口语 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽Chat练口语，权益与产品与合集一致
  * 权益 Pro access，产品 com.tech.AiSpeak.All（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 Chat%E7%BB%83%E5%8F%A3%E8%AF%AD 的请求（Chat练口语），不影响其他 App
