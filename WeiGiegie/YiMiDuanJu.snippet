@@ -1,0 +1,6 @@
+# 薏米短剧 — 规则（配合 yimiduanju.js 使用）
+[rewrite_local]
+# > 薏米短剧
+^https?://newyimi\-api\.zhangyue\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yimiduanju.js
+[mitm]
+hostname = newyimi-api.zhangyue.com
