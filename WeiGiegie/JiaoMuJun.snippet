@@ -1,0 +1,6 @@
+# 酵母菌 — 规则（配合 jiaomujun.js 使用）
+[rewrite_local]
+^http:\/\/116\.62\.172\.2(?::80)?\/(user\/(getUserInfoDetail|owndetailForPost)|website\/v1\/config)\.do url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/jiaomujun.js
+
+[mitm]
+hostname = 116.62.172.2
