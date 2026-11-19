@@ -1,0 +1,7 @@
+# Adapty — 规则（配合 Adapty.js 使用）
+
+[rewrite_local]
+^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Adapty.js
+
+[mitm]
+hostname = api.adapty.io
