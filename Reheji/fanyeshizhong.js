@@ -1,4 +1,6 @@
 /* 翻页时钟 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽翻页时钟，权益与产品与合集一致
  * 权益 Pro access，产品 com.douwan.aiclock.ALL（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 %E7%BF%BB%E9%A1%B5%E6%97%B6%E9%92%9F 的请求（翻页时钟），不影响其他 App
