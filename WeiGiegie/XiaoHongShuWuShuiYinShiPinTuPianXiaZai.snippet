@@ -1,0 +1,6 @@
+# 小红书 无水印视频/图片下载 — 规则（配合 xiaohongshuwushuiyinshipintupianxiazai.js 使用）
+[rewrite_local]
+# > 小红书 无水印视频/图片下载 + 强制开启下载权限
+^https?://rec\.xiaohongshu\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xiaohongshuwushuiyinshipintupianxiazai.js
+[mitm]
+hostname = rec.xiaohongshu.com, edith.xiaohongshu.com, www.xiaohongshu.com
