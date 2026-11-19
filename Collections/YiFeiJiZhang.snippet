@@ -1,0 +1,6 @@
+# 一飞记账 — 规则（配合 yifeijizhang.js 使用）
+[rewrite_local]
+^https?:\/\/jz\.jarstones\.com\/api url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/yifeijizhang.js
+
+[mitm]
+hostname = jz.jarstones.com
