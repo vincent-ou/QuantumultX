@@ -1,0 +1,6 @@
+# 绅士 — 规则（配合 shenshi.js 使用）
+[rewrite_local]
+# >绅士-摄影者的天堂
+^https?://gentlemanapp/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/shenshi.js
+[mitm]
+hostname = gentlemanapp
