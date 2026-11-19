@@ -1,4 +1,6 @@
 /* 已阅 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽已阅，权益与产品与合集一致
  * 权益 vip，产品 com.vip.forever_1（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 iRead 的请求，不影响其他 App
