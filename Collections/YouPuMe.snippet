@@ -1,0 +1,6 @@
+# 有谱么 — 规则（配合 youpume.js 使用）
+[rewrite_local]
+^https?:\/\/yopu\.co\/api\/user\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/youpume.js
+
+[mitm]
+hostname = yopu.co
