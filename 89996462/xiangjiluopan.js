@@ -1,0 +1,10 @@
+/* 相机罗盘 — VIP 解锁
+ * 原作者：89996462
+ * 适配版本：1.1.0
+ * 清理整理：Muse — 去掉作者推广与原版链接，保留改写逻辑，逻辑与数值与原版一致
+ * [rewrite_local]
+ * [mitm] hostname = zhenxiang.net.cn
+ */
+
+var body = $response.body.replace(/rvi":\d+/g,'rvi":1').replace(/vi":\d+/g,'vi":1')
+$done({ body });
