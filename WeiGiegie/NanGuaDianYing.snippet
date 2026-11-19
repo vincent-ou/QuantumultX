@@ -1,0 +1,6 @@
+# 南瓜电影 — 规则（配合 nanguadianying.js 使用）
+[rewrite_local]
+^https?:\/\/open-secret-api-v2.vcinema.cn\/v.+\/(user\/v2|get_overdue_device_menu_v2) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/nanguadianying.js
+
+[mitm]
+hostname = open-secret-api-v2.vcinema.cn,47.93.95.61
