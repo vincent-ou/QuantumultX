@@ -1,0 +1,6 @@
+# 古文岛 — 规则（配合 guwendao.js 使用）
+[rewrite_local]
+^https?:\/\/.*\.guwendao\.net\/(api\/user\/getVip|router\/user\/getUserInfo) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/guwendao.js
+
+[mitm]
+hostname = *.guwendao.net
