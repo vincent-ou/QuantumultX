@@ -1,0 +1,6 @@
+# 任意水印相机 — 规则（配合 renyishuiyinxiangji.js 使用）
+[rewrite_local]
+# >任意水印相机（永久会员）
+^https?://ff\.mofangzhice\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/renyishuiyinxiangji.js
+[mitm]
+hostname = ff.mofangzhice.com
