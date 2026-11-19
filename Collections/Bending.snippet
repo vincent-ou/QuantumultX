@@ -1,0 +1,7 @@
+# Bending — 规则（配合 Bending.js 使用）
+
+[rewrite_local]
+^https?:\/\/.*\.oracle\.bendingspoonsapps\.com\/v\d\/(users\/.+|purchases\/verify) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Bending.js
+
+[mitm]
+hostname = *.oracle.bendingspoonsapps.com
