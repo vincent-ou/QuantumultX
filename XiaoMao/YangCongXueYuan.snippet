@@ -1,0 +1,12 @@
+# 洋葱学园 — 规则（配合 yangcongxueyuan.js 使用）
+
+[rewrite_local]
+https:\/\/ios-api-v5-0\.yangcong345\.com\/growth-operation-config\/api\/vip\/info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/yangcongxueyuan.js
+https:\/\/ios-api-v5-0\.yangcong345\.com\/api\/client\/userAuth url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/yangcongxueyuan.js
+https:\/\/ios-api-v5-0\.yangcong345\.com\/api\/client\/userAuth\/current url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/yangcongxueyuan.js
+https:\/\/7to12\.yangcong345\.com\/backend\/api\/client\/userAuth url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/yangcongxueyuan.js
+https:\/\/ios-api-v5-0\.yangcong345\.com\/course-mall\/app\/mytabs url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/yangcongxueyuan.js
+https:\/\/7to12\.yangcong345\.com\/backend\/study-course url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/yangcongxueyuan.js
+
+[mitm]
+hostname = ios-api-v5-0.yangcong345.com,7to12.yangcong345.com
