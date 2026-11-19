@@ -1,0 +1,6 @@
+# 追剧日历 — 规则（配合 zhuijurili.js 使用）
+[rewrite_local]
+# >追剧日历-你的追剧好帮手
+^https?://api\.rc\-backup\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/zhuijurili.js
+[mitm]
+hostname = api.rc-backup.com
