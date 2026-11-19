@@ -1,0 +1,8 @@
+# 薯条漫画 — 规则（配合 shutiaomanhua.js 使用）
+[rewrite_local]
+# >薯条漫画-热门耽美bl漫画 Unlock VIP
+# >去弹窗
+^https://www\.shutiaoapp\.com/api//adOpen/getAd url reject
+^https?://www\.shutiaoapp\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/shutiaomanhua.js
+[mitm]
+hostname = www.shutiaoapp.com
