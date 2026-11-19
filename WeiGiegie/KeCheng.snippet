@@ -1,0 +1,6 @@
+# 课程 — 规则（配合 kecheng.js 使用）
+[rewrite_local]
+# > 熊猫助眠&课程+会员解锁
+^https?://sleep\.navolove\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/kecheng.js
+[mitm]
+hostname = sleep.navolove.com
