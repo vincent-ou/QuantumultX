@@ -1,0 +1,6 @@
+# 语音翻译 — 规则（配合 yuyinfanyi.js 使用）
+[rewrite_local]
+# >语音翻译-实时翻译同声传译翻译软件（永久会员）
+^https?://fy\.yunmiao\.tech/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yuyinfanyi.js
+[mitm]
+hostname = fy.yunmiao.tech
