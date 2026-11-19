@@ -1,0 +1,6 @@
+# 推剧助手 — 规则（配合 tuijuzhushou.js 使用）
+[rewrite_local]
+^https?:\/\/film-api\.startupfun\.vip\/api\/v\d\/(wallpaper\/generator|user\/point\/info) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/tuijuzhushou.js
+
+[mitm]
+hostname = film-api.startupfun.vip
