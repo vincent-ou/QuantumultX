@@ -1,0 +1,6 @@
+# 香蕉视频 — 规则（配合 xiangjiaoshipin.js 使用）
+[rewrite_local]
+# > 香蕉视频++
+^https?:\/\/.+\/vod\/* url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xiangjiaoshipin.js
+[mitm]
+hostname = *.cqict.cn,cwt98ehs.cqict.cn
