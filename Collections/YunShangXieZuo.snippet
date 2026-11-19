@@ -1,0 +1,6 @@
+# 云上写作 — 规则（配合 yunshangxiezuo.js 使用）
+[rewrite_local]
+^https?:\/\/www\.yunshangxiezuo\.com\/api\/getAuthenticate url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/yunshangxiezuo.js
+
+[mitm]
+hostname = www.yunshangxiezuo.com
