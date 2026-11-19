@@ -1,0 +1,6 @@
+# FT中文网 — 规则（配合 ftzhongwenwang.js 使用）
+[rewrite_local]
+^https?:\/\/.*\.cloudfront\.net\/(index\.php\/jsapi\/(paywall|get_story_more_info)|mobile\/verify) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/ftzhongwenwang.js
+
+[mitm]
+hostname = *.cloudfront.net, ftmailbox.cn
