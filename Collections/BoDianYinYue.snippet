@@ -1,0 +1,6 @@
+# 波点音乐 — 规则（配合 bodianyinyue.js 使用）
+[rewrite_local]
+^https:\/\/bd-api\.kuwo\.cn\/api\/(ucenter\/users|play\/listening\/user|service\/(home\/index|banner\/myPage|advert\/watch)) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/bodianyinyue.js
+
+[mitm]
+hostname = bd-api.kuwo.cn
