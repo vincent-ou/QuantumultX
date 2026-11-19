@@ -1,0 +1,6 @@
+# 听书助手 — 规则（配合 tingshuzhushou.js 使用）
+[rewrite_local]
+^https?:\/\/www\.huojiwangluo\.cn\/ting\/user\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/tingshuzhushou.js
+
+[mitm]
+hostname = www.huojiwangluo.cn
