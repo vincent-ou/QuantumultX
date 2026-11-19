@@ -330,7 +330,7 @@ const list = {
   'com.lixkit.diary': { tp: 'timea', hx: 'hxpda', id: "com.lixkit.diary.permanent_68" },  //diary
   'com.touchbits.subscriptions': { tp: 'timea', hx: 'hxpda', id: "com.touchbits.subscriptions.iap.pro.yearly" },  //dyt
   'org.zrey.money': { tp: 'timeb', hx: 'hxpda', id: "org.zrey.money.lifetime" },  //costmemo
-  'com.sfun.snapedit': { tp: 'timea', hx: 'hxpda', id: "com.moiseum.dailyart.subscription.Patron" },  //weikeMusic
+  'com.OfflineMusic.www': { tp: 'timeb', hx: 'hxpda', id: "com.OfflineMusic.www.lifetime198" },  //维克音乐
   'com.polygitapp.polygit': { tp: 'timea', hx: 'hxpda', id: "com.polygitapp.polygit.pro.yearly" },  //polygit
   'com.sm.widget': { tp: 'timea', hx: 'hxpda', id: "com.sm.widget.Pro" },  //colorwidget
   'linsen.camera.app': { tp: 'timea', hx: 'hxpda', id: "linsen.camera.App.yearly" },  //shiguangxiangji
