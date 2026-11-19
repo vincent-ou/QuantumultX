@@ -1,0 +1,6 @@
+# ZiWuJiao — 规则（配合 ziwujiao.js 使用）
+[rewrite_local]
+^http[s]?:\/\/lxy.51wnl-cq.com\/userApi\/getUserDetail url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/ziwujiao.js
+
+[mitm]
+hostname = (ms.51wnl-cq.com|lxy.51wnl-cq.com)
