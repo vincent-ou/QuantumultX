@@ -1,4 +1,6 @@
 /* Tide Guide潮汐 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽Tide Guide潮汐，权益与产品与合集一致
  * 权益 Tides+，产品 TideGuidePro_Lifetime_Family_149.99（终身），到期日 null（终身不过期）
  * 只处理 User-Agent 或 Bundle ID 含 Tide%20Guide 的请求（Tide Guide潮汐），不影响其他 App
