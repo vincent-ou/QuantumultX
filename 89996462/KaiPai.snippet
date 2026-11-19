@@ -1,0 +1,6 @@
+# KaiPai — 规则（配合 kaipai.js 使用）
+[rewrite_local]
+^https?:\/\/api-sub\.meitu\.com\/v2\/user\/(login_vip_check|vip_info|info_by_entrance).*json url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/89996462/kaipai.js
+
+[mitm]
+hostname = api-sub.meitu.com
