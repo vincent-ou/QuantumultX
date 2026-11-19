@@ -1,0 +1,6 @@
+# 星动剧场 — 规则（配合 xingdongjuchang.js 使用）
+[rewrite_local]
+# > 星动剧场
+^https?://akappapi\.vipduanju\.cn/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/xingdongjuchang.js
+[mitm]
+hostname = akappapi.vipduanju.cn
