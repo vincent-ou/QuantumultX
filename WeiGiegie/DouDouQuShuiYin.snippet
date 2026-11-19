@@ -1,0 +1,6 @@
+# 抖抖去水印 — 规则（配合 doudouqushuiyin.js 使用）
+[rewrite_local]
+^https?:\/\/kkyun.com\/api\/(accounts\/user|apps/start_task).*$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/doudouqushuiyin.js
+
+[mitm]
+hostname = kkyun.com
