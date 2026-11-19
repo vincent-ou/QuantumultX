@@ -1,0 +1,7 @@
+# 佐糖照片修复 — 规则（配合 zuotangzhaopianxiufu.js 使用）
+
+[rewrite_local]
+^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/zuotangzhaopianxiufu.js
+
+[mitm]
+hostname = *.aoscdn.com, *.apsapp.cn
