@@ -1,0 +1,6 @@
+# IFTTT — 规则（配合 IFTTT.js 使用）
+[rewrite_local]
+^https?:\/\/ifttt\.com\/api\/v\d\/graph url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/IFTTT.js
+
+[mitm]
+hostname = ifttt.com
