@@ -1,4 +1,6 @@
 /* iTunes — 苹果收据解锁（本地清单式）
+ * 原作者：chxm1023（底版）+ ddgksf2013（BuyiTunes 合并）
+ * 适配版本：未注明
  * 清理整理：Muse — 删除作者信息/版本号检查/弹窗/宣传；混淆核心 build/buildHistory/fakeReceipt 改写为明文；清单与数值与原版一致
  * 匹配：按 User-Agent 或 bundle_id 查清单；未命中走兜底（过期 in_app 延到 2099-09-09，无 in_app 注入 <bundle_id>.yearly）
  * 注意：仅对本地校验收据的 App 有效；走 StoreKit 本地校验的 App 无效
