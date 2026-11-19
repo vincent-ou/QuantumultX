@@ -1,0 +1,7 @@
+# 小熊便签 — 规则（配合 xiaoxiongbianqian.js 使用）
+[rewrite_local]
+^http[s]?:\/\/buy.itunes.apple.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/xiaoxiongbianqian.js
+
+[mitm]
+
+hostname = buy.itunes.apple.com
