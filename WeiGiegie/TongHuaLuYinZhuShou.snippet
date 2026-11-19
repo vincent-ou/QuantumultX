@@ -1,0 +1,6 @@
+# 通话录音助手 — 规则（配合 tonghualuyinzhushou.js 使用）
+[rewrite_local]
+# >通话录音助手 vip
+^https?://call\-recorder\.xinmengmakeji\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/tonghualuyinzhushou.js
+[mitm]
+hostname = call-recorder.xinmengmakeji.com
