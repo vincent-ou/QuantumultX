@@ -1,0 +1,6 @@
+# 桃花村直播 搭配“SenPlayer播放器” 弹窗播放 — 规则（配合 taohuacunzhibodapeisenplayerbofangqidanchuangbofang.js 使用）
+[rewrite_local]
+# > 桃花村直播 搭配“SenPlayer播放器” 弹窗播放
+^https?://lb\.h12345\.net/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/taohuacunzhibodapeisenplayerbofangqidanchuangbofang.js
+[mitm]
+hostname = lb.h12345.net
