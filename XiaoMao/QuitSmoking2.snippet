@@ -1,0 +1,6 @@
+# Quit Smoking — 规则（配合 QuitSmoking2.js 使用）
+[rewrite_local]
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/QuitSmoking2.js
+
+[mitm]
+hostname = api.revenuecat.com, api.rc-backup.com
