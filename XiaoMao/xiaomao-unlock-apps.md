@@ -449,9 +449,6 @@
 | HistoryGeoGuesser | 无 productName/entitlements，无法推断，未猜测 |
 | FileManagers | 无 productName/entitlements，无法推断，未猜测 |
 | ali_sign_auto2.js（阿里云盘自动领取） | 原作者标注“自动领取已失效” |
-| SCV（采精车） | 成人站 missav 随机推送工具——已提取，需用户决定是否删除 |
-| 解炮大师 | 小帽 | 未注明 | 补缺：JiePaoDaShi.snippet（规则，引 jiepaodashi.js，MITM jiepou.vesal.cn） |
 | 解剖大师 | 小帽 | 未注明 | 补缺：jiepoudashi.js（逻辑，与 jiepaodashi.js 同内容，解剖大师模型解锁） |
-| 美日新闻图片 | 小帽 | 未注明 | 补缺：MeiRiXinWuTuPian.snippet（定时任务规则，引 meirixinwutupian.js，每天 9 点） |
 | 每日新闻图片 | 小帽 | 未注明 | 补缺：meirixinwentupian.js（逻辑，与 meirixinwutupian.js 同内容，每日新闻 60s 图片版推送） |
 | TallyCounter | 小帽 | 1 | 重名保留 2：TallyCounter2.js + TallyCounter2.snippet，B/C 版（App 专属 iTunes 收据，终身）；库里原版为 A2 版（RevenueCat 模板） |
