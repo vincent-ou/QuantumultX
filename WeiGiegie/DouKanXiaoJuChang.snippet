@@ -1,0 +1,6 @@
+# 抖看小剧场 — 规则（配合 doukanxiaojuchang.js 使用）
+[rewrite_local]
+^https?:\/\/(videohub.xdplt|mv-ps.xdplt).com\/api\/v1\/(short\/play|payment\/apple\/pay\/verify\/info|user\/info) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/doukanxiaojuchang.js
+
+[mitm]
+hostname = mv-ps.xdplt.com,videohub.xdplt.com
