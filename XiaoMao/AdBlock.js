@@ -1,0 +1,310 @@
+/* AdBlock — 通用去广告
+ * 原作者：小帽
+ * 适配版本：未注明
+ * 清理整理：Muse — 去除作者推广/外链与多平台兼容代码，仅保留 Quantumult X 逻辑，逻辑与数值与原版一致
+ * [rewrite_local]
+ * [mitm] hostname = *
+ */
+//==================== 运行配置 ====================
+const CONFIG = {
+  discoveryMode: false, // 未配置规则时：false=静默放行（默认）；true=把捕获到的 host/path + 可复制配置打到 QX 日志（不弹窗）
+};
+
+//==================== BoxJS 实时配置（覆盖式单条规则，免改代码）====================
+// 配合 BoxJS 订阅 rewrite/boxJS/XiaoMaoReverseTools.json 使用
+function readBox(key, def, type) {
+  let raw = null;
+  try { if (typeof $prefs !== 'undefined' && $prefs) raw = $prefs.valueForKey(key); } catch (e) {}
+  const empty = raw === null || raw === undefined || String(raw).trim() === '';
+  const s = empty ? '' : String(raw).trim();
+  try {
+    switch (type) {
+      case 'bool': return empty ? def : /^(1|true|yes|on)$/i.test(s);
+      case 'int': { if (empty) return def; const n = parseInt(s, 10); return isNaN(n) ? def : n; }
+      case 'list': {
+        const src = empty ? (Array.isArray(def) ? def.join('\n') : String(def == null ? '' : def)) : s;
+        return src.split(/[,\n]/).map((x) => x.trim()).filter(Boolean);
+      }
+      case 'regex': {
+        if (empty) return def;
+        if (s.charAt(0) === '/') {
+          const m = s.match(/^\/(.*)\/([gimsuy]*)$/);
+          return m ? new RegExp(m[1], m[2] || 'i') : new RegExp(s, 'i');
+        }
+        return new RegExp(s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+      }
+      default: return empty ? def : s;
+    }
+  } catch (e) { return def; }
+}
+
+CONFIG.discoveryMode = readBox('adDiscovery', CONFIG.discoveryMode, 'bool');
+CONFIG.notify = readBox('adNotify', true, 'bool');
+
+//==================== 规则配置区 ====================
+
+const RULES = [
+  // 示例1：信息流列表，删掉标记为广告的项
+  {
+    name: '信息流去广告',
+    host: '', // 留空 = 未配置；改成你的目标 host 才生效（支持 '*.example.com' / 'api.*.com'）
+    path: /\/feed\/list/i, // 匹配 URL 路径
+    action: 'remove_ads',
+    listPath: 'data.list', // 数组所在路径，点号分隔
+    adFlag: 'is_ad', // 广告标记字段，为真即删
+    adType: 1, // 或按类型值判断，如 type===1 是广告，可省略
+  },
+
+  // 示例2：开屏/启动页广告，直接清空
+  {
+    name: '开屏广告',
+    host: '',
+    path: /\/splash/i,
+    action: 'empty_list',
+    listPath: 'data.ads',
+  },
+
+  // 示例3：改字段（如关闭倒计时、隐藏 Banner）
+  {
+    name: '启动倒计时',
+    host: '',
+    path: /\/config/i,
+    action: 'set_field',
+    fieldPath: 'data.ad_duration',
+    value: 0,
+  },
+
+  // 示例4：正则替换，适合非 JSON 响应
+  {
+    name: '文本替换',
+    host: '',
+    path: /\.js$/i,
+    action: 'regex',
+    pattern: 'splash_ad',
+    replacement: '',
+  },
+];
+
+//==================== BoxJS 一键规则（免改代码，由订阅参数生成，插入到 RULES 最前）====================
+(function applyBoxRule() {
+  const h = readBox('adHost', '', 'str');
+  if (!h) return; // 未填域名则不启用本卡片规则，仍可用内联 RULES
+  const rule = {
+    name: 'BoxJS一键配置',
+    host: h,
+    path: readBox('adPath', '', 'regex') || /\/.*/i,
+    action: readBox('adAction', 'remove_ads', 'str'),
+    listPath: readBox('adListPath', 'data.list', 'str'),
+    adFlag: readBox('adAdFlag', 'is_ad', 'str'),
+    fieldPath: readBox('adFieldPath', 'data.ad_duration', 'str'),
+    value: readBox('adValue', '0', 'str'),
+    pattern: readBox('adPattern', '', 'str'),
+    replacement: readBox('adReplacement', '', 'str'),
+    flags: 'g',
+  };
+  const adTypeRaw = readBox('adAdType', '', 'str');
+  if (adTypeRaw !== '') {
+    const n = Number(adTypeRaw);
+    if (!isNaN(n)) rule.adType = n; else rule.adTypeStr = adTypeRaw;
+  }
+  RULES.unshift(rule);
+})();
+
+//==================== 引擎（一般不用改）=====================
+
+function matchHost(ruleHost, host) {
+  // 仅显式填 '*' 才全匹配；留空视为"未配置"，不在此兜底
+  if (ruleHost === '*') return true;
+  // 前缀 '*.'(如 '*.example.com') → 后缀匹配（含多级子域）
+  if (ruleHost.indexOf('*.') === 0) {
+    const suffix = ruleHost.slice(1); // '.example.com'
+    return host === suffix.slice(1) || host.endsWith(suffix);
+  }
+  // 任意位置 '*' 通配（如 'api.*.com' 'a*.example.com'）
+  if (ruleHost.indexOf('*') >= 0) {
+    const re = new RegExp(
+      '^' +
+        ruleHost
+          .replace(/[.+?^${}()|[\]\\]/g, '\\$&') // 转义正则元字符
+          .replace(/\*/g, '[^.]*') + // '*' = 任意非点字符段
+        '$'
+    );
+    return re.test(host);
+  }
+  return host === ruleHost;
+}
+
+// 路径前两段生成可复制正则（去掉动态 id，用户可再微调）
+function buildPathRegex(path) {
+  const segs = path.split('/').filter(Boolean).slice(0, 2);
+  const lit = segs.map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('\\/');
+  return '/' + lit + '/i';
+}
+
+// 生成"可复制的专属配置"引导文本（捕获真实 host/path 后给出）
+function buildConfigGuide(host, path, file, qxType, scriptCfg) {
+  const esc = host.replace(/\./g, '\\.');
+  const name = file.split('/').pop();
+  return [
+    '【' + name + ' · 捕获到目标】',
+    'host = ' + host,
+    'path = ' + path,
+    '',
+    '复制下面这段到 QX 配置，即可锁定你的专属目标（脚本名已是完整远程地址，QX 资源引入直接拉取）：',
+    '',
+    '[rewrite_local]',
+    '^https?://' + esc + '/ url ' + qxType + ' ' + file,
+    '',
+    '[mitm]',
+    'hostname = ' + host,
+    '',
+    '// ' + name + ' 配置区',
+    scriptCfg,
+    '',
+  ].join('\n');
+}
+
+// 取路径 a.b.c
+function pick(obj, path) {
+  if (!path) return obj;
+  const ks = path.split('.');
+  let cur = obj;
+  for (const k of ks) {
+    if (cur == null) return undefined;
+    cur = cur[k];
+  }
+  return cur;
+}
+
+// 设路径 a.b.c
+function setPath(obj, path, val) {
+  const ks = path.split('.');
+  let cur = obj;
+  for (let i = 0; i < ks.length - 1; i++) {
+    const k = ks[i];
+    if (cur[k] == null || typeof cur[k] !== 'object') cur[k] = {};
+    cur = cur[k];
+  }
+  cur[ks[ks.length - 1]] = val;
+}
+
+function isAd(item, rule) {
+  if (!item || typeof item !== 'object') return false;
+  if (rule.adFlag && item[rule.adFlag]) return true;
+  if (rule.adType != null && item.type === rule.adType) return true;
+  if (rule.adTypeStr && String(item.type) === String(rule.adTypeStr)) return true;
+  if (rule.adFieldEq && item[rule.adField] === rule.adFieldEq) return true;
+  return false;
+}
+
+let body = $response.body;
+let url = $request.url;
+
+// QX 的 JSC 没有 URL 全局对象，用正则提取
+let host = (url.match(/^https?:\/\/([^\/?#]+)/) || [])[1] || url;
+host = host.split(':')[0];
+const _path = (url.match(/^https?:\/\/[^\/?#]+([^?#]*)/) || [,'/'])[1] || '/';
+
+let hit = null;
+for (const r of RULES) {
+  if (!r.host) continue; // 未配置 host 的规则跳过，仅作引导
+  if (!matchHost(r.host, host)) continue;
+  if (r.path && !r.path.test(url)) continue;
+  hit = r;
+  break;
+}
+
+// 没命中任何已配置规则时：
+// - discoveryMode=false（默认）→ 静默放行，不弹通知、不刷日志
+// - discoveryMode=true → 仅把捕获到的 host/path + 可复制配置打到 QX 日志（不弹窗），供你之后锁定目标
+const _setupKey = 'adBlock_setup_hint';
+if (!hit) {
+  // 首次进入未配置态：弹一次提醒（告知当前状态 + 用完及时关掉 MITM），避免只在日志里没人看到
+  if (!$prefs.valueForKey(_setupKey)) {
+    $prefs.setValueForKey('1', _setupKey);
+    const modeTxt = CONFIG.discoveryMode
+      ? '发现模式已开启：会在 QX 日志打印捕获到的 host/path（不弹窗）。拿到目标后请在 BoxJS 关掉『发现模式』并填『目标域名』；研究完毕请及时关闭 MITM / 本工具，勿长期用 * 抓全量流量。'
+      : '未配置规则（目标域名为空），当前静默放行（不处理任何响应）。请到 BoxJS『广告拦截』卡片的『目标域名』填入你的目标 host 锁定目标；研究完毕请及时关闭 MITM / 本工具，勿长期用 * 抓全量流量。';
+    $notify('逆向工具箱 · 未配置提醒（仅提示一次）', host, modeTxt.slice(0, 900));
+  }
+  if (CONFIG.discoveryMode) {
+    const _gk = 'adBlock_cap_' + host;
+    if (!$prefs.valueForKey(_gk)) {
+      $prefs.setValueForKey('1', _gk);
+      const scriptCfg =
+        "RULES: [\n" +
+        "  {\n" +
+        "    name: '我的去广告',\n" +
+        "    host: '" + host + "',\n" +
+        "    path: " + buildPathRegex(_path) + ",\n" +
+        "    action: 'remove_ads',\n" +
+        "    listPath: 'data.list',\n" +
+        "    adFlag: 'is_ad',\n" +
+        "  },\n" +
+        "]";
+      const g = buildConfigGuide(host, _path, '', 'script-response-body', scriptCfg);
+      console.log('[ad_block · 发现] ' + g);
+    }
+  } else {
+    console.log('[ad_block] 未配置规则，已静默放行。到 BoxJS『广告拦截』卡片填『目标域名』后生效；开启『发现模式』可在 QX 日志查看捕获到的 host/path。');
+  }
+}
+
+function main() {
+if (hit) {
+  if (hit.action === 'regex') {
+    // 正则/字符串替换，适合 JS、CSS、非 JSON 响应
+    try {
+      const flags = hit.flags || 'g';
+      body = body.replace(new RegExp(hit.pattern, flags), hit.replacement || '');
+      console.log('[ad_block] ' + hit.name + ' 正则替换完成');
+    } catch (e) {
+      console.log('[ad_block] ' + hit.name + ' 正则失败：' + e);
+    }
+  } else {
+    let obj = null;
+    let parseOk = true;
+    try {
+      obj = JSON.parse(body);
+    } catch (e) {
+      // 非 JSON：如果是正则规则之外的动作，跳过避免破坏二进制
+      parseOk = false;
+      console.log('[ad_block] ' + hit.name + ' 响应非 JSON，跳过');
+    }
+
+    if (parseOk && obj) {
+      let changed = false;
+      const target = pick(obj, hit.listPath || hit.fieldPath);
+
+      if (hit.action === 'remove_ads' && Array.isArray(target)) {
+        const before = target.length;
+        const kept = target.filter((it) => !isAd(it, hit));
+        if (kept.length !== before) {
+          setPath(obj, hit.listPath, kept);
+          changed = true;
+          console.log('[ad_block] ' + hit.name + ' 删除 ' + (before - kept.length) + ' 条广告');
+        }
+      } else if (hit.action === 'empty_list' && Array.isArray(target)) {
+        if (target.length) {
+          setPath(obj, hit.listPath, []);
+          changed = true;
+          console.log('[ad_block] ' + hit.name + ' 清空 ' + target.length + ' 条');
+        }
+      } else if (hit.action === 'set_field') {
+        setPath(obj, hit.fieldPath, hit.value);
+        changed = true;
+        console.log('[ad_block] ' + hit.name + ' 设置 ' + hit.fieldPath + '=' + hit.value);
+      }
+
+      if (changed) {
+        $done({ body: JSON.stringify(obj) });
+        return;
+      }
+    }
+  }
+}
+
+$done({});
+}
+
+main();
