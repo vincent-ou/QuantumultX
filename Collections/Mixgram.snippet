@@ -1,0 +1,7 @@
+# Mixgram — 规则（配合 Mixgram.js 使用）
+[rewrite_local]
+^https?:\/\/.+\.cloudfunctions\.net\/validateSubscription url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Mixgram.js
+^https?:\/\/.+\.appsflyersdk\.com\/api\/v\d\/ios\/validate_subscription url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Mixgram.js
+
+[mitm]
+hostname = *.cloudfunctions.net, *.appsflyersdk.com
