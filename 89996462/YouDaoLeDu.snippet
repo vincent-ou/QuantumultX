@@ -1,0 +1,7 @@
+# 有道乐读 — 规则（配合 youdaoledu.js 使用）
+[rewrite_local]
+^http[s]?:\/\/api-yread-online.du.youdao.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/89996462/youdaoledu.js
+
+[mitm]
+
+hostname = api-yread-online.du.youdao.com
