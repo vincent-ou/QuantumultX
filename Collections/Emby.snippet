@@ -1,0 +1,7 @@
+# Emby — 规则（配合 Emby.js 使用）
+
+[rewrite_local]
+^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/Collections/Emby.js
+
+[mitm]
+hostname = mb3admin.com
