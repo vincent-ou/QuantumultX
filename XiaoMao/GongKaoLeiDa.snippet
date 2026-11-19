@@ -1,0 +1,12 @@
+# 公考雷达 — 规则（配合 gongkaoleida.js 使用）
+
+[rewrite_local]
+https:\/\/api\.gongkaoleida\.com\/api url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/XiaoMao/gongkaoleida.js
+https:\/\/errlog\.umeng\.com\/api\/crashsdk\/logcollect url reject
+https:\/\/api\.gongkaoleida\.com\/api\/v.+\/my\/index url reject
+https:\/\/api\.gongkaoleida\.com\/api\/v.+\/sets\/getAllTips url reject
+https:\/\/api\.gongkaoleida\.com\/api\/v.+\/ad\/info url reject
+https:\/\/report\.gongkaoleida\.com url reject
+
+[mitm]
+hostname = errlog.umeng.com, api.gongkaoleida.com,report.gongkaoleida.com
