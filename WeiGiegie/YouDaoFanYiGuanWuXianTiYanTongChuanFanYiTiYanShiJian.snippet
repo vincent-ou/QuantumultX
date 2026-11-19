@@ -1,0 +1,6 @@
+# 有道翻译官 无限体验同传翻译体验时间 — 规则（配合 youdaofanyiguanwuxiantiyantongchuanfanyitiyanshijian.js 使用）
+[rewrite_local]
+# > 有道翻译官-107种语言翻译
+^https?://dict\-ai\-subtitle\.youdao\.com/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/youdaofanyiguanwuxiantiyantongchuanfanyitiyanshijian.js
+[mitm]
+hostname = dict-ai-subtitle.youdao.com,dict.youdao.com
