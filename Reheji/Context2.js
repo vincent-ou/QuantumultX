@@ -1,4 +1,6 @@
 /* Context — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽Context，权益与产品与合集一致
  * 权益 Context Pro，产品 ctx_sub_1y_sspai_preorder_angel（年付），到期日 2099-09-09
  * 只处理 User-Agent 或 Bundle ID 含 Context_iOS 的请求（Context），不影响其他 App
