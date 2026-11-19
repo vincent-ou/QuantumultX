@@ -1,0 +1,6 @@
+# 语音转换文字 — 规则（配合 yuyinzhuanhuanwenzi.js 使用）
+[rewrite_local]
+# > 语音转换文字-录音转文字-语音备忘录音软件
+^https?://\*/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/WeiGiegie/yuyinzhuanhuanwenzi.js
+[mitm]
+hostname = *
