@@ -1,4 +1,6 @@
 /* 拼图软件 — RevenueCat 订阅解锁（单独版）
+ * 原作者：chxm1023
+ * 适配版本：未注明
  * 清理整理：Muse — 从 RevenueCat 合集中单抽拼图软件，权益与产品与合集一致
  * 权益 ShowcasePro.Ultra，产品 DesignTech.SIA.ShowcasePro.Ultra.Lifetime（终身），到期日 终身
  * 只处理 User-Agent 或 Bundle ID 含 ShowcasePro 的请求（拼图软件），不影响其他 App
