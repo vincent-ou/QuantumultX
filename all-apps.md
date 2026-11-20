@@ -1,12 +1,12 @@
 # 全库 App 总索引
 
-生成时间：2026-11-19。共 **2041 行**（一个 App 一行；同一 App 在多个文件夹出现时各占一行）。
+生成时间：2026-11-19。共 **2042 行**（一个 App 一行；同一 App 在多个文件夹出现时各占一行）。
 
 ## 各文件夹行数
 
 | 文件夹 | 行数 | 说明 |
 | --- | --- | --- |
-| root | 20 | 根目录 standalone 脚本（20 对） |
+| root | 21 | 根目录 standalone 脚本（21 个） |
 | Reheji | 508 | Reheji/（RevenueCat 合集，508 对） |
 | Collections | 232 | Collections/（chxm1023 单个 App 合集，232 行；227 个 .js，12 条共享脚本） |
 | XiaoMao | 431 | XiaoMao/（小帽 boxJS，431 行；434 对减 3 个已删除） |
@@ -1298,6 +1298,7 @@
 | 轻音社 | WeiGiegie | 1.1.4 | `WeiGiegie/qingyinshe.js` | App 专属 |
 | 亲戚计算器 | chxm1023 | 未注明 | `Collections/qinqijisuanqi.js` | App 专属 |
 | Qi水印 | chxm1023 | 未注明 | `Reheji/qishuiyin.js` | RevenueCat（终身） |
+| 汽水音乐 | ddgksf2013 | 未注明 | `QiShuiYinYue.snippet` | App 专属 |
 | 汽修宝典 | 小帽 | 未注明 | `XiaoMao/qixiubaodian.js` | App 专属 |
 | Qi应用海报 | chxm1023 | 未注明 | `Reheji/qiyingyonghaibao.js` | RevenueCat（终身） |
 | 奇游手游加速器 | WeiGiegie | 3.5.4 | `WeiGiegie/qiyoushouyoujiasuqi.js` | App 专属 |
