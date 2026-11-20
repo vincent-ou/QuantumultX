@@ -1,0 +1,33 @@
+# 汽水音乐 — 去广告规则
+# 原作者：ddgksf2013
+# 适配版本：未注明
+# 清理整理：Muse — 基于原版 V1.0.6（2025-09-26）清理，规则逻辑未动；仅去广告，不含会员解锁
+# 用法：先卸载汽水音乐，再在 QX「重写 → 规则资源」里添加本文件，之后重新使用
+# 注意：本规则只用 QX 内置动作（reject-200 / jsonjq），没有额外的 .js 逻辑文件
+
+[rewrite_local]
+# 视频广告
+^https:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}\/luna\/media_ads url reject-200
+# 通用广告
+^https:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}\/luna\/ads url reject-200
+# 位置隐私
+^https:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}\/location\/info url reject-200
+# 广告弹窗
+^https:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}\/luna\/commerce url reject-200
+# TAGS推荐
+^https:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}\/luna\/hashtag\/recommend url reject-200
+# 我的页面推广
+^https:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}\/luna\/me\? url jsonjq-response-body 'del(.reward_ad_banner)'
+# 会员免费听整月 VIEW
+^https:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}\/luna\/card url jsonjq-response-body 'del(.preview_guide)'
+# 热门搜索
+^https:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}\/luna\/search-block url jsonjq-response-body 'del(.search_chart_block)'
+# DNS处理
+^https:\/\/tnc.*zijieapi\.com\/get_domains url reject-200
+# 搜索界面活动
+^https:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}\/luna\/activities url jsonjq-response-body 'del(.activity_map)'
+# 音乐流推广（只保留 track 类型的条目）
+^https:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}\/luna\/feed\/song-tab url jsonjq-response-body '.items |= map(select(.type == "track"))'
+
+[mitm]
+hostname = beta-luna.douyin.com, api.qishui.com, tnc*-*.zijieapi.com
