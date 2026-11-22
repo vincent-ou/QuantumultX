@@ -1,12 +1,12 @@
 # 全库 App 总索引
 
-生成时间：2026-11-19。共 **2042 行**（一个 App 一行；同一 App 在多个文件夹出现时各占一行）。
+生成时间：2026-11-19。共 **2043 行**（一个 App 一行；同一 App 在多个文件夹出现时各占一行）。
 
 ## 各文件夹行数
 
 | 文件夹 | 行数 | 说明 |
 | --- | --- | --- |
-| root | 21 | 根目录 standalone 脚本（21 个） |
+| root | 22 | 根目录 standalone 脚本（22 个） |
 | Reheji | 508 | Reheji/（RevenueCat 合集，508 对） |
 | Collections | 232 | Collections/（chxm1023 单个 App 合集，232 行；227 个 .js，12 条共享脚本） |
 | XiaoMao | 431 | XiaoMao/（小帽 boxJS，431 行；434 对减 3 个已删除） |
@@ -1537,6 +1537,7 @@
 | Sponder | 小帽 | 未注明 | `XiaoMao/Sponder.js` | RevenueCat |
 | SpoonMe | 小帽 | 未注明 | `XiaoMao/SpoonMe.js` | RevenueCat |
 | Spotify | 小帽 | 未注明 | `XiaoMao/Spotify.js` | App 专属 |
+| Spotify | app2smile | 未注明 | `SpotifyProto.js` | App 专属（部分 Premium） |
 | StardewValleyGuide | 小帽 | 未注明 | `XiaoMao/StardewValleyGuide.js` | RevenueCat |
 | Starship | 89996462 | 1.1.2 | `89996462/Starship.js` | RevenueCat |
 | Startodo | chxm1023 | 未注明 | `Reheji/Startodo.js` | RevenueCat（终身） |
