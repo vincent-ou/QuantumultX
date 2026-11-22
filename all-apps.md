@@ -1538,7 +1538,7 @@
 | SpoonMe | 小帽 | 未注明 | `XiaoMao/SpoonMe.js` | RevenueCat |
 | Spotify | 小帽 | 未注明 | `XiaoMao/Spotify.js` | App 专属 |
 | Spotify | app2smile | 未注明 | `SpotifyProto.js` | App 专属（部分 Premium） |
-| Spotify | 小帽 | 未注明 | `SpotifyGeci.js` | App 专属（歌词翻译） |
+| Spotify | 小帽 | 未注明 | `SpotifyLyrics.js` | App 专属（歌词翻译） |
 | StardewValleyGuide | 小帽 | 未注明 | `XiaoMao/StardewValleyGuide.js` | RevenueCat |
 | Starship | 89996462 | 1.1.2 | `89996462/Starship.js` | RevenueCat |
 | Startodo | chxm1023 | 未注明 | `Reheji/Startodo.js` | RevenueCat（终身） |
