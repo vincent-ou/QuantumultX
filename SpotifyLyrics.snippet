@@ -1,0 +1,7 @@
+# Spotify 歌词翻译 — 规则（配合 SpotifyLyrics.js 使用）
+
+[rewrite_local]
+^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/main/SpotifyLyrics.js
+
+[mitm]
+hostname = spclient.wg.spotify.com
