@@ -384,7 +384,6 @@
 | Sleep Cycle | 小帽 | 未注明 | Sleep Cycle 高级版解锁 |
 | 小小签到 | 小帽 | 未注明 | 微信小程序小小签到自动刷金币 |
 | Spin the Wheel | 小帽 | 23 | Spin the Wheel 终身解锁（iTunes 收据） |
-| Spotify | 小帽 | 未注明 | Spotify 歌词自动翻译（需填百度翻译 AppID/Key） |
 | Tally Counter | 小帽 | 1 | Tally Counter 终身解锁（iTunes 收据） |
 | 糖豆视频 | 小帽 | 未注明 | 糖豆视频会员/付费视频解锁 |
 | Tjime | 小帽 | 未注明 | Tjime 终身订阅解锁（Adapty） |
