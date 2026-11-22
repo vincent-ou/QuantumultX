@@ -1,6 +1,6 @@
 # 全库 App 总索引
 
-生成时间：2026-11-19。共 **2044 行**（一个 App 一行；同一 App 在多个文件夹出现时各占一行）。
+生成时间：2026-11-19。共 **2043 行**（一个 App 一行；同一 App 在多个文件夹出现时各占一行）。
 
 ## 各文件夹行数
 
@@ -9,7 +9,7 @@
 | root | 23 | 根目录 standalone 脚本（23 个） |
 | Reheji | 508 | Reheji/（RevenueCat 合集，508 对） |
 | Collections | 232 | Collections/（chxm1023 单个 App 合集，232 行；227 个 .js，12 条共享脚本） |
-| XiaoMao | 431 | XiaoMao/（小帽 boxJS，431 行；434 对减 3 个已删除） |
+| XiaoMao | 430 | XiaoMao/（小帽 boxJS，430 行；434 对减 4 个已删除） |
 | WeiGiegie | 268 | WeiGiegie/（WeiGiegie 666，268 行；274 对减 5 个已删除、1 个已移至根目录） |
 | 89996462 | 464 | 89996462/（89996462 ycdz/gx，464 对） |
 | Afengye | 118 | Afengye/（afengye crack.js，118 对） |
@@ -1536,7 +1536,6 @@
 | Spin the Wheel | 小帽 | 23 | `XiaoMao/SpinTheWheel.js` | iTunes 收据 |
 | Sponder | 小帽 | 未注明 | `XiaoMao/Sponder.js` | RevenueCat |
 | SpoonMe | 小帽 | 未注明 | `XiaoMao/SpoonMe.js` | RevenueCat |
-| Spotify | 小帽 | 未注明 | `XiaoMao/Spotify.js` | App 专属 |
 | Spotify | app2smile | 未注明 | `SpotifyProto.js` | App 专属（部分 Premium） |
 | Spotify | 小帽 | 未注明 | `SpotifyLyrics.js` | App 专属（歌词翻译） |
 | StardewValleyGuide | 小帽 | 未注明 | `XiaoMao/StardewValleyGuide.js` | RevenueCat |
