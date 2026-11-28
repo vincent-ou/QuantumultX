@@ -1,6 +1,6 @@
 # 全库 App 总索引
 
-生成时间：2026-11-28。共 **2146 行**（一个 App 一行；同一 App 在多个文件夹出现时各占一行）。
+生成时间：2026-11-28。共 **2153 行**（一个 App 一行；同一 App 在多个文件夹出现时各占一行）。
 
 ## 各文件夹行数
 
@@ -13,7 +13,7 @@
 | WeiGiegie | 268 | WeiGiegie/（WeiGiegie 666，268 行；274 对减 5 个已删除、1 个已移至根目录） |
 | 89996462 | 464 | 89996462/（89996462 ycdz/gx，464 对） |
 | Afengye | 118 | Afengye/（afengye crack.js，118 对） |
-| MoYu | 90 | MoYu/（墨鱼 ddgksf2013，90 行） |
+| MoYu | 97 | MoYu/（墨鱼 ddgksf2013，97 行） |
 | filter | 13 | filter/（墨鱼 ddgksf2013 分流规则，13 个文件） |
 
 ## 怎么查
@@ -45,6 +45,7 @@
 | 223网校 | 89996462 | 3.7.1 | `89996462/223wangxiao.js` | App 专属 |
 | 360相机 | chxm1023 | 未注明 | `Collections/360xiangji.js` | App 专属 |
 | 3DMeditation | 小帽 | 未注明 | `XiaoMao/3DMeditation.js` | RevenueCat |
+| 555 | ddgksf2013 | 未注明 | `MoYu/555ad.js` | 去广告 |
 | 666书友会 | WeiGiegie | 3.4.0 | `WeiGiegie/666shuyouhui.js` | App 专属 |
 | 6open | 89996462 | 2.4 | `89996462/6Open.js` | App 专属 |
 | 7动 | 89996462 | 4.7.8 | `89996462/7dong.js` | App 专属 |
@@ -202,6 +203,7 @@
 | 哔哩哔哩 | ddgksf2013 | 未注明 | `MoYu/BiLiBiLiZhiLian.snippet` | App 专属 |
 | 哔哩哔哩 | NobyDa、ddgksf2013 | 未注明 | `MoYu/BiLiBiLiHuanQu.snippet` | App 专属 |
 | 哔哩哔哩 | ddgksf2013 | 未注明 | `MoYu/BiLiBiLiSingleTab.snippet` | App 专属 |
+| 哔哩哔哩 | ddgksf2013 | 未注明 | `MoYu/BiLiBiLi.snippet` | 去广告 |
 | 哔哩哔哩大会员 | WeiGiegie | 8.22.0 | `WeiGiegie/bilibilidahuiyuan.js` | App 专属 |
 | 哔哩哔哩大会员 | ddgksf2013 | 7.63.0 | `MoYu/bilibilidahuiyuan.js` | App 专属 |
 | 哔哩哔哩漫画 | ddgksf2013 | 未注明 | `MoYu/BiLiBiLiManHua.snippet` | 去广告 |
@@ -519,6 +521,7 @@
 | fastdiet | afengye | 1.3.7 | `Afengye/Fastdiet.js` | RevenueCat |
 | FastingTrackerForWomen | 小帽 | 未注明 | `XiaoMao/FastingTrackerForWomen.js` | RevenueCat |
 | FeedBack | 小帽 | 未注明 | `XiaoMao/FeedBack.js` | RevenueCat |
+| 飞客 | ddgksf2013 | 未注明 | `MoYu/feike.js` | 去广告 |
 | 飞鱼计划 | 89996462 | 3.0.44 | `89996462/feiyujihua.js` | App 专属 |
 | Felo实时翻译 | chxm1023 | 未注明 | `Collections/Felo.js` | App 专属 |
 | 分贝仪 | 89996462 | 5.0.9 | `89996462/fenbeiyi.js` | RevenueCat |
@@ -885,6 +888,7 @@
 | 快制图表 | chxm1023 | 未注明 | `Reheji/kuaizhitubiao.js` | RevenueCat（终身） |
 | 夸克 | ddgksf2013 | 未注明 | `MoYu/Quark.snippet` | 去广告 |
 | 酷安 | 小帽 | 未注明 | `XiaoMao/kuan.js` | App 专属 |
+| 酷安 | ddgksf2013 | 未注明 | `MoYu/kuan.js` | 去广告 |
 | 酷拍 | afengye | 3.7 | `Afengye/kupai.js` | RevenueCat |
 | 酷雀水印管家 | WeiGiegie | 1.8.1 | `WeiGiegie/kuqueshuiyinguanjia.js` | App 专属 |
 | 酷我音乐 | 89996462 | 10.3.3 | `89996462/kuwoyinyue.js` | App 专属 |
@@ -1612,6 +1616,7 @@
 | StardewValleyGuide | 小帽 | 未注明 | `XiaoMao/StardewValleyGuide.js` | RevenueCat |
 | Starship | 89996462 | 1.1.2 | `89996462/Starship.js` | RevenueCat |
 | Startodo | chxm1023 | 未注明 | `Reheji/Startodo.js` | RevenueCat（终身） |
+| StartUpAds | ddgksf2013 | 未注明 | `MoYu/StartUpAds.snippet` | 去广告 |
 | Stay | ddgksf2013 | 未注明 | `MoYu/stay.js` | App 专属 |
 | StayOff | chxm1023 | 未注明 | `Reheji/StayOff.js` | RevenueCat（终身） |
 | StaySleep | chxm1023 | 未注明 | `Reheji/StaySleep.js` | RevenueCat（终身） |
@@ -1634,6 +1639,7 @@
 | Subtrack | chxm1023 | 未注明 | `Reheji/Subtrack.js` | RevenueCat（终身） |
 | Successly | 小帽 | 未注明 | `XiaoMao/Successly.js` | RevenueCat |
 | 随机图片 | 小帽 | 未注明 | `XiaoMao/suijitupian.js` | App 专属 |
+| 随手记 | ddgksf2013 | 未注明 | `MoYu/SuiShouJi.snippet` | 去广告 |
 | 随手写 | chxm1023 | 未注明 | `Collections/suishouxie.js` | App 专属 |
 | 随心记 | chxm1023 | 未注明 | `Reheji/suixinji.js` | RevenueCat（终身） |
 | 速记账单 | chxm1023 | 未注明 | `Reheji/sujizhangdan.js` | RevenueCat（其他） |
@@ -2128,6 +2134,7 @@
 | 知乎 | WeiGiegie | 未注明 | `WeiGiegie/zhihu.js` | App 专属 |
 | 知乎 | WeiGiegie | 未注明 | `WeiGiegie/zhihu2.js` | 未注明 |
 | 知乎 | ddgksf2013 | 未注明 | `MoYu/ZhiHuKaiPing.snippet` | 去广告 |
+| 知乎 | ddgksf2013 | 未注明 | `MoYu/ZhiHu.snippet` | 去广告 |
 | 指尖笔记 | 89996462 | v2.9.1 | `89996462/zhijianbiji.js` | App 专属 |
 | 指尖时光 | 89996462 | 6.1.2 | `89996462/zhijianshiguang.js` | App 专属 |
 | 指尖时光 | 89996462 | 6.3.70 | `89996462/zhijianshiguang2.js` | App 专属 |
