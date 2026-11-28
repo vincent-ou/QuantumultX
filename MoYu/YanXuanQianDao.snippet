@@ -1,0 +1,7 @@
+# 严选 — 定时任务（配合 yanxuanqiandao.js 使用）
+[rewrite_local]
+^https:\/\/act\.you\.163\.com\/act-attendance\/(?:task\/list|att\/v4\/index|att\/v3\/sign) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/yanxuanqiandao.js
+[task_local]
+10 9 * * * https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/yanxuanqiandao.js, tag=网易严选每日签到, enabled=true
+[mitm]
+hostname = act.you.163.com
