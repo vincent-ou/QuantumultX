@@ -1,0 +1,10 @@
+# 京东搜索 — 规则（配合 jingdongsousuo.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=hotWords url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/jingdongsousuo.js
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=hotSearchTerms url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/jingdongsousuo.js
+
+[mitm]
+
+hostname = api.m.jd.com
