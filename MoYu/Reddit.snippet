@@ -1,0 +1,9 @@
+# Reddit — 规则（配合 reddit.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/gql-fed\.reddit\.com\/$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/reddit.js
+
+[mitm]
+
+hostname = gql-fed.reddit.com
