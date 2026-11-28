@@ -1,0 +1,5 @@
+# 漫画台Lite — 规则（配合 manhuatai.js 使用）
+[rewrite_local]
+^https?:\/\/comic\.321mh\.com\/app_api\/v\d\/getcomicinfo_body url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/manhuatai.js
+[mitm]
+hostname = comic.321mh.com
