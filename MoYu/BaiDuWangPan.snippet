@@ -1,0 +1,7 @@
+# 百度网盘 — 规则（配合 baiduwangpan.js 使用）
+
+[rewrite_local]
+^https?:\/\/pan\.baidu\.com\/rest\/.+\/membership\/user url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/baiduwangpan.js
+
+[mitm]
+hostname = pan.baidu.com
