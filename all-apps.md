@@ -1,6 +1,6 @@
 # 全库 App 总索引
 
-生成时间：2026-11-28。共 **2141 行**（一个 App 一行；同一 App 在多个文件夹出现时各占一行）。
+生成时间：2026-11-28。共 **2146 行**（一个 App 一行；同一 App 在多个文件夹出现时各占一行）。
 
 ## 各文件夹行数
 
@@ -13,7 +13,7 @@
 | WeiGiegie | 268 | WeiGiegie/（WeiGiegie 666，268 行；274 对减 5 个已删除、1 个已移至根目录） |
 | 89996462 | 464 | 89996462/（89996462 ycdz/gx，464 对） |
 | Afengye | 118 | Afengye/（afengye crack.js，118 对） |
-| MoYu | 85 | MoYu/（墨鱼 ddgksf2013，85 行） |
+| MoYu | 90 | MoYu/（墨鱼 ddgksf2013，85 行） |
 | filter | 13 | filter/（墨鱼 ddgksf2013 分流规则，13 个文件） |
 
 ## 怎么查
@@ -161,6 +161,7 @@
 | 百度贴吧 | 小帽 | 未注明 | `XiaoMao/baidutieba.js` | App 专属 |
 | 百度贴吧 | app2smile、ddgksf2013 | 未注明 | `MoYu/TieBa.snippet` | 去广告 |
 | 百度网盘 | chxm1023 | 未注明 | `Collections/baiduwangpan.js` | App 专属 |
+| 百度网盘 | ddgksf2013 | 未注明 | `MoYu/baiduwangpan.js` | App 专属 |
 | 百度网盘 | WeiGiegie | 13.10.5 | `WeiGiegie/baiduwangpan.js` | App 专属 |
 | 百度文库☆ | 89996462 | 8.1.01 | `89996462/baiduwenku.js` | App 专属 |
 | 白马剧场 | 89996462 | 1.0.1 | `89996462/baimajuchang.js` | App 专属 |
@@ -200,7 +201,9 @@
 | 哔哩哔哩 | ddgksf2013 | 7.1.0 | `MoYu/BiLiBiLiCC.snippet` | App 专属 |
 | 哔哩哔哩 | ddgksf2013 | 未注明 | `MoYu/BiLiBiLiZhiLian.snippet` | App 专属 |
 | 哔哩哔哩 | NobyDa、ddgksf2013 | 未注明 | `MoYu/BiLiBiLiHuanQu.snippet` | App 专属 |
+| 哔哩哔哩 | ddgksf2013 | 未注明 | `MoYu/BiLiBiLiSingleTab.snippet` | App 专属 |
 | 哔哩哔哩大会员 | WeiGiegie | 8.22.0 | `WeiGiegie/bilibilidahuiyuan.js` | App 专属 |
+| 哔哩哔哩大会员 | ddgksf2013 | 7.63.0 | `MoYu/bilibilidahuiyuan.js` | App 专属 |
 | 哔哩哔哩漫画 | ddgksf2013 | 未注明 | `MoYu/BiLiBiLiManHua.snippet` | 去广告 |
 | 哔哩哔哩Upos | ddgksf2013、alyce233 | 未注明 | `MoYu/UposRedirect.snippet` | 分流规则 |
 | BillShare | 小帽 | 未注明 | `XiaoMao/BillShare.js` | RevenueCat |
@@ -1826,6 +1829,7 @@
 | WeatherFit | afengye | 6.12.3 | `Afengye/WeatherFit.js` | RevenueCat |
 | WeatherScope | 小帽 | 未注明 | `XiaoMao/WeatherScope.js` | App 专属 |
 | 微博 | 小帽 | 未注明 | `XiaoMao/weibo.js` | App 专属 |
+| 微博 | ddgksf2013 | V2.0.142 | `MoYu/weibo.js` | 去广告 |
 | 伟大的我 | chxm1023 | 未注明 | `Reheji/weidadewo.js` | RevenueCat（其他） |
 | 维刻 | chxm1023 | 未注明 | `Reheji/weike.js` | RevenueCat（其他） |
 | 维克音乐 | chxm1023 | 未注明 | `Reheji/weikeyinle.js` | RevenueCat（终身） |
@@ -1910,6 +1914,7 @@
 | 消防行 | chxm1023 | 未注明 | `Collections/xiaofangxing.js` | App 专属 |
 | 小荷听书 | WeiGiegie | 未注明 | `WeiGiegie/xiaohetingshu.js` | App 专属 |
 | 小红书 | 小帽 | 未注明 | `XiaoMao/xiaohongshu.js` | App 专属 |
+| 小红书 | ddgksf2013 | 未注明 | `MoYu/xiaohongshu.js` | 去广告 |
 | 小红书 无水印视频/图片下载 | WeiGiegie | 9.1.8 | `WeiGiegie/xiaohongshuwushuiyinshipintupianxiazai.js` | App 专属 |
 | 小决定 | chxm1023 | 未注明 | `Reheji/xiaojueding.js` | RevenueCat（年付） |
 | 小鹿声文 | 89996462 | 1.9.75 | `89996462/xiaolushengwen.js` | App 专属 |
