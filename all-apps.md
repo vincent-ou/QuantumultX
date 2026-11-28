@@ -13,7 +13,7 @@
 | WeiGiegie | 268 | WeiGiegie/（WeiGiegie 666，268 行；274 对减 5 个已删除、1 个已移至根目录） |
 | 89996462 | 464 | 89996462/（89996462 ycdz/gx，464 对） |
 | Afengye | 118 | Afengye/（afengye crack.js，118 对） |
-| MoYu | 90 | MoYu/（墨鱼 ddgksf2013，85 行） |
+| MoYu | 90 | MoYu/（墨鱼 ddgksf2013，90 行） |
 | filter | 13 | filter/（墨鱼 ddgksf2013 分流规则，13 个文件） |
 
 ## 怎么查
