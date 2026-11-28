@@ -1,0 +1,98 @@
+# 微博 — 规则（配合 weibo.js 使用）
+
+# 注意：使用时请关闭 QX 的[兼容性增强]开关，否则无法去除微博广告。
+# 覆盖微博与微博国际版：首页信息流、搜索页、详情页、评论区、超话、开屏广告等。
+
+[rewrite_local]
+
+# ======= 微博国内版 ======= #
+# > 微博_详情页及评论区
+^https?:\/\/api\.weibo\.cn\/\d\/statuses\/container_detail url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博_首页信息流可能感兴趣推广
+^https?:\/\/api\.weibo\.cn\/\d\/statuses\/container_positive url reject-200
+# > 微博_首页顶部弹窗
+^https?:\/\/api\.weibo\.cn\/\d\/push\/info url reject-200
+# > 微博_删除侧栏视频流
+^https?:\/\/api\.weibo\.cn\/\d\/ug\/checkin\/stream url jsonjq-response-body '.items |= map(select(.category != "card"))'
+# > 微博_启动感兴趣弹窗
+^https?:\/\/api\.weibo\.cn\/.*account\/recommend_interesttags url reject-dict
+# > 微博_首页顶部直播推荐Tab
+^https?:\/\/api\.weibo\.cn\/.*\/media_homelist url reject-200
+# > 微博_搜索页默认填充词
+^https?:\/\/api\.weibo\.cn\/.*finder\/searchbarchange url reject-200
+# > 微博_AD_Preload
+^https?:\/\/api\.weibo\.cn\/\d\/ad\/preload url reject-dict
+# > 微博_首页顶部homeExtend
+^https?:\/\/api\.weibo\.cn\/\d\/groups\/allgroups\/v\d url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博_用户推荐弹窗
+^https?:\/\/api\.weibo\.cn\/\d\/profile\/recommend_popuser url reject-dict
+# > 微博_开屏广告预加载处理
+^https?:\/\/boot.*weibo\.com\/v\d\/ad\/preload url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博_未登陆状态下首页信息流处理
+^https?:\/\/api\.weibo\.cn\/\d\/\w{5}\/(statuses_unread_hot_timeline|timeline) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博_每日一次的开屏广告请求
+^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime url reject-200
+# > 微博_视频信息处理
+^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博_去除底部超话栏表层浮icon及tips
+^https?:\/\/api\.weibo\.cn\/.*discovery_home_bottom_getdotinfo url reject-dict
+# > 微博_屏蔽首页左上角每日的弹窗tips
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily url reject-dict
+# > 微博_屏蔽发现页面搜索框热词
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博_应用内弹窗广告
+^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) url reject
+# > 微博_屏蔽sdkconfig请求
+^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php url reject
+# > 微博_Spotlight
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight url reject-dict
+# > 微博_自定义tab皮肤
+^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博_非会员设置tab皮肤
+^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博_去广告以及去除各部分推广模块
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(searchall|page\?|0flowpage) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(unread_)?friends(/|_)timeline url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/groups/timeline url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(container_timeline|unread_hot_timeline|extend|video_mixtimeline|unread_topic_timeline) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile/(me|container_timeline) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/video/(community_tab|remind_info|tiny_stream_video_list) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/search/(finder|container_timeline|container_discover) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|container/get_item) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+
+# ======= 微博国际版 ======= #
+# > 微博国际版_开屏拦截
+# > 微博国际版_帖子下方广告banner
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=open_app url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博国际版_趋势页热门影片
+^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl url reject-dict
+# > 微博国际版_屏蔽hotsearch
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users url reject-dict
+# > 微博国际版_屏蔽热推荐
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? url reject-dict
+# > 微博国际版_屏蔽searching_info
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*a=get_searching_info url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo_search_info.json
+# > 微博国际版_屏蔽search_topic
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo_search_topic.json
+# > 微博国际版_屏蔽开屏广告
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博国际版_屏蔽sdkad
+^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博国际版_趋势顶部Card去广告
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*a=trends url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博国际版_屏蔽用户VIP栏
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+# > 微博国际版_热搜处理
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=search_topic url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+
+[filter_local]
+
+# > 微博_分流
+host, sdkapp.uve.weibo.com, direct
+host, adstrategy.biz.weibo.com, reject
+host-suffix, api.touch-moblie.com, reject
+
+[mitm]
+
+hostname = api.weibo.*, *.api.weibo.*, mapi.weibo.*, *.uve.weibo.com, new.vip.weibo.cn, boot.biz.weibo.com
