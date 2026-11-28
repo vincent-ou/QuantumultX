@@ -1,0 +1,17 @@
+# 随手记 — 去广告规则（纯 reject，无逻辑脚本）
+# 原作者：ddgksf2013（墨鱼）｜适配版本：未注明
+
+[rewrite_local]
+
+https://tg.feidee.com/online_ad/api/search.do url reject
+https://tg.feidee.com/vis-ad-engine-ws/api/show url reject
+https://api.feidee.net/v1/configs/client/configs url reject-200
+https://yunmk.feidee.net/cab-market-ws/market/v2/contents url reject-dict
+https://community.feidee.com/api/v1/home/top url reject-200
+https://yun.feidee.net/cab-query-ws/v1/comet/vtable/score-card url reject-dict
+https://moneymarket.ssjlicai.com/finance-common-operation-ws/api/actShelve/v1/actShelveShowTipInfo url reject
+https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-result url reject-dict
+
+[mitm]
+
+hostname = *.feidee.*, *.ssjlicai.*
