@@ -1,0 +1,9 @@
+# 爱奇艺 — 规则（配合 aiqiyi.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/.*cupid\.iqiyi\.com\/mixer\? url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/aiqiyi.js
+
+[mitm]
+
+hostname = cupid.iqiyi.com
