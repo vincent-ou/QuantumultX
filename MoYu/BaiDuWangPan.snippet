@@ -1,7 +1,22 @@
-# 百度网盘 — 规则（配合 baiduwangpan.js 使用）
+# 百度网盘 — 规则（配合 baiduwangpan.js 使用；含去广告规则）
+# 原作者：ddgksf2013（墨鱼）｜适配版本：未注明
 
 [rewrite_local]
+
 ^https?:\/\/pan\.baidu\.com\/rest\/.+\/membership\/user url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/baiduwangpan.js
+https?:\/\/pan\.baidu\.com\/api\/getconfig url reject-dict
+https?:\/\/.*baidu\.com\/rest\/.*\/membership\/(proxy\/)?guide url reject-200
+https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list url reject-200
+https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad url reject-200
+https?:\/\/pan\.baidu\.com\/act\/api\/activityentry url reject-200
+https:\/\/pan\.baidu\.com\/feed\/hotlist url reject-200
+https?:\/\/.*zhangyuyidong\.cn\/api\/zysdk url reject-200
+https?:\/\/pan\.baidu\.com\/api\/getsyscfg url reject-dict
+https:\/\/pan\.baidu\.com\/queryintent\/queryhint url reject-200
+https:\/\/pan\.baidu\.com\/coins\/center\/notice url reject-200
+https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist url jsonjq-response-body '.result.list=[]'
+https:\/\/pan\.baidu\.com\/recommend\/shortseries\/list url reject-dict
 
 [mitm]
-hostname = pan.baidu.com
+
+hostname = pan.baidu.com, afd.baidu.com, zhangyuyidong.cn
