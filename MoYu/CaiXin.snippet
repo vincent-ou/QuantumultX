@@ -1,0 +1,9 @@
+# 财新 — 规则（配合 caixin.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/caixin.js
+
+[mitm]
+
+hostname = gg.caixin.com
