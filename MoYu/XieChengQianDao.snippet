@@ -1,0 +1,7 @@
+# 携程旅行 — 定时任务（配合 xiechengqiandao.js 使用）
+[rewrite_local]
+^https:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/[a-zA-Z]+Login(?:$|\?) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/xiechengqiandao.js
+[task_local]
+15 7,15 * * * https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/xiechengqiandao.js, tag=Ctrip
+[mitm]
+hostname = m.ctrip.com
