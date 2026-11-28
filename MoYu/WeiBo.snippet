@@ -1,7 +1,8 @@
 # 微博 — 规则（配合 weibo.js 使用）
-
+# 原作者：ddgksf2013（墨鱼）｜适配版本：V2.0.142
 # 注意：使用时请关闭 QX 的[兼容性增强]开关，否则无法去除微博广告。
 # 覆盖微博与微博国际版：首页信息流、搜索页、详情页、评论区、超话、开屏广告等。
+# 2026-11-28 合并用户 QX 缓存导出的 weibo_json.js 版本：新增设置接口与统一路规则；6 条冲突的 reject 规则以导出版本为准改走改写。
 
 [rewrite_local]
 
@@ -9,17 +10,13 @@
 # > 微博_详情页及评论区
 ^https?:\/\/api\.weibo\.cn\/\d\/statuses\/container_detail url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
 # > 微博_首页信息流可能感兴趣推广
-^https?:\/\/api\.weibo\.cn\/\d\/statuses\/container_positive url reject-200
 # > 微博_首页顶部弹窗
-^https?:\/\/api\.weibo\.cn\/\d\/push\/info url reject-200
 # > 微博_删除侧栏视频流
 ^https?:\/\/api\.weibo\.cn\/\d\/ug\/checkin\/stream url jsonjq-response-body '.items |= map(select(.category != "card"))'
 # > 微博_启动感兴趣弹窗
 ^https?:\/\/api\.weibo\.cn\/.*account\/recommend_interesttags url reject-dict
 # > 微博_首页顶部直播推荐Tab
-^https?:\/\/api\.weibo\.cn\/.*\/media_homelist url reject-200
 # > 微博_搜索页默认填充词
-^https?:\/\/api\.weibo\.cn\/.*finder\/searchbarchange url reject-200
 # > 微博_AD_Preload
 ^https?:\/\/api\.weibo\.cn\/\d\/ad\/preload url reject-dict
 # > 微博_首页顶部homeExtend
@@ -31,13 +28,11 @@
 # > 微博_未登陆状态下首页信息流处理
 ^https?:\/\/api\.weibo\.cn\/\d\/\w{5}\/(statuses_unread_hot_timeline|timeline) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
 # > 微博_每日一次的开屏广告请求
-^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime url reject-200
 # > 微博_视频信息处理
 ^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
 # > 微博_去除底部超话栏表层浮icon及tips
 ^https?:\/\/api\.weibo\.cn\/.*discovery_home_bottom_getdotinfo url reject-dict
 # > 微博_屏蔽首页左上角每日的弹窗tips
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily url reject-dict
 # > 微博_屏蔽发现页面搜索框热词
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
 # > 微博_应用内弹窗广告
@@ -60,6 +55,12 @@
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/search/(finder|container_timeline|container_discover) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|container/get_item) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+
+# > 2026-11-28 合并用户 QX 缓存导出的 weibo_json.js 版本（统一路 + 设置接口）
+^https?://api\.weibo\.cn(?:/2/statuses/container_timeline_hot|/2/statuses/container_positive|/2/guest/container_timeline_hot|/2/statuses/container_timeline_unread|/2/statuses/container_timeline|/2/live/media_homelist|/2/remind/hometab_dot|/2/remind/unread_count|/2/statuses/container_detail|/2/statuses/container_detail_comment|/2/statuses/container_detail_forward|/2/statuses/variety|/2/comments/build_comments|/2/search/finder|/2/search/container_timeline|/2/search/container_discover|/2/!/was/finder/searchbarchange|/2/cardlist|/2/flowpage|/2/searchall|/2/profile/me|/2/profile/container_timeline|/2/video/flow_stream|/2/video/flow_stream_cache|/2/push/daily|/2/push/active|/2/push/info|/2/guest/push_active|/2/groups/allgroups/v2|/2/client/abserver_list|/2/checkin/show|/2/video/remind_info|/2/video/home_channels)(?=[?#]|$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+^https?://bootrealtime\.uve\.weibo\.com(?:/v3/ad/realtime)(?=[?#]|$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+^https://api\.weibo\.cn/__qx_weibo_settings__/(?:api/config)?(?=[?#]|$) url script-echo-response https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
+^https://api\.weibo\.cn/__qx_weibo_settings__/api/(?:save|reset)(?=[?#]|$) url script-analyze-echo-response https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weibo.js
 
 # ======= 微博国际版 ======= #
 # > 微博国际版_开屏拦截
