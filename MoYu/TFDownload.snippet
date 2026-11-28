@@ -1,0 +1,11 @@
+# TestFlight — 规则
+# 原作者：id77、ddgksf2013
+# 适配版本：未注明
+# 清理整理：Muse — 解决国区 TF 无法下载部分应用的问题
+# 注意：对普通 TF 应用的更新应无影响（原版标注未测试）
+
+[rewrite_local]
+^https?:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*/builds/\d*/install url request-body storefrontId" : ".*" request-body storefrontId" : "143441-1,29"
+
+[mitm]
+hostname = testflight.apple.com
