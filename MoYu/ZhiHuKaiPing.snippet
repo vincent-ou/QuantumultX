@@ -1,0 +1,11 @@
+# 知乎 — 规则（配合 zhihukaiping.js 使用）
+
+# 仅去开屏；完整净化见 WeiGiegie/zhihu2.js。
+
+[rewrite_local]
+
+^https?:\/\/api\.zhihu\.com\/commercial_api.*launch_v2 url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/zhihukaiping.js
+
+[mitm]
+
+hostname = api.zhihu.com
