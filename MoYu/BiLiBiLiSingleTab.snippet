@@ -1,0 +1,9 @@
+# 哔哩哔哩 — 规则（配合 bilibilisingletab.js 使用）
+
+# 标签页处理。
+
+[rewrite_local]
+^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/bilibilisingletab.js
+
+[mitm]
+hostname = app.bilibili.com
