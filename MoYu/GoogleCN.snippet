@@ -1,0 +1,11 @@
+# Google.cn — 规则
+# 原作者：ddgksf2013
+# 适配版本：未注明
+# 清理整理：Muse — Google.cn 跳转 google.com
+
+[rewrite_local]
+# Redirect Google Search Service
+^https?:\/\/(www.)?(g|google)\.cn url 302 https://www.google.com
+
+[mitm]
+hostname = www.google.cn
