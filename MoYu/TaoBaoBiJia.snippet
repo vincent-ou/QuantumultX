@@ -1,0 +1,7 @@
+# 淘宝比价 — 规则（配合 taobaobijia.js 使用）
+# 注意：源文件无 [rewrite_local]，本规则按脚本内路径常量（/amdc/mobileDispatch、/gw/mtop.taobao.detail.getdetail）推断；amdc 响应分支与请求分支需不同规则类型，原规则未在源文件中，待真机核实。
+[rewrite_local]
+^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch url script-request-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/taobaobijia.js
+^https?:\/\/.*\.taobao\.com\/gw\/mtop.taobao.detail.getdetail url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/taobaobijia.js
+[mitm]
+hostname = amdc.m.taobao.com, *.taobao.com
