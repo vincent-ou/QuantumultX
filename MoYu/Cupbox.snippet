@@ -1,0 +1,9 @@
+# Cupbox — 规则（配合 cupbox.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/.*\.cupfox\.com\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/cupbox.js
+
+[mitm]
+
+hostname = *.cupfox.com, *.cupfox.app
