@@ -1,0 +1,9 @@
+# 夸克 — 规则（配合 quark.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/.*\.quark\.cn\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/quark.js
+
+[mitm]
+
+hostname = *.quark.cn
