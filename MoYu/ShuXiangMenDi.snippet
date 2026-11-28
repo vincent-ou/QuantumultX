@@ -1,0 +1,7 @@
+# 书香门第 — 定时任务（配合 shuxiangmendi.js 使用）
+[rewrite_local]
+https?:\/\/www\.txtnovel\.top\/plugin\.php\?id=dsu_paulsign:sign&operation=qiandao&infloat=0&inajax=0&mobile=yes url script-request-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/shuxiangmendi.js
+[task_local]
+0 9 * * * https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/shuxiangmendi.js, tag=书香门第
+[mitm]
+hostname = www.txtnovel.top
