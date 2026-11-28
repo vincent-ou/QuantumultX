@@ -1,0 +1,6 @@
+# 京喜 — 规则（配合 jingxi.js 使用）
+# 注意：源文件无 [rewrite_local]，本规则按脚本内 URL 正则推断，待真机核实。
+[rewrite_local]
+^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/jingxi.js
+[mitm]
+hostname = api.m.jd.com
