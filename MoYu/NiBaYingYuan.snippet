@@ -1,0 +1,9 @@
+# 泥巴影院 — 规则（配合 nibayingyuan.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/.*nivod.*\/($|[0-9a-zA-Z=_/-]+\.html) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/nibayingyuan.js
+
+[mitm]
+
+hostname = m.nivod4.tv
