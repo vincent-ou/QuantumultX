@@ -1,0 +1,9 @@
+# IT之家 — 规则（配合 itzhijia.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/.*\.ithome\.com\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/itzhijia.js
+
+[mitm]
+
+hostname = *.ithome.com
