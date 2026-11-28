@@ -1,0 +1,9 @@
+# 哔哩哔哩 — 规则（配合 bilibilizhilian.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/app\.bilibili\.com\/x\/resource\/domain url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/bilibilizhilian.js
+
+[mitm]
+
+hostname = app.bilibili.com, api.bilibili.com
