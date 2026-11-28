@@ -1,0 +1,7 @@
+# FileBall — 规则（配合 fileball.js、fileballaliyunpan.js 使用）
+[rewrite_local]
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/*) url script-echo-response https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/fileball.js
+^https?:\/\/firebaseremoteconfig\.googleapis\.com\/v\d\/projects\/filebox url script-echo-response https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/fileball.js
+^https?:\/\/.*\.example\.com url script-analyze-echo-response https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/fileballaliyunpan.js
+[mitm]
+hostname = api.revenuecat.com,firebaseremoteconfig.googleapis.com,*.example.com
