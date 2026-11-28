@@ -1,0 +1,10 @@
+# 哔哩哔哩 — 规则（配合 bilibilicc.js 使用）
+
+[rewrite_local]
+
+# > 哔哩哔哩繁体CC字幕转中文简体（2023-04-11）
+^https?:\/\/.*\.hdslb\.com\/bfs\/subtitle\/.+\.json url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/bilibilicc.js
+
+[mitm]
+
+hostname = aisubtitle.hdslb.com, i0.hdslb.com
