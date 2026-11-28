@@ -1,0 +1,9 @@
+# 小红书 — 规则（配合 xiaohongshu.js 使用）
+
+# 首页信息流去视频/去广告（homefeed 改写）；与小帽的高清图片捕获是不同的功能。
+
+[rewrite_local]
+^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/homefeed\? url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/xiaohongshu.js
+
+[mitm]
+hostname = *.xiaohongshu.com
