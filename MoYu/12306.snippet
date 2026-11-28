@@ -1,0 +1,9 @@
+# 12306 — 规则（配合 12306.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-analyze-echo-response https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/12306.js
+
+[mitm]
+
+hostname = ad.12306.cn
