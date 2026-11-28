@@ -1,0 +1,10 @@
+# 哔哩哔哩 — 去广告规则（仅开屏拦截；bilibili.ads.js 无存世副本，改写规则已移除）
+# 原作者：ddgksf2013（墨鱼）｜适配版本：未注明
+
+[rewrite_local]
+
+^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/show url reject-200
+
+[mitm]
+
+hostname = app.bilibili.com
