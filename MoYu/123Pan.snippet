@@ -1,9 +1,10 @@
 # 123盘 — 规则（配合 123pan.js 使用）
+# 原作者：ddgksf2013（墨鱼）｜适配版本：未注明
 
 [rewrite_local]
 
-^https?:\/\/.*\.123pan\.com\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/123pan.js
+https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/123pan.js
 
 [mitm]
 
-hostname = *.123pan.com
+hostname = www.123pan.com
