@@ -1,0 +1,5 @@
+# 微信 — 规则（配合 weixinjiefeng.js 使用）
+[rewrite_local]
+^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/weixinjiefeng.js
+[mitm]
+hostname = weixin110.qq.com, security.wechat.com
