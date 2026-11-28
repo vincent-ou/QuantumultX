@@ -1,0 +1,6 @@
+# TestFlight — 规则（配合 testflight.js 使用）
+# 注意：源文件无 [rewrite_local]，本规则按脚本内 URL 模式推断（testflight.apple.com 全站 script-request-header），待真机核实。
+[rewrite_local]
+^https?:\/\/testflight\.apple\.com\/.* url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/testflight.js
+[mitm]
+hostname = testflight.apple.com
