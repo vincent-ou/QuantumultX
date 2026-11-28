@@ -1,0 +1,9 @@
+# ahhhhfs — 规则（配合 ahhhhfs.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/.*(xbwpys|ahhhhfs)\.com\/($|[0-9a-zA-Z_/]+\/$) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/ahhhhfs.js
+
+[mitm]
+
+hostname = *.xbwpys.com, *.ahhhhfs.com
