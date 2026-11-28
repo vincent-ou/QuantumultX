@@ -1,0 +1,15 @@
+# 携程 — 规则（配合 xiechengxiaochengxu.js 使用）
+
+# 注意：本脚本与携程旅行 App 冲突（禁止 MITM），使用 App 版请勿引用本重写。
+
+[rewrite_local]
+
+^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/queryWeChatHotEvent url reject-200
+^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/getWaterflowInfo url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/xiechengxiaochengxu.js
+^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/tripAds\.json url reject-200
+^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/gethotsearchrespbysmallprogram url reject-200
+^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/flightHomeSecondService url reject-200
+
+[mitm]
+
+hostname = m.ctrip.com
