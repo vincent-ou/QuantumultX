@@ -1,0 +1,5 @@
+# 掌上公交 — 规则（配合 zhangshanggongjiao.js 使用）
+[rewrite_local]
+https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/zhangshanggongjiao.js
+[mitm]
+hostname = wx.mygolbs.com
