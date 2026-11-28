@@ -1,0 +1,9 @@
+# 平安 — 规则（配合 pingan.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/.*\.pingan\.com\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/pingan.js
+
+[mitm]
+
+hostname = *.pingan.com
