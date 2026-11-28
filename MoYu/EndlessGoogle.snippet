@@ -1,0 +1,9 @@
+# Endless Google — 规则（配合 endlessgoogle.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/www\.google\..*\/search url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/endlessgoogle.js
+
+[mitm]
+
+hostname = www.google.*
