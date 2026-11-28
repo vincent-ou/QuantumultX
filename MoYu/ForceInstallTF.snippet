@@ -1,0 +1,5 @@
+# TestFlight — 规则（配合 forceinstalltf.js 使用）
+[rewrite_local]
+^https:\/\/testflight\.apple\.com((\/v3\/accounts\/.+?\/apps$)|(\/v2\/accounts\/.+?\/apps\/.+?\/builds\/.+)) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/forceinstalltf.js
+[mitm]
+hostname = testflight.apple.com
