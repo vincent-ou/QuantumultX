@@ -1,0 +1,16 @@
+# Bing — 规则（配合 bing.js 使用）
+
+[rewrite_local]
+
+# > bing_首页优化
+^https?:\/\/sapphire\.api\.microsoftapp\.net\/config\/api\/v1\/get url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/bing.js
+# > bing_位置请求
+^https?:\/\/assets\.msn\.com\/service\/weather\/locations\/search url reject-dict
+# > bing_信息流
+^https:\/\/assets\.msn\.com\/service\/news\/feed\/pages\/startmhp url reject-dict
+# > bing_天气请求
+^https?:\/\/api\.msn\.com\/weather url reject-dict
+
+[mitm]
+
+hostname = sapphire.api.microsoftapp.net, assets.msn.com, api.msn.com
