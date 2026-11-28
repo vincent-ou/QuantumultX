@@ -1,0 +1,9 @@
+# Pixiv — 规则（配合 pixiv.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/pixiv.js
+
+[mitm]
+
+hostname = oauth.secure.pixiv.net
