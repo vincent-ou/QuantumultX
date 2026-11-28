@@ -1,0 +1,113 @@
+{
+  "id": "caixin.daily.subscription",
+  "name": "财新每日任务",
+  "author": "ddgksf2013",
+  "icon": "https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/avatar.jpg",
+  "repo": "https://github.com/vincent-ou/QuantumultX",
+  "apps": [
+    {
+      "id": "caixin.daily",
+      "name": "财新每日任务",
+      "descs_html": [
+        "可在本页粘贴完整 Cookie，手动添加或更新另一个财新账号。Cookie 自身必须包含 appinfo。",
+        "配置用于知识问答的 OpenAI 兼容 API。API Key 仅保存在代理工具的本地持久化存储中。",
+        "默认使用 DeepSeek 官方 API；也可改成其他 OpenAI 兼容服务。"
+      ],
+      "keys": [
+        "CAIXIN_MANUAL_COOKIE",
+        "CAIXIN_AI_API_URL",
+        "CAIXIN_AI_API_KEY",
+        "CAIXIN_AI_MODEL",
+        "CAIXIN_AI_API_MODE",
+        "CAIXIN_AI_USER_AGENT",
+        "CAIXIN_AI_WEB_SEARCH",
+        "CAIXIN_AI_TIMEOUT",
+        "@CAIXIN_AI_DISCOVERY.modelOptions"
+      ],
+      "scripts": [
+        {
+          "name": "添加或更新财新账号",
+          "script": "https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/caixin_account.js"
+        },
+        {
+          "name": "刷新 AI 模型列表",
+          "script": "https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/caixin_models.js"
+        }
+      ],
+      "settings": [
+        {
+          "id": "CAIXIN_MANUAL_COOKIE",
+          "name": "手动导入 Cookie",
+          "val": "",
+          "type": "textarea",
+          "rows": 5,
+          "desc": "粘贴另一个账号的完整 Cookie，再运行“添加或更新财新账号”。必须包含 SA_USER_UID（或 UID）和非空 appinfo；成功后会自动清空。"
+        },
+        {
+          "id": "CAIXIN_AI_API_URL",
+          "name": "API URL",
+          "val": "https://api.deepseek.com",
+          "type": "text",
+          "desc": "可填基础地址或完整请求地址。默认使用官方 DeepSeek：https://api.deepseek.com"
+        },
+        {
+          "id": "CAIXIN_AI_API_KEY",
+          "name": "API Key",
+          "val": "",
+          "type": "text",
+          "desc": "Bearer API Key；仅在本地 BoxJS 中填写，不要写入脚本或公开订阅。无鉴权的本地接口可留空。"
+        },
+        {
+          "id": "CAIXIN_AI_MODEL",
+          "name": "模型名称",
+          "val": "deepseek-flash",
+          "type": "modalSelects",
+          "items": "@CAIXIN_AI_DISCOVERY.modelOptions",
+          "desc": "先运行“刷新 AI 模型列表”，然后刷新或重新打开 BoxJS 页面，再从接口返回的模型中选择。"
+        },
+        {
+          "id": "CAIXIN_AI_API_MODE",
+          "name": "接口模式",
+          "val": "auto",
+          "type": "selects",
+          "items": [
+            {
+              "key": "auto",
+              "label": "自动识别"
+            },
+            {
+              "key": "responses",
+              "label": "Responses API"
+            },
+            {
+              "key": "chat",
+              "label": "Chat Completions"
+            }
+          ],
+          "desc": "自动模式根据完整 URL 判断；只填写基础地址时默认使用 Chat Completions。"
+        },
+        {
+          "id": "CAIXIN_AI_USER_AGENT",
+          "name": "User-Agent",
+          "val": "claude-cli/2.1.161 (external, cli)",
+          "type": "text",
+          "desc": "AI 接口请求使用的 User-Agent；通常无需修改。"
+        },
+        {
+          "id": "CAIXIN_AI_WEB_SEARCH",
+          "name": "启用模型联网搜索",
+          "val": false,
+          "type": "boolean",
+          "desc": "仅建议用于支持 web_search 工具的 Responses API；兼容接口不支持时请关闭。"
+        },
+        {
+          "id": "CAIXIN_AI_TIMEOUT",
+          "name": "AI 请求超时（毫秒）",
+          "val": "30000",
+          "type": "text",
+          "desc": "允许范围 5000–120000，默认 30000。"
+        }
+      ]
+    }
+  ]
+}
