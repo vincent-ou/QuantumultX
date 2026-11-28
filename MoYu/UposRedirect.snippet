@@ -1,0 +1,10 @@
+# 哔哩哔哩Upos — 规则
+# 原作者：ddgksf2013、alyce233
+# 适配版本：未注明
+# 清理整理：Muse — Upos 服务器替换为腾讯 Cos 对象存储
+
+[rewrite_local]
+^https?:\/\/upos-hz-mirrorakam\.akamaized\.net\/(.*) url 302 https://upos-sz-mirrorcos.bilivideo.com/$1
+
+[mitm]
+hostname = upos-hz-mirrorakam.akamaized.net
