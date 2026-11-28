@@ -1,0 +1,10 @@
+# 豆瓣 — 规则（配合 douban.js 使用）
+
+[rewrite_local]
+
+# > 豆瓣移动版网页去广告+快捷观影
+^https?:\/\/m\.douban\.com\/(home_guide|movie|tv|book|group|music) url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/douban.js
+
+[mitm]
+
+hostname = m.douban.com
