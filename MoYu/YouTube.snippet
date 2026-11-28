@@ -1,0 +1,18 @@
+# YouTube — 规则
+# 原作者：DivineEngine、app2smile、Maasea、VirgilClyne
+# 适配版本：未注明
+# 清理整理：Muse — 只迁 reject/302 去广告规则；Maasea 的 youtube.response.js 规则已删，PIP/后台播放功能缺失
+# 注意：视频广告仍可能出现时，在 QX 配置 [general] 下加 udp_drop_list=443
+
+[rewrite_local]
+# ======= 视频广告请求 ======= #
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject-200
+
+# ======= 通用广告请求 ======= #
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject-200
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject-200
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject-200
+
+[mitm]
+hostname = -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
