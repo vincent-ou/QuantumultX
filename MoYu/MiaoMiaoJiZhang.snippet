@@ -1,0 +1,7 @@
+# 喵喵记账 — 定时任务（配合 miaomiaojizhang.js 使用）
+[rewrite_local]
+https://meow-api.sxyj.net/api/Member/SignNew url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/miaomiaojizhang.js
+[task_local]
+15 7,15 * * * https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/miaomiaojizhang.js, tag=喵喵记账
+[mitm]
+hostname = meow-api.sxyj.net
