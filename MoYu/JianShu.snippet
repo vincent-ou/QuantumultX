@@ -1,0 +1,10 @@
+# 简书 — 规则（配合 jianshu.js 使用）
+
+[rewrite_local]
+
+^https:\/\/www\.jianshu\.com\/p url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36$2
+^https:\/\/www\.jianshu\.com\/p url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/jianshu.js
+
+[mitm]
+
+hostname = www.jianshu.com
