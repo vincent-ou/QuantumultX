@@ -1,0 +1,6 @@
+# Not Boring — 规则（配合 notboring.js 使用）
+[rewrite_local]
+^https?:\/\/api-weather\.andy\.works\/v\d\/\w{13,18}$ url reject-dict
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/*) url script-echo-response https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/notboring.js
+[mitm]
+hostname = api-weather.andy.works,api.revenuecat.com
