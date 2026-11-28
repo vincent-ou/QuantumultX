@@ -1,0 +1,9 @@
+# FreeOK — 规则（配合 freeok.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/.*\.freeok\.vip\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/freeok.js
+
+[mitm]
+
+hostname = *.freeok.vip, *.freeok.me
