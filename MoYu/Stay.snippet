@@ -1,0 +1,5 @@
+# Stay — 规则（配合 stay.js 使用）
+[rewrite_local]
+^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/stay.js
+[mitm]
+hostname = api.shenyin.name
