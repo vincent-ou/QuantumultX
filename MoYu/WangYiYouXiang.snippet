@@ -1,0 +1,23 @@
+# 网易邮箱大师 — 规则
+# 原作者：ddgksf2013
+# 适配版本：未注明
+# 清理整理：Muse — 去广告；仅用 QX 内置动作，无逻辑文件
+
+[rewrite_local]
+# > 任务推广
+^https?:\/\/dashi\.163\.com\/task-center-api\/fapi\/task url reject-dict
+# > 我的页面简化
+^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/page\/.*conf\.do url jsonjq-response-body '.data |= del(.masterLoginGuideList, .masterOperatorList, .functionOperatorInfoList, .memberOperator, .activityTabInfoList, .extList)'
+# > 通用广告请求
+^https?:\/\/appconf\.mail\.163\.com\/mmad\/master\/get\.do url reject-200
+# > 状态判断
+^https?:\/\/appconf\.mail\.163\.com\/mailoperating\/mailmaster\/api\/operator\/get url reject-dict
+# > 免费邮箱提醒
+^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/getRegConfig\.do url reject-dict
+# > 浮ICON推广
+^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/config\/function\.do url reject-dict
+# > Userinfo
+^https?:\/\/mail\.163\.com\/fgw\/mailsrv-webrobot\/.*user\/info url jsonjq-response-body '.result |= del(.assistantInfo, .quotaData)'
+
+[mitm]
+hostname = dashi.163.com, appconf.mail.163.com, mail.163.com
