@@ -1,0 +1,24 @@
+# 车来了 — 规则（配合 chelaile.js 使用）
+
+[rewrite_local]
+
+# > 我的页面
+^https?:\/\/.*chelaile\.net\.cn\/goocity\/flowPos\/listByPos url reject
+# > 详情页
+^https?:\/\/cdn\.web\.chelaile\.net\.cn\/info-flow\/index\.html url reject-200
+# > 通用广告
+^https?:\/\/.*chelaile\.net\.cn\/(api\/)?adpub url reject-200
+# > IPdir处理
+^https?:\/\/124\.70\.194\.16\/(ip|adpub) url reject-200
+# > 我的页面
+^https?:\/\/124\.70\.194\.16\/goocity\/flowPos\/listByPos url reject-200
+# > 去除底栏
+^https?:\/\/.*chelaile\.net\.cn\/goocity\/city! url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/chelaile.js
+# > 公交详情页
+^https?:\/\/web\.chelaile\.net\.cn\/api\/operative_position\/infoflow url reject-200
+# > 隐私跟踪
+^https?:\/\/atrace\.chelaile\.net\.cn\/(wx_preloadAd|adAnalysis) url reject-200
+
+[mitm]
+
+hostname = web.chelaile.net.cn, api.chelaile.net.cn, cdn.api.chelaile.net.cn, cdn.web.chelaile.net.cn, atrace.chelaile.net.cn
