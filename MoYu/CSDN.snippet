@@ -1,0 +1,9 @@
+# CSDN — 规则（配合 csdn.js 使用）
+
+[rewrite_local]
+
+.*:\/\/.*\.csdn\.net\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/csdn.js
+
+[mitm]
+
+hostname = *.csdn.net
