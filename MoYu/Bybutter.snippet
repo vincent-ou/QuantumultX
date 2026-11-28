@@ -1,0 +1,4 @@
+# Bybutter — 规则（配合 bybutter.js 使用）
+# TODO：规则待补——源文件无 [rewrite_local]/[mitm]，混淆核心解码串中无 hostname，需抓包补规则。
+# 已解码线索：脚本在 $request.url 含 v4/users/me 时改写会员，在含 v4/shop/me/privileges 时直通；
+# 规则形如 ^https?:\/\/[^\/]+\/v4\/users\/me url script-response-body <本文件 raw 地址>，hostname 待抓包确认。
