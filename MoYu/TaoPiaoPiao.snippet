@@ -1,0 +1,27 @@
+# 淘票票 — 规则（配合 amdc.js 使用）
+# 原作者：ddgksf2013
+# 适配版本：未注明
+# 清理整理：Muse — 去广告；amdc 处理走 Batch A 的 amdc.js
+
+[rewrite_local]
+# > amdc处理
+^http:\/\/amdc\.m\.taobao\.com url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/amdc.js
+# > 开屏广告
+https://acs.m.taobao.com/gw/mtop.film.mtopadvertiseapi.queryloadingbanner url jsonjq-response-body '.data.returnValue={}'
+# > 广告预加载
+https://acs.m.taobao.com/gw/mtop.film.independentadvertiseapi.querypreloadadvertise url jsonjq-response-body '.data.returnValue=[]'
+# > 搜索框下方
+https://acs.m.taobao.com/gw/mtop.film.mtopsearchapi.getranklistbytypeforsearch url jsonjq-response-body '.data.returnValue={}'
+# > 搜索填词
+https://acs.m.taobao.com/gw/mtop.film.mtopintegrationapi.homeconfig url jsonjq-response-body '.data.returnValue={}'
+# > 我的页面推广Banner
+https://acs.m.taobao.com/gw/mtop.film.mtopindependentadvertiseapi.queryadvertise url jsonjq-response-body '.data.returnValue=[]'
+# > 首页信息流顶部和最底部
+https://acs.m.taobao.com/gw/mtop.film.life.aristotle.get url jsonjq-response-body '.data.nodes[]?.nodes |= map(select(.data.componentId | IN("tpp_banner_loop", "tpp_guess_like") | not))'
+# > 启动弹窗
+https://acs.m.taobao.com/gw/mtop.film.life.popup.get url jsonjq-response-body '.data={}'
+# > 影院Tab栏顶部广告
+https://acs.m.taobao.com/gw/mtop.film.mtopitemadvertiseapi.queryadvertise url jsonjq-response-body 'del(.data.returnValue)'
+
+[mitm]
+hostname = acs.m.taobao.com
