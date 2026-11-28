@@ -1,0 +1,13 @@
+# 伪装影视 — 规则
+# 原作者：ddgksf2013
+# 适配版本：未注明
+# 清理整理：Muse — iOS 伪装影视 App 净化；jsonjq + reject
+
+[rewrite_local]
+# > juzhi
+^http:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/api\/v\d\/config\/getConfigList\.do url jsonjq-response-body '.data |= map(select(.keyName | test("config\\.(ad|search|recommend)") | not))'
+# > common
+^http:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/.*?\/v\d\/(version|notice\?|top_notice\?|advert\?position=[^2]+) url reject-200
+
+[mitm]
+hostname = app.dsx.ac
