@@ -1,0 +1,7 @@
+# 财新每日任务 — 定时任务（配合 caixinmeirirenwu.js 使用）
+[task_local]
+5 0 * * * https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/caixinmeirirenwu.js, tag=财新每日任务, enabled=true
+[rewrite_local]
+^https:\/\/gateway\.caixin\.com\/api\/(?:signin\/markRecord\/markRecordForCookie|answeractivity\/userParticipateActivity\/(?:userGetActivityForCookie|findUserActivityDetailForCookie)|integral\/assignmentConfig\/findAssignmentConfigList|app-api\/integral\/getUserIntegral) url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/caixinmeirirenwu.js
+[mitm]
+hostname = gateway.caixin.com
