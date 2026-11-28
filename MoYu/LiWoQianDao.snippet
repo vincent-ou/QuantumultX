@@ -1,0 +1,7 @@
+# 梨涡 — 定时任务（配合 liwo.js 使用）
+[rewrite_local]
+^https:\/\/api\.m\.jd\.com\/api\/v1\/sign\/doSign url script-request-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/liwo.js
+[task_local]
+5 0 * * * https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/liwo.js, tag=梨涡签到得现金
+[mitm]
+hostname = api.m.jd.com
