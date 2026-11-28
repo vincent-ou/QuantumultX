@@ -1,9 +1,12 @@
-# 百度网盘 — 规则（配合 baiduwangpan.js 使用；含去广告规则）
+# 百度网盘 — 规则（配合 baiduwangpan.js 使用；含去广告规则与 1080P 播放解锁）
 # 原作者：ddgksf2013（墨鱼）｜适配版本：未注明
 
 [rewrite_local]
 
 ^https?:\/\/pan\.baidu\.com\/rest\/.+\/membership\/user url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/baiduwangpan.js
+# > 1080P 高清播放解锁（2026-11-28 并入 QX 缓存导出 bdpan.unlock.js 配套规则）
+# 注意：bdpan.unlock.js 逻辑文件至今无存世副本（src-top/probe-bdpan.unlock.js 只是 302 跳转页），本条规则暂指 MoYu/bdpanunlock.js（文件尚未推入），找到逻辑后补推即可生效；导出第 2 条 membership/user 与已有解锁规则重复，已去重。
+https:\/\/pan\.baidu\.com\/api\/streaming\?app_id=\d+&type=M3U8_HQ_1080 url script-request-header https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/bdpanunlock.js
 https?:\/\/pan\.baidu\.com\/api\/getconfig url reject-dict
 https?:\/\/.*baidu\.com\/rest\/.*\/membership\/(proxy\/)?guide url reject-200
 https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list url reject-200
