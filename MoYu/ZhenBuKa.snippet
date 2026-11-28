@@ -1,0 +1,9 @@
+# 真不卡 — 规则（配合 zhenbuka.js 使用）
+
+[rewrite_local]
+
+^https?:\/\/.*\.zhenbuka\.com\/.* url script-response-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/zhenbuka.js
+
+[mitm]
+
+hostname = *.zhenbuka.com
