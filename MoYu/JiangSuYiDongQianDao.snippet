@@ -1,0 +1,7 @@
+# 江苏移动 — 定时任务（配合 jiangsuyidongqiandao.js 使用）
+[rewrite_local]
+http://wap.js.10086.cn/nact/action.do url script-request-body https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/jiangsuyidongqiandao.js
+[task_local]
+15 7,15 * * * https://raw.githubusercontent.com/vincent-ou/QuantumultX/refs/heads/main/MoYu/jiangsuyidongqiandao.js, tag=江苏移动
+[mitm]
+hostname = wap.js.10086.cn
